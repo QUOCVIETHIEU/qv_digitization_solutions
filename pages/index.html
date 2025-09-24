@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Quốc Việt Digitization Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            color: #E2E8F0;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }
+
+        .card-module {
+            background-color: #1A1A22;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-module:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+        }
+
+        .pulse-animation {
+            animation: pulse-ring 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .line-art-bg {
+            background-image: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23374151" stroke-width="0.2" /></svg>');
+            background-size: 10% 10%;
+        }
+
+        .hero-background {
+            position: relative;
+            /* Đảm bảo pseudo-element được định vị tương đối với section này */
+            z-index: 1;
+            /* Đảm bảo nội dung section hiển thị trên pseudo-element */
+        }
+
+        .hero-background::before {
+            content: '';
+            /* Bắt buộc phải có cho pseudo-element */
+            position: absolute;
+            /* Định vị tuyệt đối so với .hero-background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-image: url('../assets/images/banner_digitization.png'); */
+            background-image: linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.7)), url('../assets/images/banner_digital_transformation.png');
+            background-size: cover;
+            /* Phủ kín toàn bộ khu vực */
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Căn giữa ảnh */
+            filter: blur(1px) brightness(0.5);
+            /* Làm mờ ảnh và giảm độ sáng */
+            z-index: -1;
+            /* Đặt pseudo-element phía sau nội dung */
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-10 w-auto">
+                    <span class="text-2xl font-bold text-white hidden md:block">QUỐC VIỆT DIGITIZATION</span>
+                </a>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24">
+        <!-- Hero Section -->
+        <section class="relative w-full text-center py-20 px-4 sm:px-6 lg:px-8 hero-background">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                Sự chuyển đổi số của bạn bắt đầu từ đây
+            </h1>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
+                Chúng tôi cung cấp các giải pháp công nghệ tiên tiến để tối ưu hóa quy trình sản xuất và vận hành, đảm
+                bảo an toàn và hiệu quả cho doanh nghiệp của bạn.
+            </p>
+            <a href="#"
+                class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                Khám phá ngay
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section class="container mx-auto py-20 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Tầm nhìn & Sứ mệnh</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        Tại Quốc Việt, chúng tôi tin rằng công nghệ là chìa khóa để mở ra tiềm năng vô hạn cho doanh
+                        nghiệp. Sứ mệnh của chúng tôi là đồng hành cùng các đối tác trong hành trình chuyển đổi số, mang
+                        đến những giải pháp đột phá, hiệu quả và bền vững.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Chúng tôi cam kết xây dựng một hệ sinh thái số toàn diện, giúp doanh nghiệp tối ưu hóa quy
+                        trình, nâng cao năng lực cạnh tranh và phát triển mạnh mẽ trong kỷ nguyên 4.0.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-full h-auto overflow-hidden shadow-2xl">
+                        <img src="../../assets/images/banner_about_us_image.jpg" alt="Hình ảnh về công ty"
+                            class="w-full h-auto max-w-96 rounded-3xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Grid Section -->
+        <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Các giải pháp của chúng tôi</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Chúng tôi cung cấp một loạt các giải pháp số hóa toàn diện, được thiết kế để đáp ứng mọi nhu cầu của
+                    doanh nghiệp.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Module: QrCode -->
+                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.5v15m7.5-7.5h-15M17.25 4.5l-2.625 2.625M9.75 4.5l2.625 2.625M17.25 19.5l-2.625-2.625M9.75 19.5l2.625-2.625">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">QrCode</h3>
+                    <p class="text-gray-400 mt-2">Giải pháp quản lý và theo dõi thông tin sản phẩm bằng mã QR.</p>
+                </a>
+                <!-- Module: E-Forms Report -->
+                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-4 0V3m0 2H9m10 0V3m0 2h-4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">E-Forms Report</h3>
+                    <p class="text-gray-400 mt-2">Số hóa các biểu mẫu và báo cáo, tối ưu hóa quy trình làm việc.</p>
+                </a>
+                <!-- Module: Syrup Mixing Controls -->
+                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">Syrup Mixing Controls</h3>
+                    <p class="text-gray-400 mt-2">Hệ thống kiểm soát và tự động hóa quy trình pha chế si-rô.</p>
+                </a>
+                <!-- Module: Safety Video Analytics -->
+                <a href="safety-video-analytics/open-edge-detections.html" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 0h2m-2 0a2 2 0 11-4 0 2 2 0 014 0zM7 16a2 2 0 100-4 2 2 0 000 4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">Safety Video Analytics</h3>
+                    <p class="text-gray-400 mt-2">Phân tích video tự động để giám sát và đảm bảo an toàn lao động.</p>
+                </a>
+                <!-- Module: About Quốc Việt -->
+                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12a3 3 0 11-6 0 3 3 0 016 0zM17 12a3 3 0 11-6 0 3 3 0 016 0zM12 2c-3.132 0-5.698 2.568-5.698 5.698C6.302 11.232 10 17 10 17s3.698-5.768 3.698-9.302C13.698 4.568 11.132 2 8 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">About Quốc Việt</h3>
+                    <p class="text-gray-400 mt-2">Tìm hiểu thêm về tầm nhìn, sứ mệnh và đội ngũ của chúng tôi.</p>
+                </a>
+                <!-- Module: Case Studies -->
+                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                    <div class="mb-4">
+                        <svg class="w-20 h-20 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 19.5l-2.25-2.25M7.5 15.75l-2.25 2.25M17.25 15.75L14.75 18.25M12 12V3m0 9v9m-4.5-4.5H16.5m-9 0h9m-9 0L7.5 12h-1">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white">Case Studies</h3>
+                    <p class="text-gray-400 mt-2">Các dự án và câu chuyện thành công của chúng tôi trong thực tế.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1A1A22] py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                 <div class="flex items-center space-x-2 mb-4">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-500 max-w-2xl">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
+                    trưởng bền vững.
+                </p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 8.113 8.438 8.859v-6.444H7.993v-2.415h2.445V9.453c0-2.427 1.48-3.754 3.64-3.754 1.042 0 1.944.078 2.203.113v2.545h-1.488c-1.168 0-1.396.556-1.396 1.366v1.792h2.793l-.364 2.415h-2.429v6.444c4.781-.746 8.438-3.868 8.438-8.859z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.25 6.25c-1.428.634-2.95 1.066-4.542 1.26a8.216 8.216 0 01-3.618-.996c-.958-.69-1.92-1.637-2.618-2.63-1.04-.648-2.08-1.32-3.13-.996a8.216 8.216 0 01-2.923 1.968c-.73.456-1.52.888-2.316 1.23a8.17 8.17 0 00-.73.204c-1.12.336-2.24.632-3.36 1.152a20.082 20.082 0 00-3.376 1.37c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43c-.776.456-1.552.898-2.328 1.334a12.83 12.83 0 00-3.328 1.62c-.754.492-1.508 1.03-2.262 1.564a20.082 20.082 0 00-3.36 1.43z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

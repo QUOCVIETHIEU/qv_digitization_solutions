@@ -1,0 +1,26 @@
+/* Tùy chỉnh CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hiển thị dropdown khi hover */
+.group:hover .group-hover\:block {
+    display: block !important;
+}
+
+/* Đổi màu link khi hover */
+nav ul li a:hover, nav ul li button:hover {
+    color: #3b82f6; /* Blue-600 từ Tailwind */
+}
+
+/* Đổi màu nền của item trong dropdown khi hover */
+.group-hover\:block a:hover {
+    background-color: #e0f2fe; /* Blue-100 từ Tailwind */
+}
