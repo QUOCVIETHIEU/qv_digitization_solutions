@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPE Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            color: #E2E8F0;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle-blur {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4F46E5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6D28D9;
+        }
+
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-4">
+                <a href="javascript:history.back()"
+                    class="text-gray-300 hover:text-white transition-colors duration-300"
+                    aria-label="Quay lại trang trước">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <img src="/assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold text-white hidden md:block">AI Camera Solution</span>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24 relative overflow-hidden">
+        <div class="circle-blur top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
+
+        <!-- Hero Section -->
+        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+                Giải pháp Phát Hiện Thiết Bị Bảo Hộ Cá Nhân (PPE Detection)
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
+                style="animation-delay: 0.2s;">
+                viAct AI-powered PPE Detection: Giám Sát PPE Tự Động Đầu Ngành, được Hỗ trợ bởi AI Video Analytics. Giải
+                pháp chuyển đổi Camera CCTV/IP hiện có thành hệ thống giám sát an toàn thông minh, phát hiện khi PPE
+                không được sử dụng hoặc được sử dụng không đúng cách và cảnh báo ngay lập tức.
+            </p>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="space-y-24">
+                <!-- Section I: What is the solution? -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            I. Giải pháp là gì?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Hệ thống Giám sát PPE được Hỗ trợ bởi AI (AI-Powered PPE Monitoring System) là một công cụ
+                            dựa trên AI phân tích nguồn cấp dữ liệu video theo thời gian thực để phát hiện xem công nhân
+                            có đang đeo các PPE cần thiết như mũ bảo hộ, áo phản quang, găng tay và mặt nạ hay không.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                            <li>Giải pháp này sử dụng Computer Vision và AI để theo dõi liên tục:</li>
+                            <li><strong class="text-white">Phát hiện Không tuân thủ:</strong> Xác định khi không có
+                                thiết bị bảo hộ cần thiết.</li>
+                            <li><strong class="text-white">Phát hiện Sử dụng Sai cách:</strong> Nhận diện khi PPE được
+                                sử dụng không đúng quy cách.</li>
+                        </ul>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-4 font-bold">Giải pháp PPE Detection bao gồm
+                            giám sát từ đầu đến chân, bao gồm:</p>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                            <li>Mũ Bảo Hộ/Mũ An Toàn (Hard Hat/Safety Helmet Detection)</li>
+                            <li>Găng Tay (Glove Detection)</li>
+                            <li>Áo Phản Quang/Áo Hi-Vis (Safety Reflective Vest Detection/Hi-Vis Detection)</li>
+                            <li>Dây An Toàn & Dây buộc (Safety Harness & Lanyard Detection)</li>
+                            <li>Bảo vệ Mắt/Kính Bảo Hộ (Eye Protection/Goggles Detection)</li>
+                            <li>Thiết bị Bảo vệ Hô hấp (RPE) (RPE Detection)</li>
+                            <li>Giày Bảo Hộ/Giày An Toàn (Protective Footwear/Safety Shoes Detection)</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/assets/images/image_ppe_detection.png" alt="QV - AI Module"
+                            class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section II: Why is it important? -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        II. Tại sao Phát hiện PPE lại quan trọng? (Vấn đề)
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        Việc phát hiện PPE chủ động là một nhu cầu thiết yếu đối với môi trường làm việc không gây hại
+                        (zero-harm workplace).
+                    </p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Rủi ro của việc không tuân thủ PPE:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-bold text-white mb-2">Nguy cơ Gây thương tích</h4>
+                            <p class="text-gray-400">Khảo sát các nhà quản lý HSE cho thấy công nhân xây dựng không có
+                                PPE có nguy cơ bị thương gấp ba lần so với những người đeo đồ bảo hộ thích hợp.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-bold text-white mb-2">Sự cố Nghiêm trọng</h4>
+                            <p class="text-gray-400">Các sai sót nhỏ trong việc sử dụng PPE thường xảy ra trước các sự
+                                kiện nghiêm trọng—việc giải quyết chúng một cách chủ động sẽ giảm thiểu rủi ro tổng hợp.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-bold text-white mb-2">Chi phí Tăng cao</h4>
+                            <p class="text-gray-400">Mọi sự không tuân thủ PPE đều làm tăng chi phí dài hạn thông qua sự
+                                gián đoạn, yêu cầu bồi thường và phí bảo hiểm.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-bold text-white mb-2">Văn hóa An toàn</h4>
+                            <p class="text-gray-400">Sự tuân thủ PPE nhất quán mang lại nhận thức có ảnh hưởng giữa các
+                                cơ quan quản lý, khách hàng và lực lượng lao động.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                        Hệ thống AI này thay thế việc kiểm tra an toàn thủ công, giảm thiểu lỗi do con người và đảm bảo
+                        mọi công nhân đều được giám sát liên tục.
+                    </p>
+                </div>
+
+                <!-- Section III: Application Areas -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Giải pháp PPE Monitoring lý tưởng cho các ngành công nghiệp mà việc tuân thủ là rất quan
+                            trọng để giảm thiểu tai nạn, đặc biệt là:
+                        </p>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Xây dựng:</strong> Giám sát mũ bảo hộ, áo phản quang và
+                                    ủng an toàn để ngăn ngừa chấn thương do vật rơi, trượt chân và máy móc.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Dầu khí (Oil & Gas):</strong> Xác minh việc sử dụng quần
+                                    áo chống cháy (FRC), máy dò khí, mũ bảo hộ và găng tay để ngăn ngừa bỏng, nổ và tiếp
+                                    xúc với khí độc.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Khai thác mỏ (Mining):</strong> Giám sát mũ bảo hộ, quần
+                                    áo có độ hiển thị cao, mặt nạ phòng độc và kính bảo hộ.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Sản xuất (Manufacturing):</strong> Đảm bảo sử dụng kính
+                                    bảo hộ, găng tay, mũ bảo hộ (ánh xạ màu tự động) và bảo vệ tai.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Logistics & Kho hàng:</strong> Đảm bảo đeo áo phản quang,
+                                    ủng có mũi thép và găng tay để giảm thiểu tai nạn trong quá trình vận hành xe nâng
+                                    và nâng vật nặng.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Hóa chất:</strong> Giám sát tuân thủ PPE, khu vực tràn
+                                    hóa chất và khu vực xử lý hạn chế.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=PPE+Detection+Areas"
+                            alt="PPE Detection Areas" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section IV: How it Works -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            IV. Cách Thức Hoạt động (Computer Vision)
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Giải pháp video analytics của viAct cho phép phát hiện PPE theo thời gian thực và giám sát
+                            thông minh.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-white mb-2">4 Bước Đơn giản để triển khai:</h3>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
+                                <div>
+                                    <strong class="text-white">Chọn (Choose):</strong> Chọn mô-đun PPE Detection từ
+                                    viHUB, nơi cung cấp hơn 100 mô-đun AI.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
+                                <div>
+                                    <strong class="text-white">Kết nối (Connect):</strong> Dễ dàng tích hợp với hệ thống
+                                    CCTV, AI Camera hoặc IP Camera hiện có của bạn qua giao thức RTSP (Real-Time
+                                    Streaming Protocol). Trong hầu hết các trường hợp, không cần phần cứng mới.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
+                                <div>
+                                    <strong class="text-white">Ghi nhận (Capture):</strong> AI Video Analytics của viAct
+                                    ngay lập tức phát hiện rủi ro từ nguồn cấp dữ liệu trực tiếp. Hệ thống sử dụng
+                                    Computer Vision để liên tục quét các nguồn cấp CCTV.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
+                                <div>
+                                    <strong class="text-white">Kiểm soát (Control):</strong> Nhận cảnh báo tức thì (tại
+                                    chỗ/ngoài công trường). Cảnh báo được gửi qua dashboard, email, hoặc SMS.
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-4 font-bold">Tính năng Bảo mật & Tùy chỉnh Dữ
+                            liệu:</p>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                            <li><strong class="text-white">Bảo vệ Quyền riêng tư:</strong> Hệ thống tuân thủ GDPR, sử
+                                dụng các kỹ thuật làm mờ tự động để làm mờ khuôn mặt và các yếu tố nhạy cảm (ví dụ: biển
+                                số xe) nhằm đảm bảo danh tính ẩn danh của công nhân và giảm thiểu dữ liệu.</li>
+                            <li><strong class="text-white">Triển khai Linh hoạt:</strong> Hỗ trợ tùy chọn triển khai
+                                Cloud, On-Prem (tại chỗ), hoặc Hybrid.</li>
+                            <li><strong class="text-white">Tùy chỉnh Quy tắc:</strong> viAct cho phép tùy chỉnh hoàn
+                                toàn các quy tắc phát hiện PPE để phù hợp với các giao thức an toàn riêng của từng công
+                                trường (ví dụ: giám sát mũ bảo hộ ở khu vực này và mặt nạ ở khu vực khác).</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=PPE+Detection+Workflow"
+                            alt="PPE Detection Workflow" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section V: Impact and Key Benefits -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        V. Tác động và Lợi ích Chính
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        Phát hiện PPE bằng AI mang lại tác động có thể đo lường được trong việc giảm thiểu rủi ro và cải
+                        thiện hiệu quả vận hành:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Vi phạm PPE</h3>
+                            <p class="text-gray-400">Giảm **92%** việc Không tuân thủ PPE & Tử vong liên quan.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Vi phạm Tái diễn</h3>
+                            <p class="text-gray-400">Giảm **80%** vi phạm Không tuân thủ PPE lặp lại.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng Khả năng Kiểm toán</h3>
+                            <p class="text-gray-400">Sẵn sàng Kiểm toán gấp **10 lần** với xu hướng và báo cáo PPE trong
+                                một chế độ xem.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tiết kiệm Chi phí</h3>
+                            <p class="text-gray-400">Tiết kiệm trung bình **10.000 USD/Công trường** chi cho việc kiểm
+                                tra thủ công.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giám sát Hiệu quả</h3>
+                            <p class="text-gray-400">Giảm sự phụ thuộc vào giám sát thủ công; giám sát PPE thông minh
+                                24/7.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tốc độ Phản hồi</h3>
+                            <p class="text-gray-400">Cảnh báo được gửi đồng thời từ hơn 100 camera.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center py-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">
+                        Đảm bảo tuân thủ PPE 100%—mọi ca làm việc, mọi công trường.
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                        Khám phá cách viAct PPE Detection có thể tích hợp liền mạch với hệ thống CCTV hiện có của bạn để
+                        tự động hóa giám sát an toàn và giảm 92% sự không tuân thủ liên quan đến PPE.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                        YÊU CẦU BẢN DEMO NGAY HÔM NAY!
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1A1A22] py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-500 max-w-2xl">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
+                    trưởng bền vững.
+                </p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Back Button with Glassmorphism Effect -->
+    <a href="javascript:history.back()"
+        class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg transform transition-transform hover:scale-110 glass-button"
+        aria-label="Quay lại trang trước">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clip-rule="evenodd" />
+        </svg>
+    </a>
+</body>
+
+</html>

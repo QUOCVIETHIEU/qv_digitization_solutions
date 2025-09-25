@@ -71,7 +71,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* background-image: url('../assets/images/banner_digitization.png'); */
+            /* background-image: url('/assets/images/banner_digitization.png'); */
             background-image: linear-gradient(rgba(10, 10, 15, 0.7), rgba(10, 10, 15, 0.7)), url('../assets/images/banner_digital_transformation.png');
             background-size: cover;
             /* Phủ kín toàn bộ khu vực */
@@ -83,6 +83,24 @@
             z-index: -1;
             /* Đặt pseudo-element phía sau nội dung */
         }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4F46E5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6D28D9;
+        }
     </style>
 </head>
 
@@ -92,15 +110,39 @@
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-2">
                 <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
-                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <img src="/assets/images/qv_logo.png" alt="" class="h-12 w-auto">
                     <span class="text-2xl font-bold text-white hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li class="relative group">
+                    <a href="safety-video-analytics/safety-video-analytics.html" class="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                    <ul class="absolute hidden group-hover:block bg-[#1A1A22] text-gray-300 rounded-md shadow-lg py-2 mt-0 top-full w-max">
+                        <li><a href="/pages/safety-video-analytics/ppe-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_ppe_detection.png" alt="PPE icon" class="w-5 h-5 mr-3 rounded-sm">PPE Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/open-edge-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_open_edge_detection.png" alt="Open Edge icon" class="w-5 h-5 mr-3 rounded-sm">Open Edge Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/missing-barricade-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_missing_barricade_detection.png" alt="Missing Barricade icon" class="w-5 h-5 mr-3 rounded-sm">Missing Barricade Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/fall-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_missing_barricade_detection.png" alt="Fall Detection icon" class="w-5 h-5 mr-3 rounded-sm">Fall Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/proximity-detection-warning.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_proximity_detection_warning.png" alt="Proximity icon" class="w-5 h-5 mr-3 rounded-sm">Proximity Detection & Warning</a></li>
+                        <li><a href="/pages/safety-video-analytics/work-under-suspended-load-monitoring.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_word_under_suspended_load_monitoring.png" alt="Suspended Load icon" class="w-5 h-5 mr-3 rounded-sm">Work Under Suspended Load Monitoring</a></li>
+                        <li><a href="/pages/safety-video-analytics/unauthorized-intrusion-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_unauthorized_intrusion_detection.png" alt="Danger Zone icon" class="w-5 h-5 mr-3 rounded-sm">Unauthorized Intrusion/ Danger Zone Entry Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/workforce-heat-maps.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_workforce_heat_maps.png" alt="Workforce Heat Maps icon" class="w-5 h-5 mr-3 rounded-sm">Workforce Heat Maps</a></li>
+                        <li><a href="/pages/safety-video-analytics/perimeter-intrusion-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_perimeter_intrusion_detection.png" alt="Perimeter icon" class="w-5 h-5 mr-3 rounded-sm">Perimeter Intrusion Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/weapon-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_weapon_detection.png" alt="Weapon icon" class="w-5 h-5 mr-3 rounded-sm">Weapon Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/theft-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_theft_detection.png" alt="Theft icon" class="w-5 h-5 mr-3 rounded-sm">Theft Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/loitering-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_loitering_detection.png" alt="Loitering icon" class="w-5 h-5 mr-3 rounded-sm">Loitering Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/fight-and-violence-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_fight_violence_detection.png" alt="Fighting icon" class="w-5 h-5 mr-3 rounded-sm">Fighting & Violence Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/fire-smoke-wildfire-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_fire_smoke_wildfire_detection.png" alt="Fire Smoke icon" class="w-5 h-5 mr-3 rounded-sm">Fire, Smoke & Wildfire Detection</a></li>
+                        <li><a href="/pages/safety-video-analytics/near-miss-detection.html" class="block px-4 py-2 hover:bg-gray-700 flex items-center"><img src="/assets/images/image_near_miss_detection.png" alt="Near Miss icon" class="w-5 h-5 mr-3 rounded-sm">Near Miss Detection</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Qr Code</a></li>
+                <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300">E-Forms</a></li>
+                <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Mixing Control System</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -139,7 +181,7 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="w-full h-auto overflow-hidden shadow-2xl">
-                        <img src="../../assets/images/banner_about_us_image.jpg" alt="Hình ảnh về công ty"
+                        <img src="/assets/images/banner_about_us_image.jpg" alt="Hình ảnh về công ty"
                             class="w-full h-auto max-w-96 rounded-3xl">
                     </div>
                 </div>
@@ -198,7 +240,7 @@
                     <p class="text-gray-400 mt-2">Hệ thống kiểm soát và tự động hóa quy trình pha chế si-rô.</p>
                 </a>
                 <!-- Module: Safety Video Analytics -->
-                <a href="safety-video-analytics/open-edge-detections.html" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                <a href="safety-video-analytics/safety-video-analytics.html" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
                     <div class="mb-4">
                         <svg class="w-20 h-20 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +253,7 @@
                     <p class="text-gray-400 mt-2">Phân tích video tự động để giám sát và đảm bảo an toàn lao động.</p>
                 </a>
                 <!-- Module: About Quốc Việt -->
-                <a href="#" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
+                <a href="safety-video-analytics/ppe-detection.html" class="card-module p-8 rounded-3xl flex flex-col items-center text-center shadow-xl">
                     <div class="mb-4">
                         <svg class="w-20 h-20 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -245,7 +287,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                  <div class="flex items-center space-x-2 mb-4">
-                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <img src="/assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
                     <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
                 </div>
                 <p class="text-gray-500 max-w-2xl">

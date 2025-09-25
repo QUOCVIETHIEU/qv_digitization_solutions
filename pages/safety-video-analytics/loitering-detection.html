@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loitering Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            color: #E2E8F0;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle-blur {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4F46E5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6D28D9;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-4">
+                <a href="javascript:history.back()"
+                    class="text-gray-300 hover:text-white transition-colors duration-300"
+                    aria-label="Quay lại trang trước">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <img src="/assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold text-white hidden md:block">Safety Camera AI</span>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24 relative overflow-hidden">
+        <div class="circle-blur top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
+
+        <!-- Hero Section -->
+        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+                Giải pháp Phát Hiện Lảng Vảng
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
+                style="animation-delay: 0.2s;">
+                viAct AI-powered Loitering Detection: Giám sát Chủ động Hành vi Nán lại Đáng ngờ trên Công trường với
+                Phát Hiện Lảng Vảng được Hỗ trợ bởi AI. Giải pháp chuyển đổi CCTV hiện có của bạn thành công cụ giám sát
+                hành vi 24/7.
+            </p>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="space-y-24">
+                <!-- Section I: What is the solution? -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            I. Giải pháp là gì?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Phát Hiện Lảng Vảng (Loitering Detection) của viAct sử dụng AI video analytics để nhận dạng
+                            sự hiện diện kéo dài, bất thường của con người trong các khu vực có rủi ro cao, nhạy cảm về
+                            mặt vận hành hoặc hạn chế truy cập.
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                            <li>Phát hiện các hành vi lệch khỏi thời gian nán lại bình thường (dwell times).</li>
+                            <li>AI phân biệt một cách thông minh giữa việc chờ đợi chấp nhận được (ví dụ: nhân viên,
+                                khách) và hành vi cho thấy ý định xâm nhập, phá hoại hoặc vượt qua giao thức.</li>
+                            <li>Hệ thống hoạt động hiệu quả ngay cả trong điều kiện tầm nhìn thấp hoặc trong giờ không
+                                hoạt động.</li>
+                        </ul>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-4">
+                            Hành vi lảng vảng này có thể báo hiệu các mối đe dọa an ninh tiềm ẩn, gián đoạn quy trình
+                            làm việc, hoặc các chỉ số sớm về ý định không an toàn, khiến việc phát hiện tự động theo
+                            thời gian thực là điều cần thiết cho phòng ngừa chủ động.
+                        </p>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <img src="/assets/images/image_loitering_detection.png" alt="QV - AI Module"
+                            class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section II: Why is it important? -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        II. Tại sao Phát hiện Lảng Vảng lại quan trọng? (Vấn đề)
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        Trong các nơi làm việc năng động hoặc các khu vực bán công cộng, hành vi lảng vảng có thể có vẻ
+                        vô hại cho đến khi nó leo thang thành vi phạm an ninh, trộm cắp hoặc các cuộc gặp gỡ không an
+                        toàn.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Các Rủi ro Lảng Vảng Phổ biến:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Sự hiện diện kéo dài gần các khu vực điện áp cao, kho chứa hoặc
+                                phòng bảo trì.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Cá nhân nhàn rỗi tại lối thoát hiểm khẩn cấp, hàng rào chu vi hoặc
+                                điểm mù.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Người lạ lảng vảng gần các lối vào kiểm soát truy cập trong giờ
+                                nghỉ.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Pacing lặp đi lặp lại trong khu vực cấm chờ hoặc chỉ dành cho nhân
+                                viên.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Sự hình thành đám đông hoặc công nhân nhàn rỗi gần các mối nguy
+                                hiểm vận hành hoặc làn xe.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Các đội an ninh bỏ lỡ tín hiệu trong quá trình quá tải camera hoặc
+                                luân chuyển nhân viên.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section III: Application Areas -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Lảng vảng không chỉ là vấn đề an ninh công cộng; nó là một rủi ro vận hành ở bất cứ đâu có
+                            người và tài sản quan trọng cùng tồn tại.
+                        </p>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Công trường Xây dựng:</strong> Công nhân hoặc người ngoài
+                                    nán lại gần kho công cụ, giàn giáo, hoặc chu vi tạm thời có thể chỉ ra các vi phạm
+                                    quy tắc.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Nhà máy Dầu khí & Lọc dầu:</strong> Lảng vảng gần hành
+                                    lang ống dẫn, bến bốc dỡ hoặc nhà kiểm soát có thể nhanh chóng leo thang thành vi
+                                    phạm an toàn hoặc an ninh. Hữu ích trong giờ hoạt động thấp.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Kho hàng & Logistics:</strong> Nán lại bất thường gần
+                                    cổng giao hàng, khu vực hàng tồn kho giá trị cao hoặc lối thoát hiểm khẩn cấp có thể
+                                    dẫn đến trộm cắp hoặc gián đoạn.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Đơn vị Sản xuất & Sàn Sản xuất:</strong> Hành vi nhàn rỗi
+                                    gần các khu vực quy trình hạn chế, cánh tay robot hoặc máy móc tiêu thụ điện năng có
+                                    thể chỉ ra vi phạm an toàn.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Sân bay & Trạm Quá cảnh:</strong> AI phân biệt việc chờ
+                                    đợi tự nhiên với các mối đe dọa tiềm ẩn, cho phép các đội an ninh hành động sớm.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=Loitering+Detection+Areas"
+                            alt="Loitering Detection Areas" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section IV: How it Works -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            IV. Cách Thức Hoạt động (Computer Vision)
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Giải pháp Loitering Detection sử dụng video analytics của viAct, tận dụng cơ sở hạ tầng
+                            camera hiện có.
+                        </p>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
+                                <div>
+                                    <strong class="text-white">Chọn (Choose):</strong> Các đội an toàn kích hoạt mô-đun
+                                    “Loitering Detection” từ viHUB – nền tảng AI cung cấp hơn 100 mô-đun video
+                                    analytics.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
+                                <div>
+                                    <strong class="text-white">Kết nối (Connect):</strong> AI kết nối với hệ thống IP
+                                    hoặc CCTV hiện có qua RTSP.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
+                                <div>
+                                    <strong class="text-white">Ghi nhận (Capture):</strong> Hệ thống liên tục phân tích
+                                    nguồn cấp video trực tiếp, tự động gắn cờ hành vi liên quan đến lảng vảng dựa trên
+                                    các chỉ số như: cá nhân vượt quá ngưỡng thời gian nán lại đã đặt; các mẫu đáng ngờ
+                                    như đi vòng quanh hoặc đứng ở một vị trí; sự hiện diện tĩnh gần các khu vực rủi ro
+                                    cao hoặc cơ sở hạ tầng nhạy cảm.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
+                                <div>
+                                    <strong class="text-white">Kiểm soát (Control):</strong> Khi phát hiện, hệ thống gửi
+                                    cảnh báo tức thì: tại chỗ (còi báo động, đèn) và từ xa (ứng dụng di động, SMS, bảng
+                                    điều khiển). Kèm theo bằng chứng hình ảnh có dấu thời gian.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=Loitering+Detection+Workflow"
+                            alt="Loitering Detection Workflow" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section V: Impact and Key Benefits -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        V. Tác động và Lợi ích Chính
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        viAct AI mang lại trí thông minh hành vi được điều chỉnh cho các môi trường công nghiệp rủi ro
+                        cao.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự chậm trễ Phản hồi</h3>
+                            <p class="text-gray-400">Cắt giảm độ trễ phản hồi sự cố 60% bằng cảnh báo thời gian thực.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tối ưu hóa Giám sát</h3>
+                            <p class="text-gray-400">Giảm 54% thời gian dành cho giám sát camera trực tiếp, cho phép các
+                                đội tập trung vào các nhiệm vụ có giá trị cao hơn.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Cải thiện Độ chính xác</h3>
+                            <p class="text-gray-400">Cải thiện độ chính xác phát hiện 85% theo thời gian với ít cảnh báo
+                                sai hơn.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Chi phí Vận hành</h3>
+                            <p class="text-gray-400">Giảm tuần tra thủ công và chi phí làm thêm giờ hơn 35%.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Cải thiện Nhận thức Hành vi</h3>
+                            <p class="text-gray-400">Tăng cường nhận thức hành vi giai đoạn đầu với các thúc đẩy do AI
+                                kích hoạt hiệu quả hơn 3 lần.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tương thích Rộng rãi</h3>
+                            <p class="text-gray-400">Dễ dàng tích hợp với CCTV hiện có và các thiết lập kiểm soát truy
+                                cập. Triển khai 98% mà không cần phần cứng bổ sung.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng cường Báo cáo</h3>
+                            <p class="text-gray-400">Tăng cường độ chính xác báo cáo 45%, giúp giảm thiểu rủi ro trách
+                                nhiệm pháp lý và tăng tốc các cuộc điều tra an toàn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section VI: Case Study -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        VI. Case Study: Nhà sản xuất Thụy Điển Ngăn chặn 80+ Rủi ro Lảng Vảng
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        **Ngành:** Sản xuất (Manufacturing). **Địa điểm:** Thụy Điển (Sweden, Europe).
+                    </p>
+                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                        <p class="text-gray-300 text-lg mb-4">
+                            **Vấn đề:** Nhà máy thường xuyên xảy ra các sự cố lảng vảng trái phép gần bến bốc dỡ, lối
+                            thoát hiểm và các điểm vào phía sau. Những điểm mù bị bỏ qua này đặt ra rủi ro về xâm nhập,
+                            phá hoại và giả mạo hàng tồn kho.
+                        </p>
+                        <p class="text-gray-300 text-lg">
+                            **Giải pháp của viAct:** Tích hợp mô-đun Phát hiện Lảng Vảng vào mạng lưới camera hiện có để
+                            liên tục giám sát hành vi theo thời gian thực.
+                        </p>
+                        <p class="text-gray-300 text-lg mt-4">
+                            **Tác động của viAct:** Trong vòng 3 tháng, hơn **80** sự cố lảng vảng đã được gắn cờ sớm.
+                            Tốc độ phản ứng được cải thiện **59%** nhờ cảnh báo do AI điều khiển.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Call to Action -->
+                <div class="text-center py-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">
+                        Đừng để hành vi lảng vảng biến thành vi phạm an ninh.
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                        Khám phá cách viAct Loitering Detection có thể cải thiện độ chính xác an ninh của bạn tới 85% và
+                        giảm độ trễ phản hồi lên tới 60%.
+                    </p>
+                    <a href="#"
+                        class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                        ĐẶT LỊCH DEMO NGAY HÔM NAY!
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1A1A22] py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-500 max-w-2xl">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
+                    trưởng bền vững.
+                </p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

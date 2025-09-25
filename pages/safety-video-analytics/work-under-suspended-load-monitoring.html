@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Under Suspended Load Monitoring | Quốc Việt Digitization Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            color: #E2E8F0;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle-blur {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4F46E5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6D28D9;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-4">
+                <a href="javascript:history.back()"
+                    class="text-gray-300 hover:text-white transition-colors duration-300"
+                    aria-label="Quay lại trang trước">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <img src="/assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold text-white hidden md:block">AI Camera Solution</span>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24 relative overflow-hidden">
+        <div class="circle-blur top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
+
+        <!-- Hero Section -->
+        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+                Work Under Suspended Load Monitoring
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+                Giải pháp Giám Sát Công Nhân Dưới Tải Trọng Treo (WUSLM)
+            </p>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="space-y-24">
+                <!-- Section: Solution Overview -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            I. Giải pháp là gì?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg">
+                            Giám Sát Công Nhân Dưới Tải Trọng Treo (WUSLM) là một giải pháp an toàn nâng cao dựa trên AI, được thiết kế để phát hiện và ngăn chặn công nhân hoạt động bên dưới thang nâng, cần trục hoặc tải trọng đang hoạt động.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mt-4 text-lg">
+                            Sử dụng công nghệ video analytics độc quyền của viAct, hệ thống liên tục quan sát các đường nâng được chỉ định và các khu vực tải trọng. Hệ thống sẽ kích hoạt cảnh báo tức thì ngay khi phát hiện người lao động đi vào khu vực rủi ro cao (danger zone) bên dưới tải trọng treo.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed mt-4 text-lg">
+                            Giải pháp này giúp giảm sự phụ thuộc vào người cảnh giới thủ công và củng cố các giao thức an toàn như OSHA và DROPS.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/assets/images/image_word_under_suspended_load_monitoring.png" alt="QV - AI Module" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section: Why WUSLM is Important -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        II. Tại sao WUSLM lại quan trọng? (Vấn đề)
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        Worker Under Suspended Loads (WUSL) là một mối nguy hiểm nghiêm trọng nhưng thường bị bỏ qua.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Công nhân đi qua khu vực nâng</h3>
+                            <p class="text-gray-400">Công nhân đứng bên dưới hoặc đi qua các khu vực nâng hạ đang hoạt động.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Khu vực loại trừ không được giám sát</h3>
+                            <p class="text-gray-400">Các khu vực loại trừ xung quanh cần trục và tời nâng không được đánh dấu hiệu quả.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Phụ thuộc vào người cảnh giới thủ công</h3>
+                            <p class="text-gray-400">Người cảnh giới có thể bị hạn chế tầm nhìn hoặc phản ứng chậm trễ.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Thiếu nhận thức tình huống</h3>
+                            <p class="text-gray-400">Đặc biệt là trong thời gian thay đổi ca hoặc ở các khu vực chật chội.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Không có cảnh báo theo thời gian thực</h3>
+                            <p class="text-gray-400">Khi nhân viên đi vào vùng nguy hiểm, không có cảnh báo ngay lập tức.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Application Areas -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            III. Ứng dụng Giải pháp WUSLM Cần thiết nhất ở đâu?
+                        </h2>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Công trường Xây dựng:</strong> Giám sát các hoạt động nâng cần trục, tời nâng và lồng thép.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Sàn Sản xuất & Kho hàng:</strong> Nâng vật liệu trên cao xảy ra đồng thời với chuyển động của con người.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Giàn khoan & Nhà máy Lọc dầu:</strong> Nâng vỏ bọc, ống đứng và mô-đun nặng qua các lối đi chật hẹp.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Hoạt động Khai thác mỏ:</strong> Nâng các bộ phận lớn trong quá trình bảo trì thiết bị, thường ở những khu vực chật chội hoặc tầm nhìn thấp.
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Cảng:</strong> Container lớn được nâng thường xuyên trên boong và khu vực bến tàu, nơi công nhân thường hoạt động ở gần khu vực nâng.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://viact.ai/wp-content/uploads/2021/08/WUSLM-Application-Area.png" alt="WUSLM Application Area" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section: How it Works -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            IV. Cách Thức Hoạt động WUSLM
+                        </h2>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
+                                <div>
+                                    <strong class="text-white">Chọn:</strong> Chọn mô-đun “Worker Under Suspended Load Monitoring” từ viHUB.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
+                                <div>
+                                    <strong class="text-white">Kết nối:</strong> AI kết nối trực tiếp với hệ thống CCTV hoặc camera IP hiện có của bạn.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
+                                <div>
+                                    <strong class="text-white">Ghi nhận:</strong> Hệ thống liên tục theo dõi các khu vực nâng hạ chính 24/7.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
+                                <div>
+                                    <strong class="text-white">Kiểm soát:</strong> Khi phát hiện vi phạm, hệ thống kích hoạt cảnh báo tức thì.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://viact.ai/wp-content/uploads/2021/08/viAct-AI-powered-WUSLM-2.png" alt="WUSLM workflow" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section: Impact -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        V. Tác động và Lợi ích Chính
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        viAct AI-powered WUSLM mang lại những cải tiến có thể đo lường được trong quản lý rủi ro và hiệu quả hoạt động:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Suýt xảy ra</h3>
+                            <p class="text-gray-400">Giảm 70% các vụ suýt xảy ra dưới tải trọng treo.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Xâm nhập Trái phép</h3>
+                            <p class="text-gray-400">Giảm 59% số lần xâm nhập trái phép dưới cần trục.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Nâng cao Hiệu quả Vận hành</h3>
+                            <p class="text-gray-400">Thời gian dọn dẹp khu vực nâng cần trục được cải thiện 42%.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Dự đoán Rủi ro</h3>
+                            <p class="text-gray-400">Dự đoán nguy cơ vật thể rơi chính xác hơn 2 lần.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tốc độ Điều tra Sự cố</h3>
+                            <p class="text-gray-400">Hiệu quả phân tích sau sự cố cải thiện 4 lần với bằng chứng video.</p>
+                        </div>
+                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Nhận dạng Người Tái phạm</h3>
+                            <p class="text-gray-400">Xác định những người tái phạm nhanh hơn 3 lần.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Case Study -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        VI. Case Study: Giảm 82% Nguy cơ Nâng Hạ
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        **Ngành:** Sản xuất (Heavy equipment manufacturing plant). **Địa điểm:** Hoa Kỳ (USA).
+                    </p>
+                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                        <p class="text-gray-300 text-lg mb-4">
+                            **Vấn đề:** Nhà máy gặp các sự cố suýt xảy ra lặp lại do công nhân bước vào khu vực nâng đang hoạt động trong khi tải trọng treo lơ lửng, vi phạm quy tắc an toàn OSHA và DROPS.
+                        </p>
+                        <p class="text-gray-300 text-lg">
+                            **Tác động của viAct:** Đã đạt mức giảm **82%** số lần xâm nhập không an toàn dưới tải trọng treo trong vòng ba tháng.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center py-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">
+                         Bảo Vệ An Toàn Cho Từng Dây Nâng
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                        Đừng để sự bất cẩn trở thành thảm kịch. Hãy trang bị cho công trường của bạn một giải pháp thông minh để bảo vệ từng công nhân. Với WUSLM, chúng tôi biến rủi ro thành sự an toàn và những sự cố suýt xảy ra trở thành quá khứ.
+                    </p>
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                        YÊU CẦU DEMO NGAY HÔM NAY
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1A1A22] py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-500 max-w-2xl">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
+                    trưởng bền vững.
+                </p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

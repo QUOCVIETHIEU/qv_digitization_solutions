@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            color: #E2E8F0;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .circle-blur {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0F;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4F46E5;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #6D28D9;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-4">
+                <a href="javascript:history.back()"
+                    class="text-gray-300 hover:text-white transition-colors duration-300"
+                    aria-label="Quay lại trang trước">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <img src="/assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold text-white hidden md:block">Safety Camera AI</span>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                </li>
+                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24 relative overflow-hidden">
+        <div class="circle-blur top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
+
+        <!-- Hero Section -->
+        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+                Giải pháp Phát Hiện Ngã (Fall Detection)
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+                viAct AI-powered Fall Detection: Phòng ngừa thảm họa rơi ngã từ độ cao (FFH) – Tự động nhận diện sự cố thay đổi tư thế đột ngột hoặc sụp đổ (collapse) của công nhân, chuyển đổi CCTV thành hệ thống bảo vệ sinh mạng 24/7.
+            </p>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="space-y-24">
+                <!-- Section I: What is the solution? -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            I. Giải pháp là gì?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Phát Hiện Ngã (Fall Detection) là một mô-đun an toàn tiên tiến sử dụng Computer Vision và video analytics AI để giám sát các hoạt động trên cao.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-white mt-4 mb-2">Giải pháp này được thiết kế để:</h3>
+                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                            <li>Nhận diện sự thay đổi tư thế đột ngột hoặc sụp đổ của công nhân, cho phép phản ứng nhanh chóng trong các môi trường rủi ro cao như nhà máy lọc dầu, mỏ, và công trường xây dựng.</li>
+                            <li>Nó nằm trong viHUB – thư viện hơn 100 mô-đun AI video analytics của viAct.</li>
+                            <li>Giải pháp này nhằm mục tiêu giảm thương tích liên quan đến làm việc trên cao bằng cách đưa ra các cảnh báo tức thời về các tình huống không an toàn.</li>
+                            <li>Hệ thống video analytics mạnh mẽ này có khả năng phát hiện ngay cả các sự cố suýt xảy ra (near misses), chẳng hạn như công nhân bị vấp và suýt ngã nhưng đã kịp lấy lại thăng bằng.</li>
+                        </ul>
+                    </div>
+                     <div class="md:w-1/2">
+                        <img src="/assets/images/image_fall_detection.png" alt="QV - AI Module" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section II: Why is it important? -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        II. Tại sao Phát hiện Ngã lại quan trọng? (Vấn đề)
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        Tai nạn làm việc trên cao vẫn là một trong những nguyên nhân hàng đầu gây tử vong trong ngành công nghiệp nặng, đòi hỏi các giải pháp ngăn ngừa chủ động:
+                    </p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Mức độ Nghiêm trọng của Rủi ro (Work at Height):</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Tai nạn khi làm việc trên cao vẫn là nguyên nhân phổ biến thứ hai gây tử vong liên quan đến thương tích trong xây dựng.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Ngã từ độ cao (Fall-from-Height - FFH) là nguyên nhân chính gây tử vong trong số tất cả các sự cố làm việc trên cao.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <p class="text-gray-400">Các đội ngũ EHS cần thông tin để ngăn chặn các sự cố trước khi chúng xảy ra.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                        Bằng cách sử dụng AI video analytics, việc giảm thiểu thương tích khi làm việc trên cao sẽ xảy ra một cách chủ động với các cảnh báo tức thời khi phát hiện dù là sự cố suýt xảy ra nhỏ nhất trước khi nó trở thành tai nạn.
+                    </p>
+                </div>
+
+                <!-- Section III: Application Areas -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Giải pháp Phát Hiện Ngã và An toàn Làm việc trên cao của viAct được thiết kế cho các khu vực có độ cao, nơi rủi ro FFH là không thể tránh khỏi:
+                        </p>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Công trường Xây dựng:</strong> Theo dõi giàn giáo, mái nhà, và các khu vực tầng chưa hoàn thiện. Phát hiện nhân viên ở gần các cạnh mở (Open Edge) hoặc sử dụng phương tiện leo trèo không đúng quy định.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Nhà máy Lọc dầu & Mỏ:</strong> Giám sát các khu vực nguy hiểm, nơi sự cố trượt chân hoặc ngã có thể dẫn đến hậu quả thảm khốc.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Nhà máy & Kho hàng:</strong> Giám sát các khu vực sàn nâng, đường dốc, lối đi trên cao (catwalks) hoặc khu vực máy móc có quy trình nhạy cảm.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">An toàn Cụ thể:</strong> Phát hiện công nhân không/sử dụng dây an toàn và PPE không đúng cách khi làm việc trên cao.
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Thiết bị Đặc biệt:</strong> Giám sát chuyển động nghiêng của Gondola để ngăn ngừa rơi do mất thăng bằng.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://viact.ai/wp-content/uploads/2021/08/WUSLM-Application-Area.png" alt="Fall Detection Application Areas" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section IV: How it Works -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4 text-gradient">
+                            IV. Cách Thức Hoạt động (Computer Vision)
+                        </h2>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                            Giải pháp của viAct chuyển đổi CCTV hiện có thành một hệ thống bảo vệ chủ động, tập trung vào các hành vi nguy hiểm liên quan đến độ cao.
+                        </p>
+                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
+                                <div>
+                                    <strong class="text-white">Ghi nhận (Capture):</strong> Sử dụng các camera có sẵn của bạn. AI có thể tích hợp liền mạch với cơ sở hạ tầng CCTV hoặc IP camera hiện có thông qua RTSP. Không cần thêm thiết bị cảm biến.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
+                                <div>
+                                    <strong class="text-white">Xử lý (Process):</strong> AI Computer Vision của viAct xử lý các luồng video trực tiếp để nhận diện các dấu hiệu rủi ro, bao gồm sự thay đổi tư thế đột ngột hoặc nguy cơ bị vấp/trượt chân.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
+                                <div>
+                                    <strong class="text-white">Giám sát (Monitor):</strong> Giám sát thông qua đám mây (cloud) hoặc biên (edge). Hệ thống tạo cảnh báo tức thời khi phát hiện công nhân ở gần các khu vực nguy hiểm hoặc khi phát hiện ngã.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://viact.ai/wp-content/uploads/2021/08/viAct-AI-powered-WUSLM-2.png" alt="Fall Detection Workflow" class="w-full h-auto rounded-xl shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Section V: Impact and Key Benefits -->
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4 text-gradient">
+                        V. Tác động và Lợi ích Chính (Phòng ngừa FFH)
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                        AI của viAct cung cấp các kết quả có thể đo lường được trong việc giảm thiểu rủi ro té ngã và nâng cao hiệu suất an toàn:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Tiết kiệm Chi phí</h3>
+                            <p class="text-gray-400">Tiết kiệm 90% trong kiểm tra thủ công.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Nghiêm trọng</h3>
+                            <p class="text-gray-400">Giảm 95% các sự cố trượt chân và vấp ngã nguy hiểm.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Suýt xảy ra</h3>
+                            <p class="text-gray-400">Giảm 80% các sự cố suýt ngã/trượt chân.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Vi phạm Cạnh Mở</h3>
+                            <p class="text-gray-400">Giảm 76% các sự cố suýt xảy ra liên quan đến cạnh.</p>
+                        </div>
+                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Thời gian Phản hồi</h3>
+                            <p class="text-gray-400">Giảm 68% thời gian phản hồi an toàn, vì cảnh báo được kích hoạt ngay khi phát hiện sự gần gũi không an toàn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center py-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">
+                        Đừng để tai nạn ngã từ độ cao trở thành mối đe dọa dai dẳng đối với công nhân của bạn.
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                        Bắt đầu bản dùng thử 14 ngày miễn phí Hệ thống An toàn Làm việc trên cao (Fall Protection System) của viAct để biến CCTV của bạn thành công cụ ngăn ngừa tai nạn chủ động.
+                    </p>
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                        Yêu cầu Bản Demo Ngay Hôm Nay!
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#1A1A22] py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-500 max-w-2xl">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
+                    trưởng bền vững.
+                </p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
+                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
