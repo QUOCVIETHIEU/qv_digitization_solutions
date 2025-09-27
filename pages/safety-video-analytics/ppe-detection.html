@@ -82,7 +82,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background-color: #6D28D9;
         }
-
     </style>
 </head>
 
@@ -119,15 +118,15 @@
 
         <!-- Hero Section -->
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+            <img src="/assets/icons/icon_ppe_detector.png" alt="Open Edge Detection Icon"
+                class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
             <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
-                Giải pháp Phát Hiện Thiết Bị Bảo Hộ Cá Nhân (PPE Detection)
+                Phát Hiện Thiết Bị Bảo Hộ Cá Nhân<br>(PPE Detection)
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
                 style="animation-delay: 0.2s;">
-                viAct AI-powered PPE Detection: Giám Sát PPE Tự Động Đầu Ngành, được Hỗ trợ bởi AI Video Analytics. Giải
-                pháp chuyển đổi Camera CCTV/IP hiện có thành hệ thống giám sát an toàn thông minh, phát hiện khi PPE
-                không được sử dụng hoặc được sử dụng không đúng cách và cảnh báo ngay lập tức.
-            </p>
+                Giám sát an toàn lao động thông minh, AI nhận diện PPE theo thời gian thực.<br>Giải pháp AI biến camera
+                thường thành trợ lý an toàn, phát hiện PPE sai hoặc thiếu ngay lập tức.</p>
         </section>
 
         <!-- Content Sections -->
@@ -140,27 +139,33 @@
                             I. Giải pháp là gì?
                         </h2>
                         <p class="text-gray-300 leading-relaxed text-lg mb-4">
-                            Hệ thống Giám sát PPE được Hỗ trợ bởi AI (AI-Powered PPE Monitoring System) là một công cụ
-                            dựa trên AI phân tích nguồn cấp dữ liệu video theo thời gian thực để phát hiện xem công nhân
-                            có đang đeo các PPE cần thiết như mũ bảo hộ, áo phản quang, găng tay và mặt nạ hay không.
+                            Hệ thống giám sát PPE là một trong các giải pháp về AI Camera của Quốc Việt. Ở Module PPE
+                            này chúng tôi đã đào tạo và giám sát AI trên một tệp dữ liệu lớn về các thiết bị bảo hộ lao
+                            động
+                            ở Việt Nam. Đây là một công cụ dựa trên AI, phân tích nguồn cấp dữ liệu video theo thời gian
+                            thực (RTSP)
+                            để phát hiện xem công nhân có đang mang các đồ bảo hộ cần thiết như mũ bảo hộ, áo phản quang,
+                            găng tay và mặt nạ đúng yêu cầu tại khu vực làm việc hay không.
                         </p>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-4 font-bold">Các chế độ giám sát bao gồm:</p>
                         <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
-                            <li>Giải pháp này sử dụng Computer Vision và AI để theo dõi liên tục:</li>
+
                             <li><strong class="text-white">Phát hiện Không tuân thủ:</strong> Xác định khi không có
                                 thiết bị bảo hộ cần thiết.</li>
                             <li><strong class="text-white">Phát hiện Sử dụng Sai cách:</strong> Nhận diện khi PPE được
                                 sử dụng không đúng quy cách.</li>
                         </ul>
-                        <p class="text-gray-300 leading-relaxed text-lg mt-4 font-bold">Giải pháp PPE Detection bao gồm
-                            giám sát từ đầu đến chân, bao gồm:</p>
+                        <p class="text-gray-300 leading-relaxed text-lg mt-4 font-bold">Các đồ bảo hộ cá nhân có thể
+                            giám sát bao gồm:</p>
                         <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
-                            <li>Mũ Bảo Hộ/Mũ An Toàn (Hard Hat/Safety Helmet Detection)</li>
-                            <li>Găng Tay (Glove Detection)</li>
-                            <li>Áo Phản Quang/Áo Hi-Vis (Safety Reflective Vest Detection/Hi-Vis Detection)</li>
-                            <li>Dây An Toàn & Dây buộc (Safety Harness & Lanyard Detection)</li>
-                            <li>Bảo vệ Mắt/Kính Bảo Hộ (Eye Protection/Goggles Detection)</li>
-                            <li>Thiết bị Bảo vệ Hô hấp (RPE) (RPE Detection)</li>
-                            <li>Giày Bảo Hộ/Giày An Toàn (Protective Footwear/Safety Shoes Detection)</li>
+                            <li>Mũ Bảo Hộ (Helmet)</li>
+                            <li>Găng Tay (Glove)</li>
+                            <li>Áo Phản Quang (Safety Reflective Vest)</li>
+                            <li>Dây An Toàn (Safety Harness)</li>
+                            <li>Kính Bảo Hộ (Goggles)</li>
+                            <li>Thiết bị Bảo vệ Hô hấp (RPE)</li>
+                            <li>Giày Bảo Hộ (Safety Shoes)</li>
+                            <li>Có thể cấu hình riêng cho từng nhà máy, khu vực giám sát.</li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
@@ -172,43 +177,48 @@
                 <!-- Section II: Why is it important? -->
                 <div class="text-center">
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
-                        II. Tại sao Phát hiện PPE lại quan trọng? (Vấn đề)
+                        II. Vấn đề: Tại sao phát hiện PPE lại quan trọng?
                     </h2>
                     <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
-                        Việc phát hiện PPE chủ động là một nhu cầu thiết yếu đối với môi trường làm việc không gây hại
-                        (zero-harm workplace).
+                        Việc phát hiện PPE chủ động là một nhu cầu thiết yếu đối với môi trường làm việc an toàn không gây nguy hại (zero-harm workplace).
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Rủi ro của việc không tuân thủ PPE:</h3>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Rủi ro của việc không tuân thủ mang đồ bảo hộ (PPE)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h4 class="text-xl font-bold text-white mb-2">Nguy cơ Gây thương tích</h4>
-                            <p class="text-gray-400">Khảo sát các nhà quản lý HSE cho thấy công nhân xây dựng không có
-                                PPE có nguy cơ bị thương gấp ba lần so với những người đeo đồ bảo hộ thích hợp.</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Nguy Cơ Gây Thương Tích</h4>
+                            <p class="text-gray-400">Khảo sát cho thấy công nhân không mang PPE có nguy cơ bị thương cao gấp 3 lần so với những người được trang bị đầy đủ và đúng chuẩn.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h4 class="text-xl font-bold text-white mb-2">Sự cố Nghiêm trọng</h4>
-                            <p class="text-gray-400">Các sai sót nhỏ trong việc sử dụng PPE thường xảy ra trước các sự
-                                kiện nghiêm trọng—việc giải quyết chúng một cách chủ động sẽ giảm thiểu rủi ro tổng hợp.
+                            <h4 class="text-xl font-bold text-white mb-2">Sự Cố Nghiêm Trọng</h4>
+                            <p class="text-gray-400">Những sai sót nhỏ trong việc sử dụng PPE có thể dẫn đến tai nạn nghiêm trọng, ảnh hưởng trực tiếp đến tính mạng và tài sản của nhân viên.
                             </p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h4 class="text-xl font-bold text-white mb-2">Chi phí Tăng cao</h4>
-                            <p class="text-gray-400">Mọi sự không tuân thủ PPE đều làm tăng chi phí dài hạn thông qua sự
-                                gián đoạn, yêu cầu bồi thường và phí bảo hiểm.</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Chi Phí Tăng Cao</h4>
+                            <p class="text-gray-400">Vi phạm PPE kéo theo chi phí khổng lồ từ gián đoạn sản xuất, bồi thường tai nạn, bảo hiểm và các khoản chi phát sinh không mong muốn.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h4 class="text-xl font-bold text-white mb-2">Văn hóa An toàn</h4>
-                            <p class="text-gray-400">Sự tuân thủ PPE nhất quán mang lại nhận thức có ảnh hưởng giữa các
-                                cơ quan quản lý, khách hàng và lực lượng lao động.</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Văn Hóa An Toàn</h4>
+                            <p class="text-gray-400">Tuân thủ PPE nhất quán giúp xây dựng hình ảnh chuyên nghiệp, nâng cao niềm tin với khách hàng, quản lý và toàn bộ lực lượng lao động.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-semibold text-white mb-2">Gián Đoạn Vận Hành</h4>
+                            <p class="text-gray-400">Sự cố PPE buộc dừng công việc, điều tra, đào tạo lại, gây chậm tiến độ dự án và tổn thất năng suất.</p>
+                        </div>
+                        <div
+                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            <h4 class="text-xl font-semibold text-white mb-2">Rủi Ro Pháp Lý & Tiền Phạt</h4>
+                            <p class="text-gray-400">Không tuân thủ quy định an toàn quốc gia (như OSHA) có thể dẫn đến phạt nặng, kiện tụng và ảnh hưởng tiêu cực đến danh tiếng của doanh nghiệp.
+                            </p>
                         </div>
                     </div>
                     <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
-                        Hệ thống AI này thay thế việc kiểm tra an toàn thủ công, giảm thiểu lỗi do con người và đảm bảo
-                        mọi công nhân đều được giám sát liên tục.
+                        AI giám sát PPE - phát hiện, cảnh báo, bảo vệ an toàn mọi lúc.
                     </p>
                 </div>
 
@@ -216,61 +226,53 @@
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2">
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
-                            III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
+                            III. Giải pháp được ứng dụng ở đâu?
                         </h2>
                         <p class="text-gray-300 leading-relaxed text-lg mb-4">
-                            Giải pháp PPE Monitoring lý tưởng cho các ngành công nghiệp mà việc tuân thủ là rất quan
-                            trọng để giảm thiểu tai nạn, đặc biệt là:
+                            Giải pháp PPE Monitoring là lựa chọn lý tưởng cho nhiều ngành công nghiệp đòi hỏi an toàn lao động tuyệt đối và giảm thiểu tai nạn, tiêu biểu như:
                         </p>
                         <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Xây dựng:</strong> Giám sát mũ bảo hộ, áo phản quang và
-                                    ủng an toàn để ngăn ngừa chấn thương do vật rơi, trượt chân và máy móc.
+                                    <strong class="text-white">Xây dựng (Construction):</strong> Giám sát mũ bảo hộ, áo phản quang, ủng an toàn nhằm ngăn ngừa chấn thương do vật rơi, trượt ngã hoặc va chạm máy móc.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Dầu khí (Oil & Gas):</strong> Xác minh việc sử dụng quần
-                                    áo chống cháy (FRC), máy dò khí, mũ bảo hộ và găng tay để ngăn ngừa bỏng, nổ và tiếp
-                                    xúc với khí độc.
+                                    <strong class="text-white">Dầu khí (Oil & Gas):</strong> Kiểm soát việc mặc quần áo chống cháy (FRC), đeo mũ bảo hộ, găng tay, bảo vệ khỏi bỏng, nổ và tiếp xúc khí độc.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Khai thác mỏ (Mining):</strong> Giám sát mũ bảo hộ, quần
-                                    áo có độ hiển thị cao, mặt nạ phòng độc và kính bảo hộ.
+                                    <strong class="text-white">Khai thác mỏ (Mining):</strong> Giám sát quần áo phản quang, mũ bảo hộ, mặt nạ phòng độc, kính bảo hộ giúp bảo vệ trong môi trường nguy hiểm và thiếu ánh sáng.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Sản xuất (Manufacturing):</strong> Đảm bảo sử dụng kính
-                                    bảo hộ, găng tay, mũ bảo hộ (ánh xạ màu tự động) và bảo vệ tai.
+                                    <strong class="text-white">Sản xuất (Manufacturing):</strong> Đảm bảo người lao động luôn đeo kính bảo hộ, găng tay, mũ bảo hộ (tích hợp cảm biến/ảnh xạ màu) và bảo vệ thính giác.
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <div>
+                                    <strong class="text-white">Logistics & Kho hàng:</strong> Theo dõi việc sử dụng áo phản quang, ủng mũi thép, găng tay, giảm thiểu tai nạn trong quá trình nâng hạ, vận hành xe nâng và xử lý hàng nặng.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Logistics & Kho hàng:</strong> Đảm bảo đeo áo phản quang,
-                                    ủng có mũi thép và găng tay để giảm thiểu tai nạn trong quá trình vận hành xe nâng
-                                    và nâng vật nặng.
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
-                                <div>
-                                    <strong class="text-white">Hóa chất:</strong> Giám sát tuân thủ PPE, khu vực tràn
-                                    hóa chất và khu vực xử lý hạn chế.
+                                    <strong class="text-white">Hóa chất:</strong> Giám sát tuân thủ PPE trong khu vực tràn đổ hóa chất, khu xử lý nguy hại, bảo vệ an toàn trước rủi ro tiếp xúc chất độc hại.
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=PPE+Detection+Areas"
+                        <img src="/assets/images/image_ppe_detection_ereas.png"
                             alt="PPE Detection Areas" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
