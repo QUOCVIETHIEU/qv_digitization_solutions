@@ -177,7 +177,7 @@
                 <!-- Section II: Why is it important? -->
                 <div class="text-center">
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
-                        II. Vấn đề: Tại sao phát hiện PPE lại quan trọng?
+                        II. Tại sao phát hiện PPE lại quan trọng?
                     </h2>
                     <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Việc phát hiện PPE chủ động là một nhu cầu thiết yếu đối với môi trường làm việc an toàn không gây nguy hại (zero-harm workplace).
@@ -226,10 +226,10 @@
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2">
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
-                            III. Giải pháp được ứng dụng ở đâu?
+                            III. Được ứng dụng ở đâu?
                         </h2>
                         <p class="text-gray-300 leading-relaxed text-lg mb-4">
-                            Giải pháp PPE Monitoring là lựa chọn lý tưởng cho nhiều ngành công nghiệp đòi hỏi an toàn lao động tuyệt đối và giảm thiểu tai nạn, tiêu biểu như:
+                            Giải pháp PPE Detector là lựa chọn lý tưởng cho nhiều ngành công nghiệp, đòi hỏi an toàn lao động tuyệt đối và giảm thiểu tai nạn, tiêu biểu như:
                         </p>
                         <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
                             <li class="flex items-start">
@@ -266,7 +266,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Hóa chất:</strong> Giám sát tuân thủ PPE trong khu vực tràn đổ hóa chất, khu xử lý nguy hại, bảo vệ an toàn trước rủi ro tiếp xúc chất độc hại.
+                                    <strong class="text-white">Hóa chất:</strong> Giám sát tuân thủ PPE trong khu vực sử dụng hóa chất nguy hại, bảo vệ an toàn trước rủi ro tiếp xúc chất độc hại.
                                 </div>
                             </li>
                         </ul>
@@ -281,10 +281,10 @@
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2">
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
-                            IV. Cách Thức Hoạt động (Computer Vision)
+                            IV. Cách Thức Hoạt động
                         </h2>
                         <p class="text-gray-300 leading-relaxed text-lg mb-4">
-                            Giải pháp AI Camera PPE Detection tự động giám sát an toàn lao động theo thời gian thực, nhận diện tình trạng sử dụng đồ bảo hộ (PPE) và gửi cảnh báo tức thì. Quy trình vận hành qua các khối chức năng chính:
+                            Giải pháp AI Camera - PPE Detection tự động giám sát an toàn lao động theo thời gian thực, nhận diện tình trạng sử dụng đồ bảo hộ (PPE) và gửi cảnh báo tức thì. Quy trình vận hành qua các khối chức năng chính:
                         </p>
                         <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
                             <li class="flex items-start">
@@ -298,7 +298,7 @@
                                 <div>
                                     <strong class="text-white">Phát hiện & phân tích (Detect & Analyze):</strong> 
                                     <ul class="list-disc list-inside mt-1 text-gray-300">
-                                        <li><strong>Pose Detector:</strong> nhận diện hình dáng và tư thế người lao động trong ảnh/video.</li>
+                                        <li><strong>Pose Detector:</strong> nhận diện hình dáng và tư thế người lao động.</li>
                                         <li><strong>PPE Detector:</strong> phân tích từng người để xác định mức độ tuân thủ PPE (mũ bảo hộ, áo phản quang, găng tay, giày an toàn…).</li>
                                     </ul>
 
@@ -314,18 +314,13 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Xử lý thông minh (AI Processor):</strong> 
+                                    <strong class="text-white">Xử lý AI (AI Processor):</strong> 
                                     <ul class="list-disc list-inside mt-1 text-gray-300">
-                                        <li><strong>Body Analyzer</strong> và <strong>Face Recognition:</strong> hỗ trợ xác định cá nhân (nếu được cấu hình) nhưng vẫn tuân thủ bảo mật & ẩn danh dữ liệu.</li>
-                                        <li><strong>Logic Debounce:</strong> lọc bỏ cảnh báo giả, đảm bảo thông tin chính xác.</li>
+                                        <li><strong>Body Analyzer</strong> và <strong>Face Recognition:</strong> xác định lại người thật và khuôn mặt nhân viên vi phạm (nếu có đăng ký).</li>
+                                        <li><strong>Logic Debounce:</strong> lọc bỏ cảnh báo giả, cảnh báo lặp lại.</li>
                                         <li><strong>DB Storage:</strong> lưu trữ thông tin phân tích dài hạn.</li>
+                                        <li><strong>Cảnh báo tức thời:</strong> Sự cố vi phạm PPE được gửi cảnh báo tức thì qua Dashboard, Email, SMS hoặc ứng dụng di động. Người quản lý có thể giám sát, truy vết và xuất báo cáo trực tiếp.</li>
                                     </ul>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">5.</span>
-                                <div>
-                                    <strong class="text-white">Cảnh báo & tích hợp (Alert & Integrate):</strong> Sự cố vi phạm PPE được gửi cảnh báo tức thì qua Dashboard, Email, SMS hoặc ứng dụng di động. Người quản lý có thể giám sát, truy vết và xuất báo cáo trực tiếp.
                                 </div>
                             </li>
                         </ul>
@@ -333,10 +328,9 @@
                             liệu:</p>
                         <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
                             <li><strong class="text-white">Bảo vệ Quyền riêng tư:</strong> Hệ thống tuân thủ GDPR, sử
-                                dụng các kỹ thuật làm mờ tự động để làm mờ khuôn mặt và các yếu tố nhạy cảm (ví dụ: biển
-                                số xe) nhằm đảm bảo danh tính ẩn danh của công nhân và giảm thiểu dữ liệu.</li>
-                            <li><strong class="text-white">Triển khai Linh hoạt:</strong> Hỗ trợ tùy chọn triển khai
-                                Cloud, On-Prem (tại chỗ), hoặc Hybrid.</li>
+                                dụng các kỹ thuật thông minh để làm mờ khuôn mặt và các yếu tố nhạy cảm.</li>
+                            <li><strong class="text-white">Triển khai linh hoạt:</strong> Tùy chọn triển khai
+                                Cloud hoặc On-Prem.</li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
@@ -390,11 +384,11 @@
                 <!-- Call to Action -->
                 <div class="text-center py-12">
                     <h2 class="text-4xl font-bold text-white mb-4">
-                        Hãy đảm bảo tuân thủ PPE 100% - mọi ca làm việc, trên mọi công trường.
+                        Hãy đảm bảo tuân thủ PPE 100%<br>Mọi ca làm việc, trên mọi công trường.
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Khám phá cách Quốc Việt tích hợp một cách liền mạch giải pháp PPE Detection bằng AI với hệ thống CCTV hiện có của bạn để
-                        tự động hóa giám sát an toàn và giảm 92% sự không tuân thủ liên quan đến đồ bảo hộ cá nhân (PPE).
+                        tự động hóa giám sát an toàn và giảm tối đa sự không tuân thủ liên quan đến đồ bảo hộ cá nhân (PPE) của nhân viên.
                     </p>
                     <a href="#"
                         class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
