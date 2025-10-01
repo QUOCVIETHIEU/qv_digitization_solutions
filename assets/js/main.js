@@ -1,4 +1,68 @@
 /**
+ * Hàm routing thông minh - tự động sửa đường dẫn dựa trên vị trí hiện tại
+ */
+function qvSmartRouting() {
+    const currentPath = window.location.pathname;
+    const currentDepth = (currentPath.split('/').length - 2);
+    
+    console.log(`QV Routing: Current path = ${currentPath}, Depth = ${currentDepth}`);
+    
+    // Xác định prefix cần thiết dựa trên độ sâu
+    const getCorrectPath = (originalPath) => {
+        // Nếu đường dẫn đã có prefix pages/ thì bỏ qua
+        if (originalPath.startsWith('pages/')) {
+            const result = currentDepth > 0 ? '../'.repeat(currentDepth) + originalPath : originalPath;
+            console.log(`QV Routing: pages/ prefix detected: ${originalPath} → ${result}`);
+            return result;
+        }
+        
+        // Danh sách các pattern cần thêm pages/ prefix
+        const needsPagesPrefix = [
+            'safety-video-analytics/',
+            'e-forms-report/',
+            'qr-code/', 
+            'syrup-mixing-controls/',
+            'about-us.html'
+        ];
+        
+        // Kiểm tra xem có cần thêm pages/ prefix không
+        const needsPrefix = needsPagesPrefix.some(pattern => originalPath.startsWith(pattern)) ||
+                          originalPath === 'about-us.html';
+        
+        if (needsPrefix) {
+            const fullPath = 'pages/' + originalPath;
+            const result = currentDepth > 0 ? '../'.repeat(currentDepth) + fullPath : fullPath;
+            console.log(`QV Routing: Auto-adding pages/: ${originalPath} → ${result}`);
+            return result;
+        }
+        
+        return originalPath;
+    };
+    
+    // Sửa tất cả các link trong trang
+    document.querySelectorAll('a[href]').forEach(link => {
+        const originalHref = link.getAttribute('href');
+        
+        // Bỏ qua external links và anchors
+        if (originalHref.startsWith('http') || 
+            originalHref.startsWith('#') || 
+            originalHref.startsWith('mailto:') || 
+            originalHref === 'index.html' ||
+            originalHref === '#') {
+            return;
+        }
+        
+        const correctedPath = getCorrectPath(originalHref);
+        if (correctedPath !== originalHref) {
+            console.log(`QV Routing: Link updated: ${originalHref} → ${correctedPath}`);
+            link.setAttribute('href', correctedPath);
+        }
+    });
+    
+    console.log('QV Routing: Completed processing all links');
+}
+
+/**
  * Tự động sửa các đường dẫn tài nguyên (src, href) để chúng hoạt động chính xác
  * trên các trang có độ sâu thư mục khác nhau.
  */
@@ -94,6 +158,7 @@ async function qvLoadIncludes() {
 // Chạy các hàm khi DOM đã sẵn sàng
 document.addEventListener('DOMContentLoaded', () => {
     console.log("QV Scripts Loaded.");
+    qvSmartRouting(); // Chạy routing thông minh trước
     qvLoadIncludes();
     qvFixAssetPaths(); // Chạy hàm sửa đường dẫn cho các asset trên trang chính
 });
