@@ -3,15 +3,25 @@
  */
 function qvSmartRouting() {
     const currentPath = window.location.pathname;
-    const currentDepth = (currentPath.split('/').length - 2);
     
-    console.log(`QV Routing: Current path = ${currentPath}, Depth = ${currentDepth}`);
+    // Xử lý đặc biệt cho GitHub Pages
+    let actualDepth;
+    if (currentPath.includes('/qv_digitization_solutions/')) {
+        // Trên GitHub Pages: /qv_digitization_solutions/ = depth 0 (tương đương root)
+        const pathAfterRepo = currentPath.replace('/qv_digitization_solutions/', '');
+        actualDepth = pathAfterRepo === '' ? 0 : (pathAfterRepo.split('/').length - 1);
+    } else {
+        // Local development
+        actualDepth = (currentPath.split('/').length - 2);
+    }
+    
+    console.log(`QV Routing: Current path = ${currentPath}, Actual Depth = ${actualDepth}`);
     
     // Xác định prefix cần thiết dựa trên độ sâu
     const getCorrectPath = (originalPath) => {
         // Nếu đường dẫn đã có prefix pages/ thì bỏ qua
         if (originalPath.startsWith('pages/')) {
-            const result = currentDepth > 0 ? '../'.repeat(currentDepth) + originalPath : originalPath;
+            const result = actualDepth > 0 ? '../'.repeat(actualDepth) + originalPath : originalPath;
             console.log(`QV Routing: pages/ prefix detected: ${originalPath} → ${result}`);
             return result;
         }
@@ -31,7 +41,7 @@ function qvSmartRouting() {
         
         if (needsPrefix) {
             const fullPath = 'pages/' + originalPath;
-            const result = currentDepth > 0 ? '../'.repeat(currentDepth) + fullPath : fullPath;
+            const result = actualDepth > 0 ? '../'.repeat(actualDepth) + fullPath : fullPath;
             console.log(`QV Routing: Auto-adding pages/: ${originalPath} → ${result}`);
             return result;
         }
@@ -68,10 +78,17 @@ function qvSmartRouting() {
  */
 function qvFixAssetPaths() {
     const path = window.location.pathname;
-    // Đếm số lượng dấu '/' để xác định độ sâu.
-    // Trừ đi 1 vì path thường kết thúc bằng tên file, không phải '/'.
-    // Ví dụ: /pages/foo/bar.html -> ['','pages','foo','bar.html'] -> length 4 -> depth 2
-    const depth = path.split('/').length - 2;
+    
+    // Xử lý đặc biệt cho GitHub Pages
+    let depth;
+    if (path.includes('/qv_digitization_solutions/')) {
+        // Trên GitHub Pages: /qv_digitization_solutions/ = depth 0
+        const pathAfterRepo = path.replace('/qv_digitization_solutions/', '');
+        depth = pathAfterRepo === '' ? 0 : (pathAfterRepo.split('/').length - 1);
+    } else {
+        // Local development
+        depth = path.split('/').length - 2;
+    }
 
     // Nếu trang không nằm trong thư mục con (ví dụ: index.html ở gốc), không cần làm gì.
     if (depth <= 0) return;
