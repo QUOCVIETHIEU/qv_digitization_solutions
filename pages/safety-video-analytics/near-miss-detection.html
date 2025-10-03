@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">Safety Camera AI</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -121,7 +209,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_near_miss_detection.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Suýt xảy ra Tai nạn
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
@@ -138,13 +226,13 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Phát Hiện Suýt xảy ra Tai nạn (Near Miss Detection) là một giải pháp an toàn tiên tiến được hỗ trợ bởi AI, được thiết kế để xác định các tương tác rủi ro cao và các sự kiện cận kề tai nạn theo thời gian thực.
                         </p>
-                        <p class="text-gray-300 leading-relaxed mt-4 text-lg">
+                        <p class="text-gray-600 leading-relaxed mt-4 text-lg">
                             Những khoảnh khắc tinh tế nhưng quan trọng này—như một công nhân suýt va chạm với máy móc đang di chuyển, một người đi bộ bước vào làn đường xe cộ, hoặc phản ứng không an toàn gần thiết bị hạng nặng—thường bị bỏ qua.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 leading-relaxed text-lg">
                             <li>Sử dụng công nghệ video analytics độc quyền của viAct.</li>
                             <li>Tận dụng cơ sở hạ tầng CCTV hoặc IP camera hiện có.</li>
                             <li>Hệ thống liên tục giám sát các khu vực làm việc năng động, phát hiện các mô hình hành vi rủi ro và tạo cảnh báo theo thời gian thực mà không cần dựa vào báo cáo thủ công.</li>
@@ -161,11 +249,11 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao Phát hiện Suýt xảy ra Tai nạn lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Suýt xảy ra tai nạn là những sự cố cận kề nhưng không dẫn đến tai nạn thực tế. Chúng là dấu hiệu cảnh báo sớm nhất về các lỗi an toàn lớn hơn.
                         Trong các ngành công nghiệp rủi ro cao, những sự kiện này thường không được báo cáo do áp lực thời gian, sự bình thường hóa rủi ro, hoặc thiếu công cụ giám sát thích hợp.
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Những Khoảnh khắc Suýt xảy ra Thường bị Bỏ qua:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Những Khoảnh khắc Suýt xảy ra Thường bị Bỏ qua:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                             <p class="text-gray-400">Công nhân suýt tránh va chạm với xe cộ hoặc máy móc đang di chuyển.</p>
@@ -180,7 +268,7 @@
                             <p class="text-gray-400">Tương tác người-máy gần các điểm mù mà không có tín hiệu thích hợp.</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
                         Thách thức: Những sự kiện này dường như nhỏ nhặt, nhưng chúng báo hiệu những mối nguy hiểm tiềm ẩn. viAct AI chuyển đổi CCTV thông thường thành một hệ thống phát hiện thông minh, gắn cờ các hành vi không an toàn ngay khi chúng xảy ra.
                     </p>
                 </div>
@@ -191,38 +279,38 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             AI của viAct diễn giải những khoảnh khắc bị bỏ qua này trên nhiều lĩnh vực, ngăn chặn tác hại nơi mà sự giám sát thủ công không thể theo kịp.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Công trường Xây dựng:</strong> Các điểm nóng cho suýt xảy ra tai nạn: xe ben lùi, cần trục đung đưa, góc khuất, và khu vực vật liệu đông đúc.
+                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> Các điểm nóng cho suýt xảy ra tai nạn: xe ben lùi, cần trục đung đưa, góc khuất, và khu vực vật liệu đông đúc.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Mỏ & Giàn khoan Dầu khí:</strong> Rủi ro do hạn chế không gian nghiêm ngặt. Phát hiện chuyển động không an toàn trong quá trình bảo trì hoặc ngừng hoạt động.
+                                    <strong class="text-gray-900">Mỏ & Giàn khoan Dầu khí:</strong> Rủi ro do hạn chế không gian nghiêm ngặt. Phát hiện chuyển động không an toàn trong quá trình bảo trì hoặc ngừng hoạt động.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Kho hàng & Logistics:</strong> Khu vực vận chuyển có lưu lượng giao thông cao. Rủi ro từ lối đi hẹp, tầm nhìn bị cản trở, sự chồng chéo giữa người và máy móc.
+                                    <strong class="text-gray-900">Kho hàng & Logistics:</strong> Khu vực vận chuyển có lưu lượng giao thông cao. Rủi ro từ lối đi hẹp, tầm nhìn bị cản trở, sự chồng chéo giữa người và máy móc.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Cảng & Xưởng đóng tàu:</strong> Giao thông phức tạp do container lớn, cần cẩu di động, xe nâng container. Công nhân suýt va chạm với tải trọng đu đưa hoặc bước vào đường đi của xe cộ.
+                                    <strong class="text-gray-900">Cảng & Xưởng đóng tàu:</strong> Giao thông phức tạp do container lớn, cần cẩu di động, xe nâng container. Công nhân suýt va chạm với tải trọng đu đưa hoặc bước vào đường đi của xe cộ.
                                 </div>
                             </li>
                              <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Nhà máy Sản xuất:</strong> Dây chuyền lắp ráp tốc độ nhanh, cánh tay robot, hệ thống băng chuyền. Phát hiện công nhân đưa tay vào máy, trượt chân hoặc vượt qua rào chắn an toàn.
+                                    <strong class="text-gray-900">Nhà máy Sản xuất:</strong> Dây chuyền lắp ráp tốc độ nhanh, cánh tay robot, hệ thống băng chuyền. Phát hiện công nhân đưa tay vào máy, trượt chân hoặc vượt qua rào chắn an toàn.
                                 </div>
                             </li>
                         </ul>
@@ -238,32 +326,32 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Giải pháp của viAct giám sát hành vi công nhân, chuyển động của vật thể và khoảng cách không gian bằng các thuật toán tiên tiến.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn (Choose):</strong> Chọn mô-đun "Near Miss Detection" từ viAct viHUB – nơi cung cấp hơn 100 giải pháp video analytics AI.
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun "Near Miss Detection" từ viAct viHUB – nơi cung cấp hơn 100 giải pháp video analytics AI.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối (Connect):</strong> Mô-đun AI tích hợp liền mạch với cơ sở hạ tầng giám sát hiện có của bạn (CCTV hoặc IP camera) qua RTSP.
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun AI tích hợp liền mạch với cơ sở hạ tầng giám sát hiện có của bạn (CCTV hoặc IP camera) qua RTSP.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận (Capture):</strong> AI liên tục phân tích các nguồn cấp video trực tiếp để theo dõi hành vi của công nhân và chuyển động của vật thể. Nó phát hiện: Công nhân suýt tránh máy móc đang di chuyển, Các chuyển động né tránh bất thường, Hành vi bất thường trong khu vực rủi ro cao.
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI liên tục phân tích các nguồn cấp video trực tiếp để theo dõi hành vi của công nhân và chuyển động của vật thể. Nó phát hiện: Công nhân suýt tránh máy móc đang di chuyển, Các chuyển động né tránh bất thường, Hành vi bất thường trong khu vực rủi ro cao.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát (Control):</strong> Khi phát hiện suýt xảy ra tai nạn, hệ thống kích hoạt cảnh báo tức thì: tại chỗ và từ xa. Tất cả các sự kiện được ghi lại trong bảng điều khiển tập trung để phân tích dữ liệu chuyên sâu.
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi phát hiện suýt xảy ra tai nạn, hệ thống kích hoạt cảnh báo tức thì: tại chỗ và từ xa. Tất cả các sự kiện được ghi lại trong bảng điều khiển tập trung để phân tích dữ liệu chuyên sâu.
                                 </div>
                             </li>
                         </ul>
@@ -278,36 +366,36 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính (Phòng ngừa Suýt xảy ra)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         viAct AI giúp các nhóm EHS giảm thiểu sự cố lặp lại và chuẩn hóa hiệu suất an toàn, đặc biệt trong các khu vực tắc nghẽn.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Suýt xảy ra</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Suýt xảy ra</h3>
                             <p class="text-gray-400">62% giảm các sự cố suýt va chạm liên quan đến xe nâng trong ba tháng.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Cải thiện Hiển thị Sự cố</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Hiển thị Sự cố</h3>
                             <p class="text-gray-400">91% các sự cố suýt xảy ra trước đây không được báo cáo; viAct AI đã gắn cờ chúng ngay lập tức.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng Tốc độ Phản hồi</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
                             <p class="text-gray-400">Thời gian phản hồi của giám sát viên giảm 70% nhờ các cảnh báo theo thời gian thực.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Nâng cao Điểm An toàn</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nâng cao Điểm An toàn</h3>
                             <p class="text-gray-400">38% cải thiện điểm an toàn toàn công trường.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Hiệu quả Phân tích Gốc rễ</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Hiệu quả Phân tích Gốc rễ</h3>
                             <p class="text-gray-400">63% phân tích nguyên nhân gốc rễ nhanh hơn, sử dụng các báo cáo xu hướng.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Nâng cao Khả năng Kiểm toán</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nâng cao Khả năng Kiểm toán</h3>
                             <p class="text-gray-400">30% kiểm toán EHS nội bộ nhanh hơn.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Sự cố Xe cộ Lặp lại Giảm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Sự cố Xe cộ Lặp lại Giảm</h3>
                             <p class="text-gray-400">42% giảm vi phạm xe cộ lặp lại sau khi đào tạo mục tiêu dựa trên các mô hình hành vi do AI phân tích.</p>
                         </div>
                     </div>
@@ -318,17 +406,17 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Nhà sản xuất Ả Rập Xê Út
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Sản xuất (Manufacturing). **Địa điểm:** Riyadh, Ả Rập Xê Út (Saudi Arabia).
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Nhà máy thường xuyên xảy ra suýt va chạm giữa xe nâng và công nhân tại khu vực bốc dỡ nguyên liệu thô. Xe nâng lùi từ các lối ra kho hàng bị mù, gần như va chạm với nhân viên tại chỗ. Các biện pháp an toàn thủ công và gương không đủ do tầm nhìn kém và đa nhiệm.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Giải pháp của viAct:** Tích hợp mô-đun Phát hiện Suýt xảy ra Tai nạn vào CCTV hiện có trong làn đường xe nâng. AI gắn cờ khoảng cách không an toàn theo thời gian thực, đặc biệt trong khi lùi.
                         </p>
-                        <p class="text-gray-300 text-lg mt-4">
+                        <p class="text-gray-600 text-lg mt-4">
                             **Tác động của viAct:**
                             <ul class="list-disc pl-5">
                                 <li>Các sự cố suýt xảy ra liên quan đến xe nâng đã giảm **62%** trong ba tháng đầu tiên.</li>
@@ -340,35 +428,33 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để những sự cố suýt xảy ra trở thành thảm họa tiếp theo.
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Near Miss Detection biến nhận thức muộn thành phòng ngừa chủ động, giúp công trường của bạn đạt được mục tiêu an toàn không sự cố.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         ĐẶT LỊCH DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
-                    <img src="../..../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -377,7 +463,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -387,7 +473,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>

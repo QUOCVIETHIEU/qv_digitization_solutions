@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">AI Camera Solution</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -122,7 +210,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Work Under Suspended Load Monitoring
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
@@ -139,13 +227,13 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg">
+                        <p class="text-gray-600 leading-relaxed text-lg">
                             Giám Sát Công Nhân Dưới Tải Trọng Treo (WUSLM) là một giải pháp an toàn nâng cao dựa trên AI, được thiết kế để phát hiện và ngăn chặn công nhân hoạt động bên dưới thang nâng, cần trục hoặc tải trọng đang hoạt động.
                         </p>
-                        <p class="text-gray-300 leading-relaxed mt-4 text-lg">
+                        <p class="text-gray-600 leading-relaxed mt-4 text-lg">
                             Sử dụng công nghệ video analytics độc quyền của viAct, hệ thống liên tục quan sát các đường nâng được chỉ định và các khu vực tải trọng. Hệ thống sẽ kích hoạt cảnh báo tức thì ngay khi phát hiện người lao động đi vào khu vực rủi ro cao (danger zone) bên dưới tải trọng treo.
                         </p>
-                        <p class="text-gray-300 leading-relaxed mt-4 text-lg">
+                        <p class="text-gray-600 leading-relaxed mt-4 text-lg">
                             Giải pháp này giúp giảm sự phụ thuộc vào người cảnh giới thủ công và củng cố các giao thức an toàn như OSHA và DROPS.
                         </p>
                     </div>
@@ -159,28 +247,28 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao WUSLM lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Worker Under Suspended Loads (WUSL) là một mối nguy hiểm nghiêm trọng nhưng thường bị bỏ qua.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Công nhân đi qua khu vực nâng</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Công nhân đi qua khu vực nâng</h3>
                             <p class="text-gray-400">Công nhân đứng bên dưới hoặc đi qua các khu vực nâng hạ đang hoạt động.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Khu vực loại trừ không được giám sát</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Khu vực loại trừ không được giám sát</h3>
                             <p class="text-gray-400">Các khu vực loại trừ xung quanh cần trục và tời nâng không được đánh dấu hiệu quả.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phụ thuộc vào người cảnh giới thủ công</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phụ thuộc vào người cảnh giới thủ công</h3>
                             <p class="text-gray-400">Người cảnh giới có thể bị hạn chế tầm nhìn hoặc phản ứng chậm trễ.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Thiếu nhận thức tình huống</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thiếu nhận thức tình huống</h3>
                             <p class="text-gray-400">Đặc biệt là trong thời gian thay đổi ca hoặc ở các khu vực chật chội.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Không có cảnh báo theo thời gian thực</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Không có cảnh báo theo thời gian thực</h3>
                             <p class="text-gray-400">Khi nhân viên đi vào vùng nguy hiểm, không có cảnh báo ngay lập tức.</p>
                         </div>
                     </div>
@@ -192,35 +280,35 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp WUSLM Cần thiết nhất ở đâu?
                         </h2>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Công trường Xây dựng:</strong> Giám sát các hoạt động nâng cần trục, tời nâng và lồng thép.
+                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> Giám sát các hoạt động nâng cần trục, tời nâng và lồng thép.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Sàn Sản xuất & Kho hàng:</strong> Nâng vật liệu trên cao xảy ra đồng thời với chuyển động của con người.
+                                    <strong class="text-gray-900">Sàn Sản xuất & Kho hàng:</strong> Nâng vật liệu trên cao xảy ra đồng thời với chuyển động của con người.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Giàn khoan & Nhà máy Lọc dầu:</strong> Nâng vỏ bọc, ống đứng và mô-đun nặng qua các lối đi chật hẹp.
+                                    <strong class="text-gray-900">Giàn khoan & Nhà máy Lọc dầu:</strong> Nâng vỏ bọc, ống đứng và mô-đun nặng qua các lối đi chật hẹp.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Hoạt động Khai thác mỏ:</strong> Nâng các bộ phận lớn trong quá trình bảo trì thiết bị, thường ở những khu vực chật chội hoặc tầm nhìn thấp.
+                                    <strong class="text-gray-900">Hoạt động Khai thác mỏ:</strong> Nâng các bộ phận lớn trong quá trình bảo trì thiết bị, thường ở những khu vực chật chội hoặc tầm nhìn thấp.
                                 </div>
                             </li>
                              <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Cảng:</strong> Container lớn được nâng thường xuyên trên boong và khu vực bến tàu, nơi công nhân thường hoạt động ở gần khu vực nâng.
+                                    <strong class="text-gray-900">Cảng:</strong> Container lớn được nâng thường xuyên trên boong và khu vực bến tàu, nơi công nhân thường hoạt động ở gần khu vực nâng.
                                 </div>
                             </li>
                         </ul>
@@ -236,29 +324,29 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động WUSLM
                         </h2>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn:</strong> Chọn mô-đun “Worker Under Suspended Load Monitoring” từ viHUB.
+                                    <strong class="text-gray-900">Chọn:</strong> Chọn mô-đun “Worker Under Suspended Load Monitoring” từ viHUB.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối:</strong> AI kết nối trực tiếp với hệ thống CCTV hoặc camera IP hiện có của bạn.
+                                    <strong class="text-gray-900">Kết nối:</strong> AI kết nối trực tiếp với hệ thống CCTV hoặc camera IP hiện có của bạn.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận:</strong> Hệ thống liên tục theo dõi các khu vực nâng hạ chính 24/7.
+                                    <strong class="text-gray-900">Ghi nhận:</strong> Hệ thống liên tục theo dõi các khu vực nâng hạ chính 24/7.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát:</strong> Khi phát hiện vi phạm, hệ thống kích hoạt cảnh báo tức thì.
+                                    <strong class="text-gray-900">Kiểm soát:</strong> Khi phát hiện vi phạm, hệ thống kích hoạt cảnh báo tức thì.
                                 </div>
                             </li>
                         </ul>
@@ -273,32 +361,32 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         viAct AI-powered WUSLM mang lại những cải tiến có thể đo lường được trong quản lý rủi ro và hiệu quả hoạt động:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Suýt xảy ra</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Suýt xảy ra</h3>
                             <p class="text-gray-400">Giảm 70% các vụ suýt xảy ra dưới tải trọng treo.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Xâm nhập Trái phép</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Xâm nhập Trái phép</h3>
                             <p class="text-gray-400">Giảm 59% số lần xâm nhập trái phép dưới cần trục.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Nâng cao Hiệu quả Vận hành</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nâng cao Hiệu quả Vận hành</h3>
                             <p class="text-gray-400">Thời gian dọn dẹp khu vực nâng cần trục được cải thiện 42%.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Dự đoán Rủi ro</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Dự đoán Rủi ro</h3>
                             <p class="text-gray-400">Dự đoán nguy cơ vật thể rơi chính xác hơn 2 lần.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tốc độ Điều tra Sự cố</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tốc độ Điều tra Sự cố</h3>
                             <p class="text-gray-400">Hiệu quả phân tích sau sự cố cải thiện 4 lần với bằng chứng video.</p>
                         </div>
                          <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Nhận dạng Người Tái phạm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nhận dạng Người Tái phạm</h3>
                             <p class="text-gray-400">Xác định những người tái phạm nhanh hơn 3 lần.</p>
                         </div>
                     </div>
@@ -309,14 +397,14 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Giảm 82% Nguy cơ Nâng Hạ
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Sản xuất (Heavy equipment manufacturing plant). **Địa điểm:** Hoa Kỳ (USA).
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Nhà máy gặp các sự cố suýt xảy ra lặp lại do công nhân bước vào khu vực nâng đang hoạt động trong khi tải trọng treo lơ lửng, vi phạm quy tắc an toàn OSHA và DROPS.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Tác động của viAct:** Đã đạt mức giảm **82%** số lần xâm nhập không an toàn dưới tải trọng treo trong vòng ba tháng.
                         </p>
                     </div>
@@ -324,35 +412,33 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                          Bảo Vệ An Toàn Cho Từng Dây Nâng
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Đừng để sự bất cẩn trở thành thảm kịch. Hãy trang bị cho công trường của bạn một giải pháp thông minh để bảo vệ từng công nhân. Với WUSLM, chúng tôi biến rủi ro thành sự an toàn và những sự cố suýt xảy ra trở thành quá khứ.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         YÊU CẦU DEMO NGAY HÔM NAY
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
                     <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -361,7 +447,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -371,7 +457,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>

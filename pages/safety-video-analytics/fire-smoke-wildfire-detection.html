@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">Safety Camera AI</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -121,7 +209,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Cháy, Khói & Cháy Rừng
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
@@ -138,15 +226,15 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Phát Hiện Cháy, Khói & Cháy Rừng là một giải pháp video analytics dựa trên AI, cho phép nhận dạng khói, lửa và các mối đe dọa cháy rừng theo thời gian thực trong các môi trường công nghiệp rủi ro cao.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 leading-relaxed text-lg">
                             <li>Công nghệ: Được xây dựng trên công nghệ computer vision độc quyền của viAct.</li>
                             <li>Hoạt động: Hệ thống tích hợp với mạng lưới CCTV hoặc IP camera hiện có của bạn để liên tục giám sát các dấu hiệu hình ảnh của lửa.</li>
                             <li>Lợi thế vượt trội: Không giống như các báo động khói thông thường dựa vào phát hiện hóa học bị trì hoãn hoặc giới hạn đường ngắm, AI của viAct phát hiện mối đe dọa sớm—thường là trước khi lửa bùng phát hoàn toàn—và đưa ra cảnh báo tự động ngay lập tức.</li>
                         </ul>
-                        <p class="text-gray-300 leading-relaxed text-lg mt-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             Giải pháp này hỗ trợ các nhóm EHS phản ứng nhanh hơn, ngăn chặn sự lây lan, và thiết lập văn hóa an toàn không chậm trễ.
                         </p>
                     </div>
@@ -161,10 +249,10 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao Phát hiện Cháy sớm lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Các vụ cháy và cháy rừng thường bắt đầu bằng các dấu hiệu tinh tế, dễ bị bỏ qua, đặc biệt là trong các ngành công nghiệp rủi ro cao như dầu khí, sản xuất và logistics.
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Những Thiếu sót của Phát hiện Cháy truyền thống:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Những Thiếu sót của Phát hiện Cháy truyền thống:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                             <p class="text-gray-400">Phụ thuộc vào kích hoạt bị trì hoãn: Các hệ thống truyền thống dựa vào phát hiện hóa học hoặc nhiệt độ.</p>
@@ -176,7 +264,7 @@
                             <p class="text-gray-400">Nguy cơ leo thang: Điều bắt đầu chỉ là một dấu hiệu hình ảnh nhỏ có thể nhanh chóng leo thang thành đám cháy toàn diện.</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
                         AI của viAct bước vào để lấp đầy khoảng trống này, chuyển đổi CCTV thông thường thành một mạng lưới an toàn thông minh có khả năng phát hiện các mối đe dọa tinh vi và kích hoạt phản ứng ngay lập tức.
                     </p>
                 </div>
@@ -187,38 +275,38 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Các mối nguy hiểm cháy không giới hạn ở bất kỳ ngành nào; chúng xảy ra ở bất cứ nơi nào có vật liệu dễ cháy, nhiệt độ cao hoặc hoạt động ở xa.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Nhà máy Lọc dầu & Hóa dầu:</strong> Phát hiện nguồn đánh lửa trước khi báo động truyền thống kích hoạt, ngăn chặn các sự cố quy mô lớn.
+                                    <strong class="text-gray-900">Nhà máy Lọc dầu & Hóa dầu:</strong> Phát hiện nguồn đánh lửa trước khi báo động truyền thống kích hoạt, ngăn chặn các sự cố quy mô lớn.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Kho hàng & Logistics:</strong> Giám sát liên tục khói và lửa lấp láy, bảo vệ hàng tồn kho và nhân viên.
+                                    <strong class="text-gray-900">Kho hàng & Logistics:</strong> Giám sát liên tục khói và lửa lấp láy, bảo vệ hàng tồn kho và nhân viên.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Công trường Xây dựng:</strong> AI quét liên tục các khu vực mở để tìm khói mỏng hoặc tia lửa trong môi trường năng động.
+                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> AI quét liên tục các khu vực mở để tìm khói mỏng hoặc tia lửa trong môi trường năng động.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Khu vực Dễ cháy Rừng:</strong> Hệ thống AI phát hiện khói sớm và dị thường nhiệt bên ngoài hàng rào để hỗ trợ phản ứng nhanh.
+                                    <strong class="text-gray-900">Khu vực Dễ cháy Rừng:</strong> Hệ thống AI phát hiện khói sớm và dị thường nhiệt bên ngoài hàng rào để hỗ trợ phản ứng nhanh.
                                 </div>
                             </li>
                              <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Nhà máy Sản xuất:</strong> AI theo dõi các khu vực sản xuất 24/7, xác định ngọn lửa nhỏ hoặc biến dạng nhiệt lấp lánh.
+                                    <strong class="text-gray-900">Nhà máy Sản xuất:</strong> AI theo dõi các khu vực sản xuất 24/7, xác định ngọn lửa nhỏ hoặc biến dạng nhiệt lấp lánh.
                                 </div>
                             </li>
                         </ul>
@@ -234,32 +322,32 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Giải pháp này tích hợp liền mạch với camera hiện có để cung cấp khả năng phát hiện cháy chủ động theo thời gian thực.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn (Choose):</strong> Chọn mô-đun “Fire, Smoke & Wildfire Detection” từ viHUB – thư viện chứa hơn 100 công cụ AI video analytics của viAct.
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun “Fire, Smoke & Wildfire Detection” từ viHUB – thư viện chứa hơn 100 công cụ AI video analytics của viAct.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối (Connect):</strong> Mô-đun kết nối liền mạch với các camera hiện có của bạn bằng RTSP, không cần thiết bị mới.
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun kết nối liền mạch với các camera hiện có của bạn bằng RTSP, không cần thiết bị mới.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận (Capture):</strong> AI liên tục kiểm tra video trực tiếp trên các khu vực nguy hiểm được chỉ định để phát hiện: Khói, Lửa, Nhiệt.
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI liên tục kiểm tra video trực tiếp trên các khu vực nguy hiểm được chỉ định để phát hiện: Khói, Lửa, Nhiệt.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát (Control):</strong> Khi phát hiện chỉ số cháy, hệ thống gửi cảnh báo theo thời gian thực: tại chỗ thông qua báo động hoặc đèn nháy, và từ xa qua SMS, ứng dụng di động hoặc bảng điều khiển.
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi phát hiện chỉ số cháy, hệ thống gửi cảnh báo theo thời gian thực: tại chỗ thông qua báo động hoặc đèn nháy, và từ xa qua SMS, ứng dụng di động hoặc bảng điều khiển.
                                 </div>
                             </li>
                         </ul>
@@ -274,32 +362,32 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính (Phòng ngừa Hỏa hoạn)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         viAct AI cung cấp các khả năng tiên tiến giúp cải thiện đáng kể khả năng sẵn sàng và tốc độ phản ứng với hỏa hoạn.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phát hiện Sớm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phát hiện Sớm</h3>
                             <p class="text-gray-400">Phát hiện khói và dị thường nhiệt sớm hơn tới 15 phút so với hệ thống camera thông thường.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Cảnh báo Sai</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Cảnh báo Sai</h3>
                             <p class="text-gray-400">Giảm 52% cảnh báo sai, bằng cách phân biệt giữa bụi, sương mù và các dấu hiệu cháy thực sự.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Thời gian Phản hồi Khẩn cấp</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thời gian Phản hồi Khẩn cấp</h3>
                             <p class="text-gray-400">Quy trình leo thang tự động thông báo cho đội ngũ tại chỗ và cơ quan chức năng trong vòng 30 giây.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Báo cáo Sự cố Nhanh</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Báo cáo Sự cố Nhanh</h3>
                             <p class="text-gray-400">Báo cáo sự cố nhanh hơn 3 lần, với cảnh quay có chú thích và phân tích được tự động biên soạn.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phòng ngừa Dự đoán</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phòng ngừa Dự đoán</h3>
                             <p class="text-gray-400">Cảnh báo bảo trì dự đoán giúp giảm nguy cơ cháy do đánh lửa 40% bằng cách gắn cờ máy móc quá nóng hoặc lỗi điện trước khi cháy.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Phí Bảo hiểm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Phí Bảo hiểm</h3>
                             <p class="text-gray-400">Giảm 28% phí bảo hiểm theo thời gian, nhờ khả năng phát hiện sớm đã được chứng minh.</p>
                         </div>
                     </div>
@@ -310,17 +398,17 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Lãnh đạo Năng lượng Úc Ngăn chặn Cháy rừng
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Năng lượng & Tiện ích. **Địa điểm:** Úc.
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một nhà cung cấp năng lượng tái tạo lớn (trang trại năng lượng mặt trời) gần khu vực bụi cây phải đối mặt với các mối đe dọa cháy lặp lại trong mùa khô. Cảm biến nhiệt truyền thống và kiểm tra thủ công đã bỏ sót các điểm đánh lửa âm ỉ.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Giải pháp của viAct:** Hệ thống đã xác định một sự cố đánh lửa nhỏ do cáp quá nóng. Hệ thống đã kích hoạt can thiệp, ngăn chặn một vụ cháy rừng toàn diện.
                         </p>
-                        <p class="text-gray-300 text-lg mt-4">
+                        <p class="text-gray-600 text-lg mt-4">
                             **Tác động của viAct:** Trong vòng ba tháng, hệ thống đã giúp công ty tuân thủ các tiêu chuẩn Quản lý Cháy rừng Úc.
                         </p>
                     </div>
@@ -329,35 +417,33 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để cảnh báo cháy bị chậm trễ dù chỉ một giây.
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Fire, Smoke & Wildfire Detection tích hợp liền mạch với cơ sở hạ tầng CCTV hiện có của bạn để có thể phát hiện các mối đe dọa cháy sớm hơn 15 phút so với các hệ thống thông thường.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         ĐẶT LỊCH DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
-                    <img src="../..../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -366,7 +452,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -376,7 +462,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>

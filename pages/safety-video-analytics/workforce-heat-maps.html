@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">AI Camera Solution</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -121,7 +209,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phân tích Bản đồ Nhiệt Lực lượng Lao động
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
@@ -141,14 +229,14 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Workforce Heat Map là một giải pháp cho phép Computer Vision chuyển đổi cơ sở hạ tầng CCTV
                             hiện có của bạn thành một công cụ tình báo không gian mạnh mẽ.
                             Sử dụng tính năng phát hiện vật thể và theo dõi chuyển động dựa trên AI, hệ thống lập bản đồ
                             quỹ đạo của công nhân theo thời gian thực để trực quan hóa các mẫu mật độ, nút thắt cổ chai
                             và khu vực nhàn rỗi.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 leading-relaxed text-lg">
                             <li>Tính năng cốt lõi: Cung cấp thông tin chi tiết chuyên sâu về sự di chuyển của lực lượng
                                 lao động, giúp các nhóm chủ động quản lý sự phân bổ lực lượng lao động, giảm tắc nghẽn
                                 và lập kế hoạch tài nguyên hiệu quả hơn.</li>
@@ -171,11 +259,11 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao WHMs lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Việc phân bổ sai lực lượng lao động và quá tải là những rủi ro vô hình nhưng cực kỳ nghiêm trọng
                         trên các công trường phức tạp, đặc biệt trong các ngành công nghiệp rủi ro cao.
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Các Lỗi Phân bổ Lực lượng Lao động Phổ biến:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Các Lỗi Phân bổ Lực lượng Lao động Phổ biến:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
@@ -200,7 +288,7 @@
                                 dùng chung như thang máy hoặc hành lang.</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
                         Nguy cơ: Sự sai sót trong phân bổ một vài công nhân có thể dẫn đến năng suất thấp hơn, tắc
                         nghẽn, hoặc vi phạm an toàn nghiêm trọng. AI của viAct giúp phát hiện các cụm nhàn rỗi, khu vực
                         quá tải hoặc sự phân tán rủi ro trước khi chúng dẫn đến tai nạn.
@@ -213,15 +301,15 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Dữ liệu về chuyển động của công nhân là rất quan trọng ở những nơi hoạt động thâm dụng lao
                             động gặp phải bố cục phức tạp.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Kho hàng & Trung tâm Lưu trữ:</strong> Theo dõi mật độ
+                                    <strong class="text-gray-900">Kho hàng & Trung tâm Lưu trữ:</strong> Theo dõi mật độ
                                     dòng chảy ở các khu vực bốc dỡ hoặc phân loại, giúp đội ngũ hậu cần điều chỉnh tuyến
                                     đường và nhân sự để giảm tắc nghẽn.
                                 </div>
@@ -229,7 +317,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Xưởng đóng tàu & Cơ sở Kỹ thuật nặng:</strong> Trực quan
+                                    <strong class="text-gray-900">Xưởng đóng tàu & Cơ sở Kỹ thuật nặng:</strong> Trực quan
                                     hóa sự phân bố không gian, làm nổi bật sự tập trung (clustering) và hỗ trợ duy trì
                                     khoảng cách an toàn.
                                 </div>
@@ -237,7 +325,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Công trường Xây dựng:</strong> Đưa ra cảnh báo quá tải
+                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> Đưa ra cảnh báo quá tải
                                     tức thì, giúp tối ưu hóa phân bổ nhân lực và đảm bảo điều hướng công trường an toàn
                                     hơn.
                                 </div>
@@ -245,7 +333,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Sàn Sản xuất:</strong> Theo dõi dòng chảy của công nhân
+                                    <strong class="text-gray-900">Sàn Sản xuất:</strong> Theo dõi dòng chảy của công nhân
                                     qua các trạm, tiết lộ sự kém hiệu quả của bố cục và các khu vực chưa được sử dụng
                                     hết, giúp giám sát viên tái cân bằng lao động.
                                 </div>
@@ -253,7 +341,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Khu vực Dầu khí & Mỏ (Red Zones):</strong> Phát hiện quá
+                                    <strong class="text-gray-900">Khu vực Dầu khí & Mỏ (Red Zones):</strong> Phát hiện quá
                                     tải theo thời gian thực gần các khu vực rủi ro cao (Red Zones), giúp nhóm EHS quản
                                     lý rủi ro tiếp xúc và thực thi giao thức phân vùng.
                                 </div>
@@ -272,22 +360,22 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Giải pháp WHMs tận dụng cơ sở hạ tầng camera hiện có của bạn để cung cấp trí tuệ không gian
                             năng động.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn (Choose):</strong> Chọn mô-đun “Workforce Heat Map”
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun “Workforce Heat Map”
                                     từ viHUB – thư viện hơn 100 giải pháp video analytics AI của viAct.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối (Connect):</strong> Mô-đun AI tích hợp dễ dàng
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun AI tích hợp dễ dàng
                                     với camera IP hoặc CCTV hiện có thông qua RTSP. Triển khai nhanh chóng, không cần
                                     thêm thiết bị đeo hoặc phần cứng mới.
                                 </div>
@@ -295,7 +383,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận (Capture):</strong> AI liên tục xử lý nguồn cấp
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI liên tục xử lý nguồn cấp
                                     video trực tiếp để tạo ra bản đồ nhiệt động, phát hiện: Các khu vực tắc nghẽn hoặc
                                     quá tải cao, Các khu vực có ít hoặc không có hoạt động, Các mẫu chuyển động lặp đi
                                     lặp lại, không hiệu quả.
@@ -304,7 +392,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát (Control):</strong> Dữ liệu bản đồ nhiệt được
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Dữ liệu bản đồ nhiệt được
                                     trực quan hóa trên bảng điều khiển tập trung với các chỉ báo vùng theo thời gian
                                     thực. Giám sát viên nhận được thông tin chi tiết để tái cân bằng lao động và giảm
                                     tắc nghẽn. Báo cáo xu hướng và điểm số an toàn hỗ trợ tối ưu hóa quy trình làm việc
@@ -324,43 +412,43 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Bản đồ nhiệt của viAct cung cấp thông tin chi tiết dự đoán và trí tuệ không gian để ngăn chặn sự
                         cố trước khi chúng xảy ra:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Khu vực Đỏ</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Khu vực Đỏ</h3>
                             <p class="text-gray-400">Giảm 90% xâm nhập Khu vực Đỏ (Red Zone) và sự cố quan trọng.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Lỗi Phân bổ</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Lỗi Phân bổ</h3>
                             <p class="text-gray-400">Loại bỏ 80% lỗi thủ công trong việc sắp xếp lực lượng lao động bằng
                                 cách sử dụng theo dõi mật độ theo thời gian thực.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tối ưu hóa Tắc nghẽn</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tối ưu hóa Tắc nghẽn</h3>
                             <p class="text-gray-400">Giảm tắc nghẽn trong quá trình chuyển ca/chuyển đổi 10 lần bằng
                                 cách tối ưu hóa luồng vào/ra dựa trên mẫu lịch sử.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Cải thiện An toàn Vùng Cần trục</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện An toàn Vùng Cần trục</h3>
                             <p class="text-gray-400">Giảm 52% tắc nghẽn khi AI gắn cờ mật độ không an toàn gần khu vực
                                 cần trục.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng Tốc độ Phân tích</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phân tích</h3>
                             <p class="text-gray-400">Phân tích nguyên nhân gốc rễ nhanh hơn 3 lần thông qua phát lại
                                 không gian của các sự cố.</p>
                         </div>
                         <div
                             class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tuân thủ</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tuân thủ</h3>
                             <p class="text-gray-400">Hỗ trợ tuân thủ các quy định HSE (Ví dụ: GCC) và giao thức Giấy
                                 phép Làm việc (PTW).</p>
                         </div>
@@ -372,20 +460,20 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Lãnh đạo Năng lượng GCC Cắt giảm 90% Quá tải
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Dầu khí (Oil & Gas). **Địa điểm:** GCC (Gulf Cooperation Council).
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một công ty năng lượng lớn ở GCC phải đối mặt với tình trạng quá tải lặp đi lặp
                             lại gần các Khu vực Đỏ rủi ro cao (như khu vực BOP, khu vực bàn quay). Tình trạng này gây ra
                             rủi ro va chạm và nghiền nát nghiêm trọng.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Giải pháp của viAct:** Công ty đã triển khai Mô-đun Workforce Heatmap của viAct để trực
                             quan hóa chuyển động của công nhân theo thời gian thực và cảnh báo rủi ro tắc nghẽn.
                         </p>
-                        <p class="text-gray-300 text-lg mt-4">
+                        <p class="text-gray-600 text-lg mt-4">
                             **Tác động:** Trong vòng ba tháng, công ty đã báo cáo giảm **90%** xâm nhập Khu vực Đỏ và
                             không có sự cố nghiêm trọng nào trong các khu vực được giám sát. Bản đồ nhiệt lực lượng lao
                             động đã hỗ trợ việc giám sát Khu vực Đỏ và tuân thủ các quy định HSE của GCC.
@@ -395,7 +483,7 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để sự mơ hồ về vị trí của công nhân làm ảnh hưởng đến hiệu quả hoạt động và an toàn của
                         bạn.
                     </h2>
@@ -405,29 +493,27 @@
                         thông minh.
                     </p>
                     <a href="#"
-                        class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                        class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         ĐẶT LỊCH DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
-                    <img src="../..../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -436,7 +522,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -446,7 +532,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>

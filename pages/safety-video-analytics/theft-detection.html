@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">AI Camera Solution</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -121,7 +209,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_theft_detection.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Trộm Cắp
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
@@ -138,10 +226,10 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Phát Hiện Trộm Cắp (Theft Detection) là một giải pháp giám sát dựa trên Computer Vision giúp giám sát theo thời gian thực các tài sản, vật liệu và thiết bị quan trọng trên các môi trường công nghiệp năng động.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 leading-relaxed text-lg">
                             <li>Giải pháp sử dụng AI video analytics độc quyền của viAct.</li>
                             <li>Nó tận dụng cơ sở hạ tầng CCTV hoặc IP camera hiện có để phát hiện các hành vi bất thường như giả mạo, xâm nhập và di chuyển trái phép, kích hoạt cảnh báo tức thì.</li>
                             <li>Giải pháp này đảm bảo cảnh giác liên tục 24/7 và phản ứng tự động đối với các sự cố trộm cắp tiềm ẩn, giảm sự phụ thuộc vào giám sát thủ công.</li>
@@ -158,10 +246,10 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao Phát hiện Trộm cắp lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Trộm cắp và truy cập trái phép có thể dẫn đến tổn thất tài chính đáng kể, gián đoạn hoạt động và an toàn bị xâm phạm. Những rủi ro này đặc biệt tăng cao trong giờ nghỉ, ở các khu vực thiếu ánh sáng, hoặc trên các công trường rộng lớn với sự giám sát của con người bị hạn chế.
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Các Lỗ hổng Trộm cắp Phổ biến:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Các Lỗ hổng Trộm cắp Phổ biến:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                             <p class="text-gray-400">Các điểm nhập cảnh không được giám sát trong quá trình thay đổi ca hoặc sau giờ làm việc.</p>
@@ -179,7 +267,7 @@
                             <p class="text-gray-400">Phản ứng chậm trễ do thiếu cảnh báo tập trung và xác minh sự cố.</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
                         Thách thức: Trong các khu vực rộng lớn, các sự cố an ninh thường bị bỏ qua. AI của viAct chuyển đổi CCTV truyền thống thành một lớp phòng thủ thông minh, chủ động, cho phép cảnh báo tức thì và bảo vệ 24/7.
                     </p>
                 </div>
@@ -190,38 +278,38 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Nguy cơ trộm cắp xảy ra ở bất cứ nơi nào có thiết bị, vật liệu có giá trị, hoặc các điểm truy cập bị bỏ mặc không được giám sát.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Kho hàng & Trung tâm Logistics:</strong> Rủi ro trộm cắp cao trong quá trình xếp dỡ hàng hóa và chuyển ca. Mô-đun này giám sát các điểm mù và khu vực nhạy cảm, đưa ra cảnh báo khi hàng hóa bị giả mạo, thất lạc hoặc di chuyển trái phép.
+                                    <strong class="text-gray-900">Kho hàng & Trung tâm Logistics:</strong> Rủi ro trộm cắp cao trong quá trình xếp dỡ hàng hóa và chuyển ca. Mô-đun này giám sát các điểm mù và khu vực nhạy cảm, đưa ra cảnh báo khi hàng hóa bị giả mạo, thất lạc hoặc di chuyển trái phép.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Công trường Xây dựng:</strong> Vật liệu xây dựng không được giám sát và máy móc đỗ xe là mục tiêu thường xuyên. AI cung cấp giám sát 24/7, xác định truy cập trái phép theo thời gian thực để ngăn ngừa tổn thất.
+                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> Vật liệu xây dựng không được giám sát và máy móc đỗ xe là mục tiêu thường xuyên. AI cung cấp giám sát 24/7, xác định truy cập trái phép theo thời gian thực để ngăn ngừa tổn thất.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Nhà máy Sản xuất & Khai thác mỏ:</strong> Các sân công nghiệp và khu vực khai thác mỏ thường chạy với sự giám sát hạn chế trong ca đêm hoặc cuối tuần. Mô-đun giám sát các khu vực quan trọng, bảo vệ các công cụ và thiết bị có giá trị cao.
+                                    <strong class="text-gray-900">Nhà máy Sản xuất & Khai thác mỏ:</strong> Các sân công nghiệp và khu vực khai thác mỏ thường chạy với sự giám sát hạn chế trong ca đêm hoặc cuối tuần. Mô-đun giám sát các khu vực quan trọng, bảo vệ các công cụ và thiết bị có giá trị cao.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Nhà máy Dầu khí & Tiện ích:</strong> Các trạm biến áp hoặc khu vực tiện ích ở xa thường ít nhân viên, khiến chúng dễ bị trộm cắp và giả mạo. Mô-đun đảm bảo phát hiện xâm nhập theo thời gian thực và giám sát 24/7.
+                                    <strong class="text-gray-900">Nhà máy Dầu khí & Tiện ích:</strong> Các trạm biến áp hoặc khu vực tiện ích ở xa thường ít nhân viên, khiến chúng dễ bị trộm cắp và giả mạo. Mô-đun đảm bảo phát hiện xâm nhập theo thời gian thực và giám sát 24/7.
                                 </div>
                             </li>
                              <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Cửa hàng Bán lẻ & Khu thương mại:</strong> Giám sát các khu vực thanh toán, lối đi và kho hàng trong thời gian thực, phát hiện hành vi đáng ngờ như di chuyển vật phẩm bị che giấu hoặc truy cập trái phép vào khu vực kho.
+                                    <strong class="text-gray-900">Cửa hàng Bán lẻ & Khu thương mại:</strong> Giám sát các khu vực thanh toán, lối đi và kho hàng trong thời gian thực, phát hiện hành vi đáng ngờ như di chuyển vật phẩm bị che giấu hoặc truy cập trái phép vào khu vực kho.
                                 </div>
                             </li>
                         </ul>
@@ -237,32 +325,32 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Giải pháp của viAct giám sát hành vi công nhân, chuyển động của vật thể và khoảng cách không gian bằng các thuật toán tiên tiến.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn (Choose):</strong> Kích hoạt mô-đun “Theft Detection” từ viAct viHUB. Mô-đun này được xây dựng để giám sát các khu vực có giá trị cao, đặc biệt trong giờ giám sát thấp.
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Kích hoạt mô-đun “Theft Detection” từ viAct viHUB. Mô-đun này được xây dựng để giám sát các khu vực có giá trị cao, đặc biệt trong giờ giám sát thấp.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối (Connect):</strong> Mô-đun kết nối trực tiếp với hệ thống giám sát hiện có của công trường bằng cách sử dụng luồng RTSP. Không cần nâng cấp phần cứng.
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun kết nối trực tiếp với hệ thống giám sát hiện có của công trường bằng cách sử dụng luồng RTSP. Không cần nâng cấp phần cứng.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận (Capture):</strong> Khi được kích hoạt, công cụ AI quét nguồn cấp dữ liệu video trực tiếp để phát hiện hoạt động đáng ngờ hoặc trái phép. Nó gắn cờ: Sự hiện diện của con người trong các khu vực không được phép hoặc hạn chế, Sự di chuyển ngoài lịch trình của công cụ, vật liệu hoặc máy móc, Vi phạm ranh giới vật lý như hàng rào hoặc khu vực khóa.
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> Khi được kích hoạt, công cụ AI quét nguồn cấp dữ liệu video trực tiếp để phát hiện hoạt động đáng ngờ hoặc trái phép. Nó gắn cờ: Sự hiện diện của con người trong các khu vực không được phép hoặc hạn chế, Sự di chuyển ngoài lịch trình của công cụ, vật liệu hoặc máy móc, Vi phạm ranh giới vật lý như hàng rào hoặc khu vực khóa.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát (Control):</strong> Khi hoạt động bất thường được phát hiện, hệ thống ngay lập tức đẩy cảnh báo theo thời gian thực: tại chỗ (qua còi báo động, đèn) và cho các bên liên quan từ xa (qua SMS, ứng dụng hoặc bảng điều khiển).
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi hoạt động bất thường được phát hiện, hệ thống ngay lập tức đẩy cảnh báo theo thời gian thực: tại chỗ (qua còi báo động, đèn) và cho các bên liên quan từ xa (qua SMS, ứng dụng hoặc bảng điều khiển).
                                 </div>
                             </li>
                         </ul>
@@ -277,36 +365,36 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính (Phòng ngừa Trộm cắp)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         viAct AI-powered Theft Detection nâng cao hiệu quả hoạt động và an ninh công trường với tác động có thể đo lường được:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tự động hóa Giám sát</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tự động hóa Giám sát</h3>
                             <p class="text-gray-400">Tiết kiệm tới 65% thời gian bằng cách tự động hóa giám sát công trường, cho phép bảo vệ tập trung vào ứng phó và kiểm soát truy cập.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Cải thiện Độ chính xác</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Độ chính xác</h3>
                             <p class="text-gray-400">Tăng độ chính xác dự đoán trộm cắp lên 38% theo thời gian bằng cách học các điểm bất thường về chuyển động.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng Tốc độ Phản hồi</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
                             <p class="text-gray-400">Cắt giảm thời gian phản hồi tới 70% vì AI kích hoạt cảnh báo tức thì ngay khi phát hiện di chuyển vật liệu hoặc truy cập trái phép.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố Ngoài giờ</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Ngoài giờ</h3>
                             <p class="text-gray-400">Giảm sự cố trộm cắp ngoài giờ 41% bằng cách đồng bộ hóa cảnh báo AI với các khu vực rủi ro cao.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Yêu cầu Bảo hiểm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Yêu cầu Bảo hiểm</h3>
                             <p class="text-gray-400">Giảm 27% yêu cầu bảo hiểm, nhờ hồ sơ giám sát và báo cáo kỹ thuật số có bằng chứng rõ ràng.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Nâng cao Cảnh giác</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nâng cao Cảnh giác</h3>
                             <p class="text-gray-400">Cảnh báo AI thúc đẩy chỉnh sửa hành vi; nhân viên và công nhân trở nên cảnh giác hơn 10 lần gần các khu vực nhạy cảm.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tài liệu Nhanh hơn</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tài liệu Nhanh hơn</h3>
                             <p class="text-gray-400">Cho phép tạo báo cáo liên quan đến trộm cắp nhanh hơn 3 lần cho mục đích kiểm toán hoặc bảo hiểm.</p>
                         </div>
                     </div>
@@ -317,17 +405,17 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Chuỗi Bán lẻ Dubai Giảm 63% Trộm cắp
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Bán lẻ (Retail). **Địa điểm:** Riyadh, Ả Rập Xê Út (Saudi Arabia).
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một chuỗi bán lẻ nổi tiếng ở Dubai phải đối mặt với các vấn đề trộm cắp vặt liên tục (shoplifting). Hầu hết các sự cố liên quan đến tư thế cơ thể đáng ngờ như cúi người, che giấu vật phẩm hoặc chặn tầm nhìn, các hành động thường bị bỏ sót trong quá trình giám sát thủ công.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Giải pháp của viAct:** Triển khai mô-đun Phát hiện Trộm cắp của viAct vào các camera hiện có trong cửa hàng. AI đã phát hiện hành vi lảng vảng, chạm vào vật phẩm lặp đi lặp lại và che giấu thông qua phân tích tư thế.
                         </p>
-                        <p class="text-gray-300 text-lg mt-4">
+                        <p class="text-gray-600 text-lg mt-4">
                             **Tác động của viAct:**
                             <ul class="list-disc pl-5">
                                 <li>Trong vòng bốn tháng triển khai, các cửa hàng đã ghi nhận mức giảm **63%** các sự cố trộm cắp vặt.</li>
@@ -339,35 +427,33 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để mất mát tài sản và lỗ hổng an ninh đe dọa hoạt động của bạn.
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Theft Detection có thể bảo vệ tài sản có giá trị cao, giảm thiểu tổn thất và nâng cao tính minh bạch an ninh 24/7.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         YÊU CẦU BẢN DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
-                    <img src="../..../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -376,7 +462,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -386,7 +472,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>

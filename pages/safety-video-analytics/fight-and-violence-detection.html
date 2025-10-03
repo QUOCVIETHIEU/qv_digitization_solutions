@@ -10,23 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>
-        body {
+    <style>        body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0F;
-            color: #E2E8F0;
+            background-color: #FFFFFF;
+            color: #374151;
         }
 
         .container {
             max-width: 1280px;
-        }
-
-        .gradient-bg {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+        }        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
         .text-gradient {
-            background-image: linear-gradient(to right, #4F46E5, #8B5CF6);
+            background-image: linear-gradient(to right, #C19837, #CE9522);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,7 +33,7 @@
             position: absolute;
             width: 300px;
             height: 300px;
-            background: rgba(139, 92, 246, 0.4);
+            background: rgba(193, 152, 55, 0.2);
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.2;
@@ -76,38 +73,129 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #4F46E5;
+            background-color: #C19837;
             border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: #6D28D9;
+            background-color: #CE9522;
         }
     </style>
 </head>
 
-<body class="antialiased">
-    <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0F] bg-opacity-80 backdrop-blur-sm shadow-md">
+<body class="antialiased">    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="flex items-center space-x-4">
-                <a href="javascript:history.back()"
-                    class="text-gray-300 hover:text-white transition-colors duration-300"
-                    aria-label="Quay lại trang trước">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
+            <div class="flex items-center space-x-2">
+                <a href="https://quocviet.com.vn/" target="_blank" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-800 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
                 </a>
-                <img src="../../assets/images/icon_camera_ai.png" alt="Logo" class="h-10 w-10">
-                <span class="text-2xl font-bold text-white hidden md:block">Safety Camera AI</span>
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Trang chủ</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Giải pháp</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Case Studies</a>
+                <li class="relative group">
+                    <a href="./safety-video-analytics.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
+                        Safety Camera AI
+                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-gray-600 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
+                        <li><a href="./ppe-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
+                                PPE Detection</a>
+                        </li>
+                        <li><a href="./open-edge-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Open Edge Detection</a>
+                        </li>
+                        <li><a href="./missing-barricade-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Missing Barricade Detection</a>
+                        </li>
+                        <li><a href="./fall-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Fall Detection</a>
+                        </li>
+                        <li><a href="./proximity-detection-warning.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Proximity Detection & Warning</a>
+                        </li>
+                        <li><a href="./work-under-suspended-load-monitoring.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Work Under Suspended Load Monitoring</a>
+                        </li>
+                        <li><a href="./unauthorized-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
+                                    alt="" class="w-5 h-5 mr-3">
+                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
+                        </li>
+                        <li><a href="./workforce-heat-maps.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
+                                Workforce Heat Maps</a>
+                        </li>
+                        <li><a href="./perimeter-intrusion-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Perimeter Intrusion Detection</a>
+                        </li>
+                        <li><a href="./weapon-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Weapon Detection</a>
+                        </li>
+                        <li><a href="./theft-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Theft Detection</a>
+                        </li>
+                        <li><a href="./loitering-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Loitering Detection</a>
+                        </li>
+                        <li><a href="./fight-and-violence-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fighting & Violence Detection</a>
+                        </li>
+                        <li><a href="./fire-smoke-wildfire-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
+                                    class="w-5 h-5 mr-3">
+                                Fire, Smoke & Wildfire Detection</a>
+                        </li>
+                        <li><a href="./near-miss-detection.html"
+                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
+                                Near Miss Detection</a>
+                        </li>
+                    </ul>
                 </li>
-                <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Liên hệ</a></li>
+                <li><a href="../../index.html" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Trang chủ</a></li>
+                <li><a href="../qr-code/qr-code.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
+                <li><a href="../e-forms-report/e-forms-report.html"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -121,7 +209,7 @@
         <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
              <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt="Open Edge Detection Icon"
                 class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4 animate-fadeIn">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Đánh nhau & Bạo lực
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
@@ -138,15 +226,15 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             I. Giải pháp là gì?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Phát Hiện Đánh nhau & Bạo lực là một mô-đun AI tiên tiến sử dụng computer vision và phân tích hành vi để giám sát các nguồn cấp video trực tiếp, nhận diện ngôn ngữ cơ thể hoặc các chuyển động liên quan đến hung hăng, đe dọa hoặc xung đột vật lý.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-300 space-y-2 leading-relaxed text-lg">
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2 leading-relaxed text-lg">
                             <li>Công nghệ: Được xây dựng trên viAct proprietary AI video analytics.</li>
                             <li>Hoạt động: AI nhận ra các dấu hiệu tinh tế của căng thẳng gia tăng và hành vi leo thang thường dẫn đến xô xát vật lý, chẳng hạn như la hét, tiếp cận nhanh, nắm đấm giơ lên hoặc cử chỉ thất thường.</li>
                             <li>Lợi ích: Bằng cách tích hợp với thiết lập CCTV hiện có, giải pháp biến camera tiêu chuẩn thành công cụ ngăn ngừa xung đột chủ động, cho phép phản ứng nhanh hơn và giảm thiểu rủi ro.</li>
                         </ul>
-                        <p class="text-gray-300 leading-relaxed text-lg mt-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             Giải pháp thích ứng liền mạch với mọi môi trường, từ nhà máy và hầm mỏ đến trung tâm vận tải và địa điểm tổ chức sự kiện, cung cấp sự giám sát liên tục và đảm bảo các tình huống bạo lực được xác định kịp thời.
                         </p>
                     </div>
@@ -162,10 +250,10 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         II. Tại sao Phát hiện Đánh nhau & Bạo lực lại quan trọng? (Vấn đề)
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         Việc phát hiện một cuộc xung đột trước khi nó xảy ra phức tạp hơn nhiều so với phản ứng khi nó đã diễn ra. Các cuộc đối đầu hung hăng có thể bắt đầu bằng những cử chỉ, ánh nhìn hoặc tranh cãi đơn thuần – những tín hiệu tinh tế thường bị bỏ qua trong môi trường bận rộn, ồn ào.
                     </p>
-                    <h3 class="text-2xl font-semibold text-white mb-2">Thách thức của Phát hiện Xung đột theo Thời gian thực:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thách thức của Phát hiện Xung đột theo Thời gian thực:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                             <p class="text-gray-400">Các Tín hiệu Hành vi Bỏ sót: Các cuộc gặp gỡ hung hăng bắt đầu bằng cử chỉ, ánh nhìn hoặc tranh cãi. AI phát hiện những tín hiệu hành vi nhỏ này với độ chính xác nhất quán.</p>
@@ -183,7 +271,7 @@
                             <p class="text-gray-400">Các Dấu hiệu Cảnh báo Sớm: Các dấu hiệu cảnh báo đỏ sớm thường bị nhân viên bỏ lỡ do mệt mỏi hoặc mất tập trung.</p>
                         </div>
                     </div>
-                    <p class="text-gray-300 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
                         Thách thức: Bằng cách phân tích thay đổi tư thế, chuyển động đột ngột, hành vi đám đông và các mẫu không gian, hệ thống video analytics phát hiện sự hung hăng ở giai đoạn sớm nhất. Không giống như giám sát thủ công thường bị chậm trễ và không nhất quán, AI của viAct cung cấp cảnh báo tự động ngay lập tức.
                     </p>
                 </div>
@@ -194,38 +282,38 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Nguy cơ xung đột có thể phát sinh ở bất cứ nơi nào mọi người tụ tập, làm việc hoặc đi qua. Phát hiện sớm là rất quan trọng để ngăn chặn sự leo thang và duy trì một môi trường an toàn, có kiểm soát.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Các Khu vực Công nghiệp với Lực lượng Lao động Lớn:</strong> Tranh chấp tại nơi làm việc có thể nhanh chóng leo thang, đặc biệt là trong thời gian chuyển ca, tranh chấp hợp đồng hoặc khối lượng công việc cao. Mô-đun liên tục giám sát, xác định các dấu hiệu hung hăng sớm.
+                                    <strong class="text-gray-900">Các Khu vực Công nghiệp với Lực lượng Lao động Lớn:</strong> Tranh chấp tại nơi làm việc có thể nhanh chóng leo thang, đặc biệt là trong thời gian chuyển ca, tranh chấp hợp đồng hoặc khối lượng công việc cao. Mô-đun liên tục giám sát, xác định các dấu hiệu hung hăng sớm.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Văn phòng Chính phủ & Tòa nhà Dịch vụ Công cộng:</strong> Các quầy dịch vụ đông đúc và thời gian chờ đợi kéo dài có thể dẫn đến đối đầu. Giải pháp giúp các tổ chức công phát hiện hung hăng bằng lời nói hoặc cử chỉ thù địch sớm.
+                                    <strong class="text-gray-900">Văn phòng Chính phủ & Tòa nhà Dịch vụ Công cộng:</strong> Các quầy dịch vụ đông đúc và thời gian chờ đợi kéo dài có thể dẫn đến đối đầu. Giải pháp giúp các tổ chức công phát hiện hung hăng bằng lời nói hoặc cử chỉ thù địch sớm.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Khu vực Vận hành Từ xa hoặc Cô lập:</strong> Trong các địa điểm xa xôi như mỏ hoặc giàn khoan dầu ngoài khơi, các cuộc xô xát có thể xảy ra với ít sự giám sát. AI cung cấp giám sát liên tục, phát hiện dấu hiệu hung hăng sớm và cảnh báo giám sát viên theo thời gian thực.
+                                    <strong class="text-gray-900">Khu vực Vận hành Từ xa hoặc Cô lập:</strong> Trong các địa điểm xa xôi như mỏ hoặc giàn khoan dầu ngoài khơi, các cuộc xô xát có thể xảy ra với ít sự giám sát. AI cung cấp giám sát liên tục, phát hiện dấu hiệu hung hăng sớm và cảnh báo giám sát viên theo thời gian thực.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Cửa hàng Bán lẻ, Trung tâm Mua sắm:</strong> Căng thẳng trong môi trường bán lẻ đông đúc có thể leo thang nhanh chóng do tranh chấp, nỗ lực trộm cắp hoặc hàng đợi dài. Giải pháp giám sát các lối vào, khu vực thanh toán và khu vực giao thông cao điểm.
+                                    <strong class="text-gray-900">Cửa hàng Bán lẻ, Trung tâm Mua sắm:</strong> Căng thẳng trong môi trường bán lẻ đông đúc có thể leo thang nhanh chóng do tranh chấp, nỗ lực trộm cắp hoặc hàng đợi dài. Giải pháp giám sát các lối vào, khu vực thanh toán và khu vực giao thông cao điểm.
                                 </div>
                             </li>
                              <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
                                 <div>
-                                    <strong class="text-white">Cơ sở Hạ tầng Công cộng & Ga Quá cảnh:</strong> Các khu vực trung chuyển bận rộn như bến xe buýt, sân ga và ga tàu điện ngầm là những điểm nóng thường xuyên xảy ra tranh cãi và xô xát. AI giám sát các khu vực xếp hàng và lên tàu, phát hiện các dấu hiệu hung hăng sớm.
+                                    <strong class="text-gray-900">Cơ sở Hạ tầng Công cộng & Ga Quá cảnh:</strong> Các khu vực trung chuyển bận rộn như bến xe buýt, sân ga và ga tàu điện ngầm là những điểm nóng thường xuyên xảy ra tranh cãi và xô xát. AI giám sát các khu vực xếp hàng và lên tàu, phát hiện các dấu hiệu hung hăng sớm.
                                 </div>
                             </li>
                         </ul>
@@ -241,32 +329,32 @@
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
-                        <p class="text-gray-300 leading-relaxed text-lg mb-4">
+                        <p class="text-gray-600 leading-relaxed text-lg mb-4">
                             Giải pháp này sử dụng AI để nhận biết các dấu hiệu hung hăng và kích hoạt phản ứng nhanh chóng.
                         </p>
-                        <ul class="space-y-6 text-gray-300 leading-relaxed text-lg">
+                        <ul class="space-y-6 text-gray-600 leading-relaxed text-lg">
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-white">Chọn (Choose):</strong> Chọn mô-đun "Fighting and Violence Detection" từ viAct’s viHUB, được xây dựng để phát hiện xung đột và xô xát trong thời gian thực.
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun "Fighting and Violence Detection" từ viAct’s viHUB, được xây dựng để phát hiện xung đột và xô xát trong thời gian thực.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-white">Kết nối (Connect):</strong> Kết nối mô-đun AI với hệ thống CCTV hoặc IP camera hiện có bằng giao thức RTSP. Không cần phần cứng mới.
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Kết nối mô-đun AI với hệ thống CCTV hoặc IP camera hiện có bằng giao thức RTSP. Không cần phần cứng mới.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-white">Ghi nhận (Capture):</strong> AI liên tục phân tích mỗi khung hình video để phát hiện các dấu hiệu hành vi và mẫu chuyển động báo hiệu bạo lực tiềm ẩn, bao gồm các cú lao bất ngờ, chuyển động nhanh về phía trước, la hét, giơ tay hoặc nắm đấm siết chặt. Nó cũng phát hiện các hành động theo ngữ cảnh như chen chúc, tranh cãi gay gắt, tạo tư thế hoặc cử chỉ đe dọa.
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI liên tục phân tích mỗi khung hình video để phát hiện các dấu hiệu hành vi và mẫu chuyển động báo hiệu bạo lực tiềm ẩn, bao gồm các cú lao bất ngờ, chuyển động nhanh về phía trước, la hét, giơ tay hoặc nắm đấm siết chặt. Nó cũng phát hiện các hành động theo ngữ cảnh như chen chúc, tranh cãi gay gắt, tạo tư thế hoặc cử chỉ đe dọa.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-white">Kiểm soát (Control):</strong> Khi phát hiện mối đe dọa, hệ thống video analytics ngay lập tức gửi cảnh báo đến phòng điều khiển, thiết bị di động và bảng điều khiển. Những thông báo theo thời gian thực này cho phép các đội tại chỗ can thiệp trước khi leo thang. Nền tảng cũng ghi lại sự cố để xem xét, điều tra và kiểm toán an toàn sau này.
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi phát hiện mối đe dọa, hệ thống video analytics ngay lập tức gửi cảnh báo đến phòng điều khiển, thiết bị di động và bảng điều khiển. Những thông báo theo thời gian thực này cho phép các đội tại chỗ can thiệp trước khi leo thang. Nền tảng cũng ghi lại sự cố để xem xét, điều tra và kiểm toán an toàn sau này.
                                 </div>
                             </li>
                         </ul>
@@ -281,36 +369,36 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         V. Tác động và Lợi ích Chính
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         AI của viAct cung cấp khả năng phát hiện chủ động, giảm đáng kể tỷ lệ leo thang và cải thiện phản ứng:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Độ chính xác Phát hiện Sớm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Độ chính xác Phát hiện Sớm</h3>
                             <p class="text-gray-400">Xác định sự hung hăng giai đoạn đầu với độ chính xác lên tới 89% bằng cách phân tích cử chỉ, tốc độ di chuyển và tư thế.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Sự cố</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố</h3>
                             <p class="text-gray-400">Giảm tỷ lệ leo thang sự cố tới 72% bằng cách phát hiện các mẫu hành vi thù địch.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Tăng Tốc độ Phản hồi</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
                             <p class="text-gray-400">Giảm thời gian phản hồi tới 4 lần với cảnh báo theo thời gian thực.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phát hiện Căng thẳng Tiền xung đột</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phát hiện Căng thẳng Tiền xung đột</h3>
                             <p class="text-gray-400">Gắn cờ căng thẳng trước khi xảy ra đánh nhau nhanh hơn 3 lần so với người quan sát bằng cách theo dõi sự chen chúc, tiến lên đột ngột và tương tác bằng giọng nói lớn.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Giảm Cảnh báo Sai</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Cảnh báo Sai</h3>
                             <p class="text-gray-400">Giảm 65% cảnh báo hung hăng sai bằng cách sử dụng AI thích ứng được đào tạo dựa trên các xu hướng chuyển động cụ thể tại chỗ.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phối hợp Nhóm</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phối hợp Nhóm</h3>
                             <p class="text-gray-400">Cải thiện sự phối hợp nhóm 58% thông qua các bảng điều khiển hợp nhất hiển thị cảnh báo trực tiếp, dấu thời gian và cờ hành vi được gắn thẻ vị trí.</p>
                         </div>
                         <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Phân tích Sự cố</h3>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phân tích Sự cố</h3>
                             <p class="text-gray-400">Cắt giảm thời gian phân tích sự cố 5 lần thông qua việc gắn thẻ tự động các sự kiện hung hăng với khả năng phát lại tức thì.</p>
                         </div>
                     </div>
@@ -321,17 +409,17 @@
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
                         VI. Case Study: Khu mỏ Ghana Giảm 62% Xô xát tại Nơi làm việc
                     </h2>
-                    <p class="text-gray-300 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Khai thác mỏ (Mining). **Địa điểm:** Ghana, Châu Phi.
                     </p>
                     <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
-                        <p class="text-gray-300 text-lg mb-4">
+                        <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một nhà điều hành khai thác mỏ lớn phải đối mặt với các cuộc xô xát lặp đi lặp lại giữa các công nhân, đặc biệt là trong ca đêm và giờ ăn. Địa điểm xa xôi và nhân viên tại chỗ hạn chế khiến việc can thiệp kịp thời vô cùng khó khăn.
                         </p>
-                        <p class="text-gray-300 text-lg">
+                        <p class="text-gray-600 text-lg">
                             **Giải pháp của viAct:** Công ty đã triển khai mô-đun Phát hiện Đánh nhau & Bạo lực của viAct trên cơ sở hạ tầng CCTV hiện có. AI giám sát hành vi theo thời gian thực và cảnh báo giám sát viên về các dấu hiệu hung hăng hoặc xung đột sớm.
                         </p>
-                        <p class="text-gray-300 text-lg mt-4">
+                        <p class="text-gray-600 text-lg mt-4">
                             **Tác động của viAct:** Sau ba tháng triển khai, địa điểm này đã ghi nhận giảm **62%** các vụ xô xát vật lý, sự cố hung hăng và gián đoạn hoạt động liên quan đến xung đột tại nơi làm việc.
                         </p>
                     </div>
@@ -339,35 +427,33 @@
 
                 <!-- Call to Action -->
                 <div class="text-center py-12">
-                    <h2 class="text-4xl font-bold text-white mb-4">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để những bất đồng leo thang thành bạo lực nghiêm trọng.
                     </h2>
                     <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Fighting & Violence Detection có thể tăng tốc phản ứng lên gấp 4 lần và giảm tỷ lệ leo thang sự cố tới 72% bằng cách sử dụng hệ thống CCTV hiện có của bạn.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
                         ĐẶT LỊCH DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full bg-[#1A1A22] py-12">
+    </main>    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
                 <div class="flex items-center space-x-2 mb-4">
-                    <img src="../..../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
-                    <span class="text-xl font-bold text-white">Quốc Việt Co.,Ltd</span>
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
                 </div>
-                <p class="text-gray-500 max-w-2xl">
+                <p class="text-gray-600 max-w-2xl">
                     Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng
                     trưởng bền vững.
                 </p>
                 <div class="flex space-x-6 mt-6">
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -376,7 +462,7 @@
                         </svg>
                     </a>
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
-                        class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook"
+                        class="text-gray-600 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
@@ -386,7 +472,7 @@
                 </div>
             </div>
         </div>
-        <div class="mt-8 text-center text-gray-500 text-sm">
+        <div class="mt-8 text-center text-gray-600 text-sm">
             <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
         </div>
     </footer>
