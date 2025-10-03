@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -212,7 +244,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Phát Hiện và Cảnh Báo Tiếp Cận Nguy Hiểm
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
                 viAct AI-powered Proximity Detection: Giám sát những gì con người không thể – theo dõi các vùng mù và các thiết bị lớn đang di chuyển theo thời gian thực. Hệ thống phát hiện khoảng cách rủi ro giữa máy móc và con người hoặc giữa các máy móc, đưa ra cảnh báo tức thì nhằm ngăn chặn va chạm, bảo vệ đội ngũ công nhân.
             </p>
         </section>
@@ -256,23 +288,23 @@
                     </p>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Các Lỗ hổng An toàn Phổ biến:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Máy móc hạng nặng hoạt động trong các khu vực chật hẹp mà không có vùng đệm an toàn được xác định.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Máy móc hạng nặng hoạt động trong các khu vực chật hẹp mà không có vùng đệm an toàn được xác định.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Điểm mù giữa các thiết bị lớn cản trở tầm nhìn của người vận hành.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Điểm mù giữa các thiết bị lớn cản trở tầm nhìn của người vận hành.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Công nhân đi vào khu vực máy móc hoạt động mà không được phát hiện.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Công nhân đi vào khu vực máy móc hoạt động mà không được phát hiện.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Công nhân bị xao nhãng bởi tiếng ồn hoặc mệt mỏi mà đi vào khu vực thiết bị đang hoạt động mà không hề hay biết.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Công nhân bị xao nhãng bởi tiếng ồn hoặc mệt mỏi mà đi vào khu vực thiết bị đang hoạt động mà không hề hay biết.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Thiếu cảnh báo theo thời gian thực khi có vi phạm khoảng cách không an toàn.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Thiếu cảnh báo theo thời gian thực khi có vi phạm khoảng cách không an toàn.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Không giống như giám sát thủ công, hệ thống AI đảm bảo cảnh giác liên tục, khắc phục những hạn chế do mệt mỏi và điểm mù gây ra.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Không giống như giám sát thủ công, hệ thống AI đảm bảo cảnh giác liên tục, khắc phục những hạn chế do mệt mỏi và điểm mù gây ra.</p>
                         </div>
                     </div>
                 </div>
@@ -374,29 +406,29 @@
                         viAct AI-powered Proximity Detection mang lại tác động có thể đo lường được trong việc giảm thiểu rủi ro và tăng cường hiệu quả vận hành:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Suýt xảy ra</h3>
-                            <p class="text-gray-400">Giảm tới 47% các sự cố suýt xảy ra.</p>
+                            <p class="text-gray-700">Giảm tới 47% các sự cố suýt xảy ra.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Độ chính xác Vùng Rủi ro</h3>
-                            <p class="text-gray-400">Độ chính xác vùng rủi ro cao hơn 35%.</p>
+                            <p class="text-gray-700">Độ chính xác vùng rủi ro cao hơn 35%.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cắt giảm Thời gian Phản hồi</h3>
-                            <p class="text-gray-400">Cắt giảm thời gian phản hồi khẩn cấp tới 59% bằng cách loại bỏ sự phối hợp thủ công.</p>
+                            <p class="text-gray-700">Cắt giảm thời gian phản hồi khẩn cấp tới 59% bằng cách loại bỏ sự phối hợp thủ công.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Tài liệu An toàn</h3>
-                            <p class="text-gray-400">Cho phép tạo tài liệu an toàn nhanh hơn 2.7 lần, đẩy nhanh quá trình kiểm toán và tuân thủ.</p>
+                            <p class="text-gray-700">Cho phép tạo tài liệu an toàn nhanh hơn 2.7 lần, đẩy nhanh quá trình kiểm toán và tuân thủ.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Điều chỉnh Hành vi</h3>
-                            <p class="text-gray-400">Cải thiện 25% việc sửa chữa hành vi không an toàn mà không cần đào tạo lại chính thức.</p>
+                            <p class="text-gray-700">Cải thiện 25% việc sửa chữa hành vi không an toàn mà không cần đào tạo lại chính thức.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Yêu cầu Bảo hiểm</h3>
-                            <p class="text-gray-400">Giảm 23% yêu cầu bảo hiểm.</p>
+                            <p class="text-gray-700">Giảm 23% yêu cầu bảo hiểm.</p>
                         </div>
                     </div>
                 </div>
@@ -409,7 +441,7 @@
                     <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Sản xuất Ô tô. **Địa điểm:** Đức.
                     </p>
-                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                    <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Nhà máy lắp ráp phải đối mặt với các sự cố suýt va chạm lặp đi lặp lại trong các khu vực tắc nghẽn như Dây chuyền lắp ráp cuối cùng và Đường hầm Logistics. Các biện pháp kiểm soát an toàn thủ công không đủ.
                         </p>
@@ -427,7 +459,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         AI có thể làm những gì con người không thể: Giám sát 24/7 và cảnh báo ngay lập tức về rủi ro tiếp cận nguy hiểm.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Proximity Detection có thể tích hợp với hệ thống CCTV hiện có của bạn để chuyển từ giám sát thủ công sang phòng ngừa tai nạn chủ động.
                     </p>
                     <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">

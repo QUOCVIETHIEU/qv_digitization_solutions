@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -212,7 +244,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Lảng Vảng
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn"
                 style="animation-delay: 0.2s;">
                 viAct AI-powered Loitering Detection: Giám sát Chủ động Hành vi Nán lại Đáng ngờ trên Công trường với
                 Phát Hiện Lảng Vảng được Hỗ trợ bởi AI. Giải pháp chuyển đổi CCTV hiện có của bạn thành công cụ giám sát
@@ -267,33 +299,33 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Các Rủi ro Lảng Vảng Phổ biến:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Sự hiện diện kéo dài gần các khu vực điện áp cao, kho chứa hoặc
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Sự hiện diện kéo dài gần các khu vực điện áp cao, kho chứa hoặc
                                 phòng bảo trì.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Cá nhân nhàn rỗi tại lối thoát hiểm khẩn cấp, hàng rào chu vi hoặc
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Cá nhân nhàn rỗi tại lối thoát hiểm khẩn cấp, hàng rào chu vi hoặc
                                 điểm mù.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Người lạ lảng vảng gần các lối vào kiểm soát truy cập trong giờ
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Người lạ lảng vảng gần các lối vào kiểm soát truy cập trong giờ
                                 nghỉ.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Pacing lặp đi lặp lại trong khu vực cấm chờ hoặc chỉ dành cho nhân
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Pacing lặp đi lặp lại trong khu vực cấm chờ hoặc chỉ dành cho nhân
                                 viên.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Sự hình thành đám đông hoặc công nhân nhàn rỗi gần các mối nguy
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Sự hình thành đám đông hoặc công nhân nhàn rỗi gần các mối nguy
                                 hiểm vận hành hoặc làn xe.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Các đội an ninh bỏ lỡ tín hiệu trong quá trình quá tải camera hoặc
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Các đội an ninh bỏ lỡ tín hiệu trong quá trình quá tải camera hoặc
                                 luân chuyển nhân viên.</p>
                         </div>
                     </div>
@@ -420,44 +452,44 @@
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự chậm trễ Phản hồi</h3>
-                            <p class="text-gray-400">Cắt giảm độ trễ phản hồi sự cố 60% bằng cảnh báo thời gian thực.
+                            <p class="text-gray-700">Cắt giảm độ trễ phản hồi sự cố 60% bằng cảnh báo thời gian thực.
                             </p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tối ưu hóa Giám sát</h3>
-                            <p class="text-gray-400">Giảm 54% thời gian dành cho giám sát camera trực tiếp, cho phép các
+                            <p class="text-gray-700">Giảm 54% thời gian dành cho giám sát camera trực tiếp, cho phép các
                                 đội tập trung vào các nhiệm vụ có giá trị cao hơn.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Độ chính xác</h3>
-                            <p class="text-gray-400">Cải thiện độ chính xác phát hiện 85% theo thời gian với ít cảnh báo
+                            <p class="text-gray-700">Cải thiện độ chính xác phát hiện 85% theo thời gian với ít cảnh báo
                                 sai hơn.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Chi phí Vận hành</h3>
-                            <p class="text-gray-400">Giảm tuần tra thủ công và chi phí làm thêm giờ hơn 35%.</p>
+                            <p class="text-gray-700">Giảm tuần tra thủ công và chi phí làm thêm giờ hơn 35%.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Nhận thức Hành vi</h3>
-                            <p class="text-gray-400">Tăng cường nhận thức hành vi giai đoạn đầu với các thúc đẩy do AI
+                            <p class="text-gray-700">Tăng cường nhận thức hành vi giai đoạn đầu với các thúc đẩy do AI
                                 kích hoạt hiệu quả hơn 3 lần.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tương thích Rộng rãi</h3>
-                            <p class="text-gray-400">Dễ dàng tích hợp với CCTV hiện có và các thiết lập kiểm soát truy
+                            <p class="text-gray-700">Dễ dàng tích hợp với CCTV hiện có và các thiết lập kiểm soát truy
                                 cập. Triển khai 98% mà không cần phần cứng bổ sung.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng cường Báo cáo</h3>
-                            <p class="text-gray-400">Tăng cường độ chính xác báo cáo 45%, giúp giảm thiểu rủi ro trách
+                            <p class="text-gray-700">Tăng cường độ chính xác báo cáo 45%, giúp giảm thiểu rủi ro trách
                                 nhiệm pháp lý và tăng tốc các cuộc điều tra an toàn.</p>
                         </div>
                     </div>
@@ -471,7 +503,7 @@
                     <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Sản xuất (Manufacturing). **Địa điểm:** Thụy Điển (Sweden, Europe).
                     </p>
-                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                    <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Nhà máy thường xuyên xảy ra các sự cố lảng vảng trái phép gần bến bốc dỡ, lối
                             thoát hiểm và các điểm vào phía sau. Những điểm mù bị bỏ qua này đặt ra rủi ro về xâm nhập,
@@ -494,7 +526,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để hành vi lảng vảng biến thành vi phạm an ninh.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Loitering Detection có thể cải thiện độ chính xác an ninh của bạn tới 85% và
                         giảm độ trễ phản hồi lên tới 60%.
                     </p>

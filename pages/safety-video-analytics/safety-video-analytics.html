@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -240,7 +272,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Precision Safety Video Analytics for Unpredictable Scenarios
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
                 Cameras that analyze. Safety that scales!
             </p>
         </section>
@@ -256,7 +288,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Đảm bảo Tuân thủ Toàn diện từ Đầu đến Chân 24/7. Giám sát việc sử dụng mũ bảo hộ, dây an toàn, v.v., giảm 92% việc không tuân thủ PPE và tử vong liên quan.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm 92% việc không tuân thủ PPE và tử vong liên quan. Giúp tiết kiệm trung bình 10.000 USD/Công trường chi cho việc kiểm tra thủ công.
                         </p>
                     </div>
@@ -273,7 +305,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Hệ thống Phát hiện Rủi ro Té ngã từ Độ cao theo Thời gian thực. Tự động xác định công nhân hoặc thiết bị ở gần các cạnh không được bảo vệ (giàn giáo, mái nhà).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Đã đạt 76% giảm các vụ suýt xảy ra liên quan đến cạnh.
                         </p>
                     </div>
@@ -290,7 +322,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Cảnh báo Tức thì trong 3 giây khi phát hiện rào chắn bị thiếu, di dời hoặc hư hỏng.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Tăng khả năng ngăn ngừa té ngã và xâm nhập trái phép tới 48%.
                         </p>
                     </div>
@@ -307,7 +339,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Phản ứng Tức thì với Ngã từ Độ cao (FFH). Nhận diện sự thay đổi tư thế đột ngột hoặc sự sụp đổ của công nhân. FFH là nguyên nhân chính gây tử vong trong xây dựng.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm 95% trượt chân và vấp ngã nguy hiểm.
                         </p>
                     </div>
@@ -324,7 +356,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Theo dõi Điểm mù và Khoảng cách Rủi ro Người-Máy. Thiết lập vùng an toàn ảo xung quanh máy móc (xe nâng, máy xúc).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm tới 47% sự cố suýt xảy ra. Cắt giảm thời gian phản hồi khẩn cấp tới 59%.
                         </p>
                     </div>
@@ -341,7 +373,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Ngăn ngừa mối nguy hiểm Vật thể Rơi (DROPS) quan trọng. Phát hiện công nhân xâm nhập khu vực dưới cần trục/tải trọng treo.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Đã đạt 82% giảm số lần xâm nhập không an toàn. Dự đoán rủi ro vật thể rơi chính xác hơn 2 lần.
                         </p>
                     </div>
@@ -358,7 +390,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Thực thi Kiểm soát Truy cập 1 giây. Phát hiện và cảnh báo tức thì khi nhân viên xâm nhập khu vực bị hạn chế (Red Zone), gửi cảnh báo bằng ánh sáng & âm thanh trong 1 giây.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Tai nạn do xâm nhập Khu vực Nguy hiểm chiếm 10%.
                         </p>
                     </div>
@@ -375,7 +407,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Trí tuệ Không gian để Tối ưu hóa Nhân lực. Trực quan hóa dòng chảy và mật độ công nhân.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Đã báo cáo 90% giảm xâm nhập Khu vực Đỏ do quá tải. Loại bỏ 80% lỗi thủ công trong việc sắp xếp lực lượng lao động.
                         </p>
                     </div>
@@ -392,7 +424,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Phòng thủ Ranh giới 24/7 với Độ chính xác >95%. Phát hiện leo trèo, giả mạo hoặc xâm nhập dọc theo ranh giới công trường.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Đạt độ chính xác trên 95%. Tăng tốc phản ứng lên tới 80%.
                         </p>
                     </div>
@@ -409,7 +441,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Phát hiện Mối đe dọa Chủ động với AI. Tự động nhận dạng súng, dao và các vật nguy hiểm khác với độ chính xác lên tới 92%.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Tăng tốc thời gian phản ứng hơn 50%.
                         </p>
                     </div>
@@ -426,7 +458,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Bảo vệ Tài sản Giá trị Cao và Giảm Tổn thất. Phát hiện truy cập trái phép, giả mạo, hoặc các tư thế đáng ngờ (như che giấu vật phẩm).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Đã giúp giảm 63% sự cố trộm cắp vặt. Cắt giảm thời gian phản hồi 70%.
                         </p>
                     </div>
@@ -443,7 +475,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Trí tuệ Hành vi để Ngăn chặn Xâm nhập. Gắn cờ sự hiện diện kéo dài, bất thường (vượt quá ngưỡng thời gian nán lại).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm độ trễ phản hồi sự cố 60%. Cải thiện độ chính xác phát hiện 85% theo thời gian.
                         </p>
                     </div>
@@ -460,7 +492,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Can thiệp Sớm để Ngăn chặn Leo thang. Phát hiện các dấu hiệu hung hăng sớm (tư thế, chuyển động đột ngột).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm tỷ lệ leo thang sự cố tới 72%. Giảm thời gian phản hồi 4 lần.
                         </p>
                     </div>
@@ -477,7 +509,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Phát hiện Dấu hiệu Nguy hiểm Cháy sớm (Pre-Ignition). Phát hiện khói và dị thường nhiệt sớm hơn tới 15 phút so với hệ thống thông thường.
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> Giảm 52% cảnh báo sai.
                         </p>
                     </div>
@@ -494,7 +526,7 @@
                         <p class="text-gray-600 leading-relaxed text-lg mt-4">
                             <strong class="text-gray-900">Mô tả:</strong> Chuyển đổi Hậu quả thành Dự đoán An toàn. Tự động ghi lại và phân tích các sự cố cận kề (suýt va chạm, trượt chân).
                         </p>
-                        <p class="text-gray-400 leading-relaxed text-lg mt-2">
+                        <p class="text-gray-700 leading-relaxed text-lg mt-2">
                             <strong class="text-gray-900">Dữ liệu:</strong> 91% các sự cố suýt xảy ra trước đây không được báo cáo; AI đã gắn cờ chúng ngay lập tức.
                         </p>
                     </div>

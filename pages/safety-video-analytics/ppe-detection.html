@@ -40,6 +40,39 @@
             z-index: 0;
         }
 
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -212,7 +245,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 PPE Detection
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn"
                 style="animation-delay: 0.2s;">
                 Giải pháp video AI biến camera
                 thường thành trợ lý an toàn, giám sát và phát hiện sai phạm tuân thủ đồ bảo hộ cá nhân theo thời gian thực (PPE).</p>
@@ -273,36 +306,31 @@
                     </p>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Rủi ro của việc không tuân thủ mang đồ bảo hộ (PPE)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Nguy Cơ Gây Thương Tích</h4>
-                            <p class="text-gray-400">Khảo sát cho thấy công nhân không mang PPE có nguy cơ bị thương cao gấp 3 lần so với những người được trang bị đầy đủ và đúng chuẩn.</p>
+                            <p class="text-gray-700">Khảo sát cho thấy công nhân không mang PPE có nguy cơ bị thương cao gấp 3 lần so với những người được trang bị đầy đủ và đúng chuẩn.</p>
                         </div>
-                        <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Sự Cố Nghiêm Trọng</h4>
-                            <p class="text-gray-400">Những sai sót nhỏ trong việc sử dụng PPE có thể dẫn đến tai nạn nghiêm trọng, ảnh hưởng trực tiếp đến tính mạng và tài sản của nhân viên.
-                            </p>
+                            <p class="text-gray-700">Những sai sót nhỏ trong việc sử dụng PPE có thể dẫn đến tai nạn nghiêm trọng, ảnh hưởng trực tiếp đến tính mạng và tài sản của nhân viên.</p>
                         </div>
-                        <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Chi Phí Tăng Cao</h4>
-                            <p class="text-gray-400">Vi phạm PPE kéo theo chi phí khổng lồ từ gián đoạn sản xuất, bồi thường tai nạn, bảo hiểm và các khoản chi phát sinh không mong muốn.</p>
+                            <p class="text-gray-700">Vi phạm PPE kéo theo chi phí khổng lồ từ gián đoạn sản xuất, bồi thường tai nạn, bảo hiểm và các khoản chi phát sinh không mong muốn.</p>
                         </div>
-                        <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-bold text-gray-900 mb-2">Văn Hóa An Toàn</h4>
-                            <p class="text-gray-400">Tuân thủ PPE nhất quán giúp xây dựng hình ảnh chuyên nghiệp, nâng cao niềm tin với khách hàng, quản lý và toàn bộ lực lượng lao động.</p>
+                            <p class="text-gray-700">Tuân thủ PPE nhất quán giúp xây dựng hình ảnh chuyên nghiệp, nâng cao niềm tin với khách hàng, quản lý và toàn bộ lực lượng lao động.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-semibold text-gray-900 mb-2">Gián Đoạn Vận Hành</h4>
-                            <p class="text-gray-400">Sự cố PPE buộc dừng công việc, điều tra, đào tạo lại, gây chậm tiến độ dự án và tổn thất năng suất.</p>
+                            <p class="text-gray-700">Sự cố PPE buộc dừng công việc, điều tra, đào tạo lại, gây chậm tiến độ dự án và tổn thất năng suất.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h4 class="text-xl font-semibold text-gray-900 mb-2">Rủi Ro Pháp Lý & Tiền Phạt</h4>
-                            <p class="text-gray-400">Không tuân thủ quy định an toàn quốc gia (như OSHA) có thể dẫn đến phạt nặng, kiện tụng và ảnh hưởng tiêu cực đến danh tiếng của doanh nghiệp.
+                            <p class="text-gray-700">Không tuân thủ quy định an toàn quốc gia (như OSHA) có thể dẫn đến phạt nặng, kiện tụng và ảnh hưởng tiêu cực đến danh tiếng của doanh nghiệp.
                             </p>
                         </div>
                     </div>
@@ -438,34 +466,34 @@
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm vi phạm an toàn PPE</h3>
-                            <p class="text-gray-400">Giảm đến 92% các trường hợp không tuân thủ trang bị bảo hộ cá nhân (mũ bảo hộ, áo phản quang, găng tay…) giúp ngăn ngừa tai nạn lao động và tổn thất sức khỏe.</p>
+                            <p class="text-gray-700">Giảm đến 92% các trường hợp không tuân thủ trang bị bảo hộ cá nhân (mũ bảo hộ, áo phản quang, găng tay…) giúp ngăn ngừa tai nạn lao động và tổn thất sức khỏe.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Ngăn chặn tái diễn vi phạm</h3>
-                            <p class="text-gray-400">Nhận diện & phân tích nguyên nhân vi phạm, cung cấp cảnh báo kịp thời, giúp giảm 80% các lỗi PPE lặp lại, hình thành văn hóa an toàn bền vững</p>
+                            <p class="text-gray-700">Nhận diện & phân tích nguyên nhân vi phạm, cung cấp cảnh báo kịp thời, giúp giảm 80% các lỗi PPE lặp lại, hình thành văn hóa an toàn bền vững</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng tốc truy vết & truy xuất dữ liệu</h3>
-                            <p class="text-gray-400">Tự động hóa báo cáo PPE, truy vết nhanh từng sự cố, hỗ trợ kiểm toán nội bộ & bên thứ ba nhanh gấp 10 lần so với phương pháp thủ công.</p>
+                            <p class="text-gray-700">Tự động hóa báo cáo PPE, truy vết nhanh từng sự cố, hỗ trợ kiểm toán nội bộ & bên thứ ba nhanh gấp 10 lần so với phương pháp thủ công.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tiết kiệm chi phí vận hành</h3>
-                            <p class="text-gray-400">Giảm trung bình 10.000 USD/năm/công trường cho công tác kiểm tra thủ công và xử lý vi phạm.</p>
+                            <p class="text-gray-700">Giảm trung bình 10.000 USD/năm/công trường cho công tác kiểm tra thủ công và xử lý vi phạm.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giám sát liên tục 24/7</h3>
-                            <p class="text-gray-400">AI hoạt động không gián đoạn, thay thế giám sát viên thủ công, đảm bảo kiểm soát an toàn ngay cả ngoài giờ hành chính hay khu vực khó quan sát.</p>
+                            <p class="text-gray-700">AI hoạt động không gián đoạn, thay thế giám sát viên thủ công, đảm bảo kiểm soát an toàn ngay cả ngoài giờ hành chính hay khu vực khó quan sát.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phản hồi nhanh & cảnh báo tức thời</h3>
-                            <p class="text-gray-400">Hệ thống đồng bộ hóa đồng thời nhiều camera ở nhiều khu vực, gửi cảnh báo ngay lập tức qua dashboard, email, SMS hoặc ứng dụng di động để xử lý tình huống kịp thời.</p>
+                            <p class="text-gray-700">Hệ thống đồng bộ hóa đồng thời nhiều camera ở nhiều khu vực, gửi cảnh báo ngay lập tức qua dashboard, email, SMS hoặc ứng dụng di động để xử lý tình huống kịp thời.</p>
                         </div>
                     </div>
                 </div>
@@ -475,7 +503,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Hãy đảm bảo tuân thủ PPE 100%<br>Mọi ca làm việc, trên mọi công trường.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách Quốc Việt tích hợp một cách liền mạch giải pháp PPE Detection bằng AI với hệ thống CCTV hiện có của bạn để
                         tự động hóa giám sát an toàn và giảm tối đa sự không tuân thủ liên quan đến đồ bảo hộ cá nhân (PPE) của nhân viên.
                     </p>

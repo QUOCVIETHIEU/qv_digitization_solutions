@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -212,7 +244,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Đánh nhau & Bạo lực
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
                 viAct AI-powered Fighting & Violence Detection: Phát hiện Hành vi Hung hăng Sớm để Ngăn chặn Xung đột. Giải pháp sử dụng video analytics thông minh để phát hiện các dấu hiệu hung hăng sớm trước khi chúng leo thang, hoạt động theo thời gian thực tại các khu vực công nghiệp và công cộng.
             </p>
         </section>
@@ -255,20 +287,20 @@
                     </p>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thách thức của Phát hiện Xung đột theo Thời gian thực:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Các Tín hiệu Hành vi Bỏ sót: Các cuộc gặp gỡ hung hăng bắt đầu bằng cử chỉ, ánh nhìn hoặc tranh cãi. AI phát hiện những tín hiệu hành vi nhỏ này với độ chính xác nhất quán.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Các Tín hiệu Hành vi Bỏ sót: Các cuộc gặp gỡ hung hăng bắt đầu bằng cử chỉ, ánh nhìn hoặc tranh cãi. AI phát hiện những tín hiệu hành vi nhỏ này với độ chính xác nhất quán.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Quá tải Giám sát: Nhân viên an ninh không thể theo dõi tất cả các nguồn cấp camera liên tục.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Quá tải Giám sát: Nhân viên an ninh không thể theo dõi tất cả các nguồn cấp camera liên tục.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Nguy cơ leo thang: Khi có người báo động, thường là quá muộn để ngăn chặn leo thang.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Nguy cơ leo thang: Khi có người báo động, thường là quá muộn để ngăn chặn leo thang.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Điểm nóng Rủi ro: Các cuộc đối đầu nhóm gần các khu vực nút thắt cổ chai như hàng đợi hoặc lối ra.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Điểm nóng Rủi ro: Các cuộc đối đầu nhóm gần các khu vực nút thắt cổ chai như hàng đợi hoặc lối ra.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Các Dấu hiệu Cảnh báo Sớm: Các dấu hiệu cảnh báo đỏ sớm thường bị nhân viên bỏ lỡ do mệt mỏi hoặc mất tập trung.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Các Dấu hiệu Cảnh báo Sớm: Các dấu hiệu cảnh báo đỏ sớm thường bị nhân viên bỏ lỡ do mệt mỏi hoặc mất tập trung.</p>
                         </div>
                     </div>
                     <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
@@ -373,33 +405,33 @@
                         AI của viAct cung cấp khả năng phát hiện chủ động, giảm đáng kể tỷ lệ leo thang và cải thiện phản ứng:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Độ chính xác Phát hiện Sớm</h3>
-                            <p class="text-gray-400">Xác định sự hung hăng giai đoạn đầu với độ chính xác lên tới 89% bằng cách phân tích cử chỉ, tốc độ di chuyển và tư thế.</p>
+                            <p class="text-gray-700">Xác định sự hung hăng giai đoạn đầu với độ chính xác lên tới 89% bằng cách phân tích cử chỉ, tốc độ di chuyển và tư thế.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố</h3>
-                            <p class="text-gray-400">Giảm tỷ lệ leo thang sự cố tới 72% bằng cách phát hiện các mẫu hành vi thù địch.</p>
+                            <p class="text-gray-700">Giảm tỷ lệ leo thang sự cố tới 72% bằng cách phát hiện các mẫu hành vi thù địch.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
-                            <p class="text-gray-400">Giảm thời gian phản hồi tới 4 lần với cảnh báo theo thời gian thực.</p>
+                            <p class="text-gray-700">Giảm thời gian phản hồi tới 4 lần với cảnh báo theo thời gian thực.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phát hiện Căng thẳng Tiền xung đột</h3>
-                            <p class="text-gray-400">Gắn cờ căng thẳng trước khi xảy ra đánh nhau nhanh hơn 3 lần so với người quan sát bằng cách theo dõi sự chen chúc, tiến lên đột ngột và tương tác bằng giọng nói lớn.</p>
+                            <p class="text-gray-700">Gắn cờ căng thẳng trước khi xảy ra đánh nhau nhanh hơn 3 lần so với người quan sát bằng cách theo dõi sự chen chúc, tiến lên đột ngột và tương tác bằng giọng nói lớn.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Cảnh báo Sai</h3>
-                            <p class="text-gray-400">Giảm 65% cảnh báo hung hăng sai bằng cách sử dụng AI thích ứng được đào tạo dựa trên các xu hướng chuyển động cụ thể tại chỗ.</p>
+                            <p class="text-gray-700">Giảm 65% cảnh báo hung hăng sai bằng cách sử dụng AI thích ứng được đào tạo dựa trên các xu hướng chuyển động cụ thể tại chỗ.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phối hợp Nhóm</h3>
-                            <p class="text-gray-400">Cải thiện sự phối hợp nhóm 58% thông qua các bảng điều khiển hợp nhất hiển thị cảnh báo trực tiếp, dấu thời gian và cờ hành vi được gắn thẻ vị trí.</p>
+                            <p class="text-gray-700">Cải thiện sự phối hợp nhóm 58% thông qua các bảng điều khiển hợp nhất hiển thị cảnh báo trực tiếp, dấu thời gian và cờ hành vi được gắn thẻ vị trí.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phân tích Sự cố</h3>
-                            <p class="text-gray-400">Cắt giảm thời gian phân tích sự cố 5 lần thông qua việc gắn thẻ tự động các sự kiện hung hăng với khả năng phát lại tức thì.</p>
+                            <p class="text-gray-700">Cắt giảm thời gian phân tích sự cố 5 lần thông qua việc gắn thẻ tự động các sự kiện hung hăng với khả năng phát lại tức thì.</p>
                         </div>
                     </div>
                 </div>
@@ -412,7 +444,7 @@
                     <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Khai thác mỏ (Mining). **Địa điểm:** Ghana, Châu Phi.
                     </p>
-                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                    <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một nhà điều hành khai thác mỏ lớn phải đối mặt với các cuộc xô xát lặp đi lặp lại giữa các công nhân, đặc biệt là trong ca đêm và giờ ăn. Địa điểm xa xôi và nhân viên tại chỗ hạn chế khiến việc can thiệp kịp thời vô cùng khó khăn.
                         </p>
@@ -430,7 +462,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để những bất đồng leo thang thành bạo lực nghiêm trọng.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Fighting & Violence Detection có thể tăng tốc phản ứng lên gấp 4 lần và giảm tỷ lệ leo thang sự cố tới 72% bằng cách sử dụng hệ thống CCTV hiện có của bạn.
                     </p>
                     <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">

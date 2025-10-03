@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -212,7 +244,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Vũ Khí
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn"
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn"
                 style="animation-delay: 0.2s;">
                 viAct AI-powered Weapon Detection: Ngăn chặn leo thang sớm với Phát hiện Vũ khí được Hỗ trợ bởi AI CCTV
                 tại các Địa điểm Dễ bị Tổn thương. Hệ thống biến CCTV thông thường thành hệ thống giảm thiểu mối đe dọa
@@ -263,24 +295,24 @@
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Thách thức của Giám sát Thủ công:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Vật thể bị che khuất: Vũ khí bị che khuất hoặc chỉ nhìn thấy một
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Vật thể bị che khuất: Vũ khí bị che khuất hoặc chỉ nhìn thấy một
                                 phần trong môi trường đông đúc, hoặc các nỗ lực che giấu có chủ đích qua áo khoác hoặc
                                 dây đeo công cụ.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Ánh sáng kém: Các đường nét bị mờ trong điều kiện thiếu ánh sáng
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Ánh sáng kém: Các đường nét bị mờ trong điều kiện thiếu ánh sáng
                                 hoặc đêm khuya.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Sự nhầm lẫn: Cảnh báo sai do các vật thể như ô, chân máy ảnh, hoặc
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Sự nhầm lẫn: Cảnh báo sai do các vật thể như ô, chân máy ảnh, hoặc
                                 các vật thể sáng bóng.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Quá tải nhân viên: Nhân viên an ninh bị quá tải, giám sát quá nhiều
+                            class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Quá tải nhân viên: Nhân viên an ninh bị quá tải, giám sát quá nhiều
                                 nguồn cấp video trực tiếp đồng thời.</p>
                         </div>
                     </div>
@@ -416,50 +448,50 @@
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Độ chính xác cao</h3>
-                            <p class="text-gray-400">Đạt độ chính xác lên tới 92% trong việc xác định vũ khí trong các
+                            <p class="text-gray-700">Đạt độ chính xác lên tới 92% trong việc xác định vũ khí trong các
                                 điều kiện ánh sáng và mật độ đám đông khác nhau.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Truy cập Trái phép</h3>
-                            <p class="text-gray-400">Giảm 70% sự cố truy cập trái phép bằng cách kết hợp phát hiện vũ
+                            <p class="text-gray-700">Giảm 70% sự cố truy cập trái phép bằng cách kết hợp phát hiện vũ
                                 khí theo thời gian thực với theo dõi hành vi.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
-                            <p class="text-gray-400">Tăng tốc thời gian phản hồi hơn 50% đối với các sự cố liên quan đến
+                            <p class="text-gray-700">Tăng tốc thời gian phản hồi hơn 50% đối với các sự cố liên quan đến
                                 vũ khí.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Cảnh báo Sai</h3>
-                            <p class="text-gray-400">Giảm 68% cảnh báo sai theo thời gian thông qua AI thích ứng.</p>
+                            <p class="text-gray-700">Giảm 68% cảnh báo sai theo thời gian thông qua AI thích ứng.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Phát hiện Hành vi Nhanh hơn</h3>
-                            <p class="text-gray-400">Phát hiện hành vi đáng ngờ nhanh hơn 3 lần so với con người bằng
+                            <p class="text-gray-700">Phát hiện hành vi đáng ngờ nhanh hơn 3 lần so với con người bằng
                                 cách phân tích mẫu chuyển động và tương tác vật thể theo thời gian thực.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cắt giảm Thời gian Điều tra</h3>
-                            <p class="text-gray-400">Cắt giảm thời gian điều tra 5 lần thông qua việc gắn thẻ tự động
+                            <p class="text-gray-700">Cắt giảm thời gian điều tra 5 lần thông qua việc gắn thẻ tự động
                                 các sự kiện vũ khí.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Phối hợp Nhóm</h3>
-                            <p class="text-gray-400">Cải thiện sự phối hợp giữa các nhóm 60% thông qua các bảng điều
+                            <p class="text-gray-700">Cải thiện sự phối hợp giữa các nhóm 60% thông qua các bảng điều
                                 khiển cảnh báo tập trung.</p>
                         </div>
                         <div
-                            class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                            class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Đánh giá Cảnh quay Nhanh hơn</h3>
-                            <p class="text-gray-400">Cho phép xem xét nhanh hơn 4 lần bằng cách tự động gắn cờ cảnh
+                            <p class="text-gray-700">Cho phép xem xét nhanh hơn 4 lần bằng cách tự động gắn cờ cảnh
                                 quay.</p>
                         </div>
                     </div>
@@ -473,7 +505,7 @@
                     <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Vận tải (Transportation). **Địa điểm:** Mississippi, Mỹ (USA).
                     </p>
-                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                    <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một cơ sở vận tải lớn đối mặt với số lượng sự cố an ninh liên quan đến vũ khí
                             ngày càng tăng, với súng trái phép đi vào khu vực công cộng. Khó khăn trong việc giám sát
@@ -496,7 +528,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để sự chậm trễ trong việc phát hiện làm leo thang các mối đe dọa sinh tử.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Weapon Detection có thể tích hợp liền mạch vào hệ thống CCTV hiện có của bạn
                         để đạt được độ chính xác 92% và tăng tốc phản ứng, biến phòng ngừa thành một hành động tức thời.
                     </p>

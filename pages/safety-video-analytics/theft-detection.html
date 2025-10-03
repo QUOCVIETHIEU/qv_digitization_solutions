@@ -39,6 +39,38 @@
             opacity: 0.2;
             z-index: 0;
         }
+                .liquid-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
+        }
+
+                .liquid-glass-dark {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            transition: all 0.3s ease;
+        }
+
+                .liquid-glass-dark:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
 
         @keyframes fadeIn {
             from {
@@ -212,7 +244,7 @@
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                 Giải pháp Phát Hiện Trộm Cắp
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
                 viAct AI-powered Theft Detection: Ngăn chặn Mất mát Tài sản với Giám sát Chủ động 24/7. Giải pháp video analytics của viAct chuyển đổi CCTV thông thường thành công cụ giám sát chủ động, nhận diện truy cập trái phép, giả mạo và hoạt động đáng ngờ theo thời gian thực.
             </p>
         </section>
@@ -251,20 +283,20 @@
                     </p>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Các Lỗ hổng Trộm cắp Phổ biến:</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Các điểm nhập cảnh không được giám sát trong quá trình thay đổi ca hoặc sau giờ làm việc.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Các điểm nhập cảnh không được giám sát trong quá trình thay đổi ca hoặc sau giờ làm việc.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Giả mạo máy móc, công cụ hoặc vật liệu không được giám sát.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Giả mạo máy móc, công cụ hoặc vật liệu không được giám sát.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Điểm mù trong phạm vi CCTV thông thường do ánh sáng hoặc vật cản.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Điểm mù trong phạm vi CCTV thông thường do ánh sáng hoặc vật cản.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Việc thiếu cảnh báo theo thời gian thực đối với các chuyển động đáng ngờ hoặc hành vi lảng vảng.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Việc thiếu cảnh báo theo thời gian thực đối với các chuyển động đáng ngờ hoặc hành vi lảng vảng.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-                            <p class="text-gray-400">Phản ứng chậm trễ do thiếu cảnh báo tập trung và xác minh sự cố.</p>
+                        <div class="liquid-glass-dark p-6">
+                            <p class="text-gray-700">Phản ứng chậm trễ do thiếu cảnh báo tập trung và xác minh sự cố.</p>
                         </div>
                     </div>
                     <p class="text-gray-600 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
@@ -369,33 +401,33 @@
                         viAct AI-powered Theft Detection nâng cao hiệu quả hoạt động và an ninh công trường với tác động có thể đo lường được:
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tự động hóa Giám sát</h3>
-                            <p class="text-gray-400">Tiết kiệm tới 65% thời gian bằng cách tự động hóa giám sát công trường, cho phép bảo vệ tập trung vào ứng phó và kiểm soát truy cập.</p>
+                            <p class="text-gray-700">Tiết kiệm tới 65% thời gian bằng cách tự động hóa giám sát công trường, cho phép bảo vệ tập trung vào ứng phó và kiểm soát truy cập.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cải thiện Độ chính xác</h3>
-                            <p class="text-gray-400">Tăng độ chính xác dự đoán trộm cắp lên 38% theo thời gian bằng cách học các điểm bất thường về chuyển động.</p>
+                            <p class="text-gray-700">Tăng độ chính xác dự đoán trộm cắp lên 38% theo thời gian bằng cách học các điểm bất thường về chuyển động.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Tốc độ Phản hồi</h3>
-                            <p class="text-gray-400">Cắt giảm thời gian phản hồi tới 70% vì AI kích hoạt cảnh báo tức thì ngay khi phát hiện di chuyển vật liệu hoặc truy cập trái phép.</p>
+                            <p class="text-gray-700">Cắt giảm thời gian phản hồi tới 70% vì AI kích hoạt cảnh báo tức thì ngay khi phát hiện di chuyển vật liệu hoặc truy cập trái phép.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Sự cố Ngoài giờ</h3>
-                            <p class="text-gray-400">Giảm sự cố trộm cắp ngoài giờ 41% bằng cách đồng bộ hóa cảnh báo AI với các khu vực rủi ro cao.</p>
+                            <p class="text-gray-700">Giảm sự cố trộm cắp ngoài giờ 41% bằng cách đồng bộ hóa cảnh báo AI với các khu vực rủi ro cao.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Yêu cầu Bảo hiểm</h3>
-                            <p class="text-gray-400">Giảm 27% yêu cầu bảo hiểm, nhờ hồ sơ giám sát và báo cáo kỹ thuật số có bằng chứng rõ ràng.</p>
+                            <p class="text-gray-700">Giảm 27% yêu cầu bảo hiểm, nhờ hồ sơ giám sát và báo cáo kỹ thuật số có bằng chứng rõ ràng.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nâng cao Cảnh giác</h3>
-                            <p class="text-gray-400">Cảnh báo AI thúc đẩy chỉnh sửa hành vi; nhân viên và công nhân trở nên cảnh giác hơn 10 lần gần các khu vực nhạy cảm.</p>
+                            <p class="text-gray-700">Cảnh báo AI thúc đẩy chỉnh sửa hành vi; nhân viên và công nhân trở nên cảnh giác hơn 10 lần gần các khu vực nhạy cảm.</p>
                         </div>
-                        <div class="bg-[#1A1A22] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tài liệu Nhanh hơn</h3>
-                            <p class="text-gray-400">Cho phép tạo báo cáo liên quan đến trộm cắp nhanh hơn 3 lần cho mục đích kiểm toán hoặc bảo hiểm.</p>
+                            <p class="text-gray-700">Cho phép tạo báo cáo liên quan đến trộm cắp nhanh hơn 3 lần cho mục đích kiểm toán hoặc bảo hiểm.</p>
                         </div>
                     </div>
                 </div>
@@ -408,7 +440,7 @@
                     <p class="text-gray-600 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
                         **Ngành:** Bán lẻ (Retail). **Địa điểm:** Riyadh, Ả Rập Xê Út (Saudi Arabia).
                     </p>
-                    <div class="bg-[#1A1A22] p-8 rounded-xl shadow-lg">
+                    <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-600 text-lg mb-4">
                             **Vấn đề:** Một chuỗi bán lẻ nổi tiếng ở Dubai phải đối mặt với các vấn đề trộm cắp vặt liên tục (shoplifting). Hầu hết các sự cố liên quan đến tư thế cơ thể đáng ngờ như cúi người, che giấu vật phẩm hoặc chặn tầm nhìn, các hành động thường bị bỏ sót trong quá trình giám sát thủ công.
                         </p>
@@ -430,7 +462,7 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">
                         Đừng để mất mát tài sản và lỗ hổng an ninh đe dọa hoạt động của bạn.
                     </h2>
-                    <p class="text-lg text-gray-400 mb-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
                         Khám phá cách viAct Theft Detection có thể bảo vệ tài sản có giá trị cao, giảm thiểu tổn thất và nâng cao tính minh bạch an ninh 24/7.
                     </p>
                     <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-gray-900 shadow-lg transform transition-transform hover:scale-105">
