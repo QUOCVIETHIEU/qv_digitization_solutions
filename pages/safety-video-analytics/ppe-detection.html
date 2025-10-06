@@ -99,6 +99,26 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        .hero-bg-ppe {
+            position: relative;
+            background-image: url('../../assets/images/banner_digital_transformation1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-bg-ppe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            z-index: 1;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 4px;
@@ -240,17 +260,20 @@
         <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
 
         <!-- Hero Section -->
-        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-            <img src="../../assets/icons/icon_ppe_detector.png" alt="Open Edge Detection Icon"
-                class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
-                PPE Detection
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-12 animate-fadeIn"
-                style="animation-delay: 0.2s;">
-                Giải pháp video AI biến camera
-                thường thành trợ lý an toàn, giám sát và phát hiện sai phạm tuân thủ đồ bảo hộ cá nhân theo thời gian
-                thực (PPE).</p>
+        <section class="w-full text-center py-8 px-4 sm:px-6 lg:px-8 relative z-10 hero-bg-ppe">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/70 to-white/80 z-0"></div>
+            <div class="relative z-10">
+                <img src="../../assets/icons/icon_ppe_detector.png" alt="PPE Detection Icon"
+                    class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
+                    PPE Detection
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-4 animate-fadeIn"
+                    style="animation-delay: 0.2s;">
+                    Giải pháp video AI biến camera
+                    thường thành trợ lý an toàn, giám sát và phát hiện sai phạm tuân thủ đồ bảo hộ cá nhân theo thời gian
+                    thực (PPE).</p>
+            </div>
         </section>
 
         <!-- Content Sections -->
