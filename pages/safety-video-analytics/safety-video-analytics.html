@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src../assets/js/main.js"></script>
-    <style>        body {
+    <style>
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #FFFFFF;
             color: #374151;
@@ -18,7 +19,9 @@
 
         .container {
             max-width: 1280px;
-        }        .gradient-bg {
+        }
+
+        .gradient-bg {
             background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
@@ -39,7 +42,8 @@
             opacity: 0.2;
             z-index: 0;
         }
-                .liquid-glass {
+
+        .liquid-glass {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -49,13 +53,13 @@
             transition: all 0.3s ease;
         }
 
-                .liquid-glass:hover {
+        .liquid-glass:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-5px);
             box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
         }
 
-                .liquid-glass-dark {
+        .liquid-glass-dark {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -65,7 +69,7 @@
             transition: all 0.3s ease;
         }
 
-                .liquid-glass-dark:hover {
+        .liquid-glass-dark:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-5px);
             box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
@@ -95,12 +99,13 @@
         .animate-slideInRight {
             animation: slideInRight 1s ease-in-out forwards;
         }
-        
+
         @keyframes slideInLeft {
             from {
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -112,6 +117,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -145,7 +151,7 @@
     </style>
 </head>
 
-<body class="antialiased">    <!-- Header/Navigation -->
+<body class="antialiased"> <!-- Header/Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-2">
@@ -167,8 +173,7 @@
                     </a>
                     <ul
                         class="absolute hidden group-hover:block bg-white text-gray-900 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
-                        <li><a href="./ppe-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                        <li><a href="./ppe-detection.html" class="block px-4 py-2 hover:bg-gray-50 flex items-center">
                                 <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
                                 PPE Detection</a>
                         </li>
@@ -183,8 +188,7 @@
                                     class="w-5 h-5 mr-3">
                                 Missing Barricade Detection</a>
                         </li>
-                        <li><a href="./fall-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                        <li><a href="./fall-detection.html" class="block px-4 py-2 hover:bg-gray-50 flex items-center">
                                 <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
                                 Fall Detection</a>
                         </li>
@@ -222,8 +226,7 @@
                                 <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
                                 Weapon Detection</a>
                         </li>
-                        <li><a href="./theft-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
+                        <li><a href="./theft-detection.html" class="block px-4 py-2 hover:bg-gray-50 flex items-center">
                                 <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
                                 Theft Detection</a>
                         </li>
@@ -255,7 +258,8 @@
                         class="text-gray-900 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
                 <li><a href="../e-forms-report/e-forms-report.html"
                         class="text-gray-900 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
-                <li><a href="#" class="text-gray-900 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
+                <li><a href="#" class="text-gray-900 hover:text-gray-900 transition-colors duration-300">Case
+                        Studies</a>
                 </li>
             </ul>
         </nav>
@@ -267,13 +271,21 @@
         <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
 
         <!-- Hero Section -->
-        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
-                Precision Safety Video Analytics for Unpredictable Scenarios
+        <section class="relative w-full text-center py-4 px-4 sm:px-6 lg:px-8 hero-background">
+             <!-- Hero Image -->
+            <div class="mt-6 mb-6 flex justify-center">
+                <img src="../../assets/images/image_safety_one_million_hours.png" alt="Safety Video Analytics Overview" 
+                     class="w-auto h-auto max-w-4xl mx-auto rounded-xl shadow-2xl">
+            </div>
+
+            <h1 class="text-5xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                Giải Pháp Về Safety Video Analytics
             </h1>
-            <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
-                Cameras that analyze. Safety that scales!
+            <p class="text-xl text-gray-900 max-w-4xl mx-auto mb-8">
+                Camera tự động giám sát – Hệ thống an toàn linh hoạt theo nhu cầu nhà máy
             </p>
+            
+           
         </section>
 
         <!-- Content Sections -->
@@ -282,261 +294,331 @@
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 0.4s;">
                         <a href="ppe-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">PPE Detection (Phát hiện PPE)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Đúng Bảo Hộ Lao Động (PPE)</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Đảm bảo Tuân thủ Toàn diện từ Đầu đến Chân 24/7. Giám sát việc sử dụng mũ bảo hộ, dây an toàn, v.v., giảm 92% việc không tuân thủ PPE và tử vong liên quan.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi đảm bảo tuân thủ đầy
+                            đủ các quy định về trang bị bảo hộ cá nhân (PPE) một cách liên tục, 24/7. Hệ thống tự động
+                            giám sát việc sử dụng mũ bảo hiểm, dây đai an toàn và các thiết bị cần thiết khác, từ đó
+                            giúp ngăn ngừa hiệu quả các trường hợp vi phạm và rủi ro tai nạn lao động.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm 92% việc không tuân thủ PPE và tử vong liên quan. Giúp tiết kiệm trung bình 10.000 USD/Công trường chi cho việc kiểm tra thủ công.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Nâng cao an toàn lao động:</strong> Tự động phát hiện và cảnh báo các vi phạm về PPE ngay lập
+                                tức, đảm bảo môi trường làm việc an toàn hơn cho mọi công nhân.</li>
+
+                            <li><strong>Tối ưu hóa quy trình:</strong> Giúp loại bỏ quy trình kiểm tra an toàn thủ công tốn thời gian,
+                                giúp doanh nghiệp tiết kiệm chi phí và nguồn lực đáng kể.</li>
+                            <li><strong>Giảm thiểu rủi ro:</strong> Chủ động phát hiện và cảnh báo các hành vi không tuân thủ, từ đó giảm
+                                thiểu đáng kể nguy cơ xảy ra tai nạn nghiêm trọng.</li>
+                        </ul>
+
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 0.4s;">
-                        <img src="../../assets/images/image_ppe_detection.png" alt="PPE Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_ppe_detection.png" alt="PPE Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 0.6s;">
                         <a href="open-edge-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Open Edge Detection (Phát hiện Cạnh Mở)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Thiếu Hàng Rào Bảo Vệ Trên Cao - Phòng ngừa Nguy cơ Té ngã
+                            </h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Hệ thống Phát hiện Rủi ro Té ngã từ Độ cao theo Thời gian thực. Tự động xác định công nhân hoặc thiết bị ở gần các cạnh không được bảo vệ (giàn giáo, mái nhà).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi tự động xác định và cảnh báo các rủi ro té ngã từ độ cao theo thời gian thực. Hệ thống sẽ ngay lập tức nhận diện công nhân hoặc thiết bị đang tiến gần đến các khu vực không an toàn như mép giàn giáo, rìa mái nhà hoặc các cạnh không có rào chắn bảo vệ.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Đã đạt 76% giảm các vụ suýt xảy ra liên quan đến cạnh.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Nâng cao an toàn lao động:</strong> Chủ động phòng ngừa tai nạn, giảm thiểu đáng kể nguy cơ té ngã cho công nhân làm việc trên cao.</li>
+                            <li><strong>Giám sát thông minh:</strong> Tự động theo dõi các khu vực nguy hiểm, giảm sự phụ thuộc vào việc giám sát thủ công và nâng cao hiệu quả quản lý an toàn.</li>
+                            <li><strong>Đảm bảo tuân thủ:</strong> Giúp doanh nghiệp dễ dàng tuân thủ các quy định nghiêm ngặt về an toàn lao động, tránh những rủi ro pháp lý không đáng có.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 0.6s;">
-                        <img src="../../assets/images/image_open_edge_detection.png" alt="Open Edge Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_open_edge_detection.png" alt="Open Edge Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 0.8s;">
                         <a href="missing-barricade-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Missing Barricade Detection (Phát hiện Thiếu Rào chắn)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát hiện Thiếu Rào Chắn - Giám sát An toàn Liên tục</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Cảnh báo Tức thì trong 3 giây khi phát hiện rào chắn bị thiếu, di dời hoặc hư hỏng.
+                            <strong class="text-gray-900">Mô tả:</strong> Hệ thống của chúng tôi cung cấp cảnh báo tức thì ngay khi phát hiện rào chắn tại khu vực nguy hiểm bị thiếu, di dời hoặc hư hỏng. Việc cảnh báo được thực hiện chỉ trong vòng 3 giây, đảm bảo phản ứng nhanh chóng để ngăn ngừa các rủi ro tiềm tàng.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Tăng khả năng ngăn ngừa té ngã và xâm nhập trái phép tới 48%.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Phòng ngừa tai nạn:</strong> Chủ động cảnh báo khi có nguy cơ, ngăn chặn hiệu quả các vụ té ngã hoặc xâm nhập trái phép vào khu vực nguy hiểm.</li>
+                            <li><strong>Tối ưu hóa an ninh:</strong> Nâng cao khả năng giám sát an ninh tại các công trường, đảm bảo các khu vực giới hạn luôn được bảo vệ.</li>
+                            <li><strong>Phản ứng tức thì:</strong> Cảnh báo gần như ngay lập tức giúp đội ngũ an toàn có thể khắc phục sự cố kịp thời, giảm thiểu tối đa rủi ro.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 0.8s;">
-                        <img src="../../assets/images/image_missing_barricade_detection.png" alt="Missing Barricade Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_missing_barricade_detection.png"
+                            alt="Missing Barricade Detection" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 1.0s;">
                         <a href="fall-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Fall Detection (Phát hiện Ngã)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Té Ngã - Cứu Hộ Tức Thì</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Phản ứng Tức thì với Ngã từ Độ cao (FFH). Nhận diện sự thay đổi tư thế đột ngột hoặc sự sụp đổ của công nhân. FFH là nguyên nhân chính gây tử vong trong xây dựng.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi cung cấp khả năng phản ứng tức thì với các vụ té ngã từ độ cao, một trong những nguyên nhân tử vong hàng đầu trong ngành xây dựng. Hệ thống tự động nhận diện sự thay đổi tư thế đột ngột hoặc sự sụp đổ của công nhân, từ đó kích hoạt cảnh báo khẩn cấp ngay lập tức.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm 95% trượt chân và vấp ngã nguy hiểm.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Phản ứng khẩn cấp:</strong> Đảm bảo đội ngũ cứu hộ có thể tiếp cận hiện trường nhanh nhất có thể, tối đa hóa cơ hội cứu sống nạn nhân.</li>
+                            <li><strong>Bảo vệ toàn diện:</strong> Giám sát liên tục để phát hiện các rủi ro, ngay cả trong những môi trường làm việc phức tạp nhất, nơi việc giám sát thủ công gặp nhiều khó khăn.</li>
+                            <li><strong>An tâm làm việc:</strong> Giúp công nhân và ban quản lý dự án yên tâm hơn khi biết rằng có một hệ thống tự động luôn giám sát và sẵn sàng hỗ trợ trong tình huống khẩn cấp.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 1.0s;">
-                        <img src="../../assets/images/image_fall_detection.png" alt="Fall Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_fall_detection.png" alt="Fall Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 1.4s;">
                         <a href="sproximity-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Proximity Detection & Warning (Phát hiện & Cảnh báo Tiếp cận Nguy hiểm)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện & Cảnh Báo Tiếp Cận Nguy Hiểm</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Theo dõi Điểm mù và Khoảng cách Rủi ro Người-Máy. Thiết lập vùng an toàn ảo xung quanh máy móc (xe nâng, máy xúc).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi giải quyết các điểm mù nguy hiểm bằng cách thiết lập các vùng an toàn ảo xung quanh máy móc hạng nặng như xe nâng, xe xúc. Hệ thống tự động theo dõi khoảng cách giữa con người và máy móc, đưa ra cảnh báo tức thì khi phát hiện có người hoặc thiết bị tiến vào vùng nguy hiểm.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm tới 47% sự cố suýt xảy ra. Cắt giảm thời gian phản hồi khẩn cấp tới 59%.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Phòng tránh va chạm:</strong> Chủ động ngăn ngừa các sự cố va chạm giữa người và máy móc, bảo vệ an toàn cho công nhân.</li>
+                            <li><strong>Nâng cao nhận thức an toàn:</strong> Cảnh báo kịp thời giúp người điều khiển máy và công nhân xung quanh nhận thức rõ hơn về rủi ro, từ đó cải thiện quy trình làm việc an toàn.</li>
+                            <li><strong>Giảm thiểu rủi ro:</strong> Giúp doanh nghiệp quản lý hiệu quả các khu vực có mật độ hoạt động cao, giảm thiểu đáng kể các tai nạn không mong muốn.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 1.4s;">
-                        <img src="../../assets/images/image_proximity_detection_warning.png" alt="Proximity Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_proximity_detection_warning.png" alt="Proximity Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
-                
+
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 1.6s;">
                         <a href="work-under-suspended-load-monitoring.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Work Under Suspended Load Monitoring (Giám sát Dưới Tải trọng Treo)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Giám Sát Đứng Dưới Vật Treo Trên Cao - Phòng Ngừa Vật Thể Rơi</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Ngăn ngừa mối nguy hiểm Vật thể Rơi (DROPS) quan trọng. Phát hiện công nhân xâm nhập khu vực dưới cần trục/tải trọng treo.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi được thiết kế để ngăn ngừa mối nguy hiểm nghiêm trọng từ các vật thể rơi. Hệ thống tự động phát hiện và cảnh báo tức thì khi có công nhân xâm nhập vào khu vực nguy hiểm bên dưới cần trục hoặc tải trọng đang được treo.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Đã đạt 82% giảm số lần xâm nhập không an toàn. Dự đoán rủi ro vật thể rơi chính xác hơn 2 lần.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Ngăn ngừa tai nạn:</strong> Chủ động bảo vệ công nhân khỏi nguy cơ bị vật thể rơi trúng, một trong những tai nạn nghiêm trọng nhất tại công trường.</li>
+                            <li><strong>Tăng cường an toàn:</strong> Đảm bảo không gian làm việc luôn được giám sát, giúp duy trì kỷ luật và nâng cao nhận thức về an toàn cho toàn bộ công nhân.</li>
+                            <li><strong>Tối ưu hóa quy trình:</strong> Hỗ trợ quản lý khu vực làm việc phức tạp một cách hiệu quả, giúp các hoạt động nâng hạ diễn ra an toàn và suôn sẻ.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 1.6s;">
-                        <img src="../../assets/images/image_word_under_suspended_load_monitoring.png" alt="Suspended Load Monitoring" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_word_under_suspended_load_monitoring.png"
+                            alt="Suspended Load Monitoring" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 1.8s;">
                         <a href="unauthorized-intrusion-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Unauthorized Intrusion/ Danger Zone Entry Detection (Cảnh báo Khu Vực Nguy hiểm)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Xâm Nhập Bất Hợp Pháp - Bảo Vệ Khu Vực Nguy Hiểm</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Thực thi Kiểm soát Truy cập 1 giây. Phát hiện và cảnh báo tức thì khi nhân viên xâm nhập khu vực bị hạn chế (Red Zone), gửi cảnh báo bằng ánh sáng & âm thanh trong 1 giây.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi thực thi kiểm soát ra vào khu vực nguy hiểm một cách gần như tức thời. Hệ thống sẽ phát hiện và cảnh báo ngay lập tức bằng ánh sáng và âm thanh khi có nhân viên xâm nhập vào các khu vực bị hạn chế (Red Zone), giúp đảm bảo an ninh và an toàn tuyệt đối.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Tai nạn do xâm nhập Khu vực Nguy hiểm chiếm 10%.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Kiểm soát truy cập hiệu quả:</strong> Ngăn chặn các hành vi xâm nhập trái phép vào khu vực nguy hiểm, bảo vệ cả công nhân lẫn tài sản.</li>
+                            <li><strong>Cảnh báo tức thì:</strong> Tốc độ phản hồi chỉ trong 1 giây giúp ngăn ngừa rủi ro ngay từ khi mới phát sinh, tránh được các tai nạn không đáng có.</li>
+                            <li><strong>Tăng cường kỷ luật:</strong> Hỗ trợ duy trì sự tuân thủ nghiêm ngặt các quy định về an toàn, tạo ra một môi trường làm việc có ý thức cao hơn.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 1.8s;">
-                        <img src="../../assets/images/image_danger_zone_alert.png" alt="Danger Zone Alert" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_danger_zone_alert.png" alt="Danger Zone Alert"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
-                
+
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 2.0s;">
                         <a href="workforce-heat-maps.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Workforce Heat Maps (Bản đồ Nhiệt Lực lượng Lao động)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Bản đồ Nhiệt - Tối Ưu Hóa Nhân Lực</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Trí tuệ Không gian để Tối ưu hóa Nhân lực. Trực quan hóa dòng chảy và mật độ công nhân.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp này sử dụng trí tuệ không gian để trực quan hóa luồng di chuyển và mật độ làm việc của công nhân. Thông qua bản đồ nhiệt, bạn có thể dễ dàng nhận biết các khu vực có quá nhiều người, giúp tối ưu hóa việc phân bổ nhân lực và đảm bảo an toàn tại những khu vực nhạy cảm.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Đã báo cáo 90% giảm xâm nhập Khu vực Đỏ do quá tải. Loại bỏ 80% lỗi thủ công trong việc sắp xếp lực lượng lao động.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Quản lý hiệu quả:</strong> Giúp ban quản lý hiểu rõ hơn về cách công nhân di chuyển và tập trung, từ đó sắp xếp lại quy trình làm việc để đạt năng suất cao nhất.</li>
+                            <li><strong>Ngăn ngừa quá tải:</strong> Chủ động phát hiện và cảnh báo các khu vực có mật độ lao động quá cao, giảm thiểu rủi ro an toàn và sự cố không đáng có.</li>
+                            <li><strong>Hỗ trợ ra quyết định:</strong> Cung cấp dữ liệu trực quan giúp nhà quản lý đưa ra các quyết định chính xác về việc bố trí và điều phối lực lượng lao động.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 2.0s;">
-                        <img src="../../assets/images/image_workforce_heat_maps.png" alt="Workforce Heat Maps" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_workforce_heat_maps.png" alt="Workforce Heat Maps"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 2.4s;">
                         <a href="perimeter-intrusion-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Perimeter Intrusion Detection (Phát hiện Xâm nhập Chu vi)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Xâm Nhập Chu Vi - Bảo Vệ Biên Giới An Toàn</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Phòng thủ Ranh giới 24/7 với Độ chính xác >95%. Phát hiện leo trèo, giả mạo hoặc xâm nhập dọc theo ranh giới công trường.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp này cung cấp lớp phòng thủ 24/7 cho toàn bộ ranh giới công trường. Hệ thống tự động phát hiện mọi hành vi leo trèo, giả mạo hoặc xâm nhập trái phép, đảm bảo khu vực làm việc luôn được bảo vệ nghiêm ngặt.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Đạt độ chính xác trên 95%. Tăng tốc phản ứng lên tới 80%.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>An ninh toàn diện:</strong> Giúp doanh nghiệp bảo vệ tài sản và công nhân khỏi các mối đe dọa từ bên ngoài một cách hiệu quả và liên tục.</li>
+                            <li><strong>Phản ứng nhanh:</strong> Cảnh báo ngay lập tức giúp đội ngũ an ninh có thể can thiệp kịp thời, ngăn chặn các sự cố trước khi chúng xảy ra.</li>
+                            <li><strong>Tăng cường kiểm soát:</strong> Hỗ trợ quản lý chặt chẽ khu vực chu vi, giảm thiểu rủi ro từ những người không có thẩm quyền.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 2.4s;">
-                        <img src="../../assets/images/image_perimeter_intrusion_detection.png" alt="Perimeter Intrusion Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_perimeter_intrusion_detection.png"
+                            alt="Perimeter Intrusion Detection" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
-                
+
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 2.6s;">
                         <a href="weapon-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Weapon Detection (Phát hiện Vũ khí)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Vũ khí - Phòng Ngừa Mối Đe Dọa</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Phát hiện Mối đe dọa Chủ động với AI. Tự động nhận dạng súng, dao và các vật nguy hiểm khác với độ chính xác lên tới 92%.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp này sử dụng công nghệ AI tiên tiến để chủ động nhận dạng và phát hiện các mối đe dọa tiềm ẩn. Hệ thống có khả năng tự động nhận diện súng, dao và các vật thể nguy hiểm khác, giúp ngăn chặn rủi ro an ninh ngay từ khi mới phát sinh.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Tăng tốc thời gian phản ứng hơn 50%.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Tăng cường an ninh:</strong> Chủ động phát hiện vũ khí giúp bảo vệ công nhân và tài sản khỏi các mối đe dọa bạo lực, đảm bảo một môi trường làm việc an toàn.</li>
+                            <li><strong>Phản ứng nhanh chóng:</strong> Cảnh báo tức thì cho phép đội ngũ an ninh phản ứng nhanh chóng, giảm thiểu nguy cơ xảy ra các sự cố nghiêm trọng.</li>
+                            <li><strong>Giám sát hiệu quả:</strong> Hệ thống tự động giám sát, giảm sự phụ thuộc vào con người và nâng cao hiệu quả của các biện pháp an ninh tổng thể.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 2.6s;">
-                        <img src="../../assets/images/image_weapon_detection.png" alt="Weapon Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_weapon_detection.png" alt="Weapon Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 2.8s;">
                         <a href="theft-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Theft Detection (Phát hiện Trộm cắp)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Trộm Cắp - Bảo Vệ Tài Sản Hiệu Quả</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Bảo vệ Tài sản Giá trị Cao và Giảm Tổn thất. Phát hiện truy cập trái phép, giả mạo, hoặc các tư thế đáng ngờ (như che giấu vật phẩm).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi được thiết kế để bảo vệ các tài sản có giá trị cao và giảm thiểu tổn thất. Hệ thống tự động phát hiện các hành vi đáng ngờ như truy cập trái phép, giả mạo thiết bị, hoặc các tư thế che giấu đồ vật, giúp ngăn chặn hành vi trộm cắp ngay từ đầu.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Đã giúp giảm 63% sự cố trộm cắp vặt. Cắt giảm thời gian phản hồi 70%.
-                        </p>
+                       <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Bảo vệ tài sản:</strong> Giúp doanh nghiệp bảo vệ hiệu quả các thiết bị, vật tư và tài sản có giá trị khỏi nguy cơ bị mất cắp.</li>
+                            <li><strong>Cảnh báo sớm:</strong> Cung cấp cảnh báo tức thì, cho phép đội ngũ an ninh phản ứng kịp thời và ngăn chặn các sự cố trộm cắp xảy ra.</li>
+                            <li><strong>Tăng cường an ninh:</strong> Giảm sự phụ thuộc vào giám sát thủ công, đảm bảo khu vực làm việc luôn được theo dõi chặt chẽ, 24/7.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 2.8s;">
-                        <img src="../../assets/images/image_theft_detection.png" alt="Theft Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_theft_detection.png" alt="Theft Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 3.0s;">
                         <a href="loitering-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Loitering Detection (Phát hiện Lảng Vảng)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Lảng Vảng - Ngăn Chặn Đột Nhập
+                            </h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Trí tuệ Hành vi để Ngăn chặn Xâm nhập. Gắn cờ sự hiện diện kéo dài, bất thường (vượt quá ngưỡng thời gian nán lại).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp này sử dụng công nghệ phân tích hành vi để ngăn chặn các mối đe dọa tiềm ẩn. Hệ thống sẽ tự động gắn cờ và cảnh báo khi phát hiện sự hiện diện bất thường hoặc hành vi nán lại quá lâu của một người hoặc nhóm người tại khu vực được giám sát.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm độ trễ phản hồi sự cố 60%. Cải thiện độ chính xác phát hiện 85% theo thời gian.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Phòng ngừa sớm:</strong> Chủ động phát hiện các hành vi khả nghi trước khi chúng có thể dẫn đến trộm cắp, phá hoại hoặc xâm nhập trái phép.</li>
+                            <li><strong>Tối ưu hóa phản ứng:</strong> Giúp đội ngũ an ninh giảm thời gian điều tra và phản ứng với các sự cố tiềm ẩn một cách hiệu quả hơn.</li>
+                            <li><strong>Giám sát thông minh:</strong> Giảm thiểu cảnh báo sai và cho phép nhân viên an ninh tập trung vào các sự kiện thực sự quan trọng, nâng cao hiệu quả giám sát tổng thể.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 3.0s;">
-                        <img src="../../assets/images/image_loitering_detection.png" alt="Loitering Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_loitering_detection.png" alt="Loitering Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 3.2s;">
                         <a href="fight-and-violence-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Fight & Violence Detection (Phát hiện Đánh nhau & Bạo lực)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Đánh Nhau & Bạo lực - Can Thiệp Sớm</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Can thiệp Sớm để Ngăn chặn Leo thang. Phát hiện các dấu hiệu hung hăng sớm (tư thế, chuyển động đột ngột).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp này giúp can thiệp sớm để ngăn chặn các xung đột leo thang. Hệ thống sử dụng công nghệ phân tích hành vi để nhận diện những dấu hiệu hung hăng ban đầu như tư thế cơ thể hoặc các chuyển động đột ngột, từ đó phát hiện nguy cơ bạo lực trước khi nó xảy ra.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm tỷ lệ leo thang sự cố tới 72%. Giảm thời gian phản hồi 4 lần.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Ngăn chặn xung đột:</strong> Chủ động cảnh báo khi có dấu hiệu căng thẳng, giúp nhân viên an ninh can thiệp kịp thời, tránh các vụ xô xát không mong muốn.</li>
+                            <li><strong>Bảo vệ môi trường làm việc:</strong> Tạo ra một không gian làm việc an toàn, nơi mọi người đều cảm thấy được bảo vệ khỏi các hành vi bạo lực.</li>
+                            <li><strong>Tăng cường an ninh:</strong> Hỗ trợ đội ngũ an ninh giám sát hiệu quả hơn, đặc biệt tại các khu vực nhạy cảm, giảm thiểu các sự cố liên quan đến bạo lực.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 3.2s;">
-                        <img src="../../assets/images/image_fight_violence_detection.png" alt="Fighting Violence Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_fight_violence_detection.png"
+                            alt="Fighting Violence Detection" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 3.6s;">
                         <a href="fire-smoke-wildfire-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Fire, Smoke & Wildfire Detection (Phát hiện Cháy, Khói & Cháy Rừng)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Cháy, Khói & Cháy - Cảnh Báo Sớm Hơn, An Toàn Hơn</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Phát hiện Dấu hiệu Nguy hiểm Cháy sớm (Pre-Ignition). Phát hiện khói và dị thường nhiệt sớm hơn tới 15 phút so với hệ thống thông thường.
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi giúp phát hiện các dấu hiệu nguy hiểm cháy sớm, trước khi đám cháy bùng phát. Hệ thống sử dụng công nghệ tiên tiến để nhận diện khói và các bất thường về nhiệt độ, đưa ra cảnh báo sớm hơn tới 15 phút so với các hệ thống thông thường.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> Giảm 52% cảnh báo sai.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Phòng ngừa hiệu quả:</strong> Cảnh báo sớm giúp đội ngũ an ninh có đủ thời gian để can thiệp, ngăn chặn đám cháy ngay từ khi mới chớm, tránh được các thiệt hại lớn về người và tài sản.</li>
+                            <li><strong>Tăng cường an toàn:</strong> Giám sát liên tục giúp bảo vệ toàn diện các khu vực nhạy cảm, đặc biệt là trong các môi trường có nguy cơ cháy cao.</li>
+                            <li><strong>Đáng tin cậy:</strong> Khả năng phát hiện chính xác, giảm thiểu tối đa các cảnh báo sai, giúp đội ngũ phản ứng tập trung vào những mối nguy hiểm thực sự.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 3.6s;">
-                        <img src="../../assets/images/image_fire_smoke_wildfire_detection.png" alt="Fire Smoke Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_fire_smoke_wildfire_detection.png"
+                            alt="Fire Smoke Detection" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
-                
+
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2 animate-slideInRight" style="animation-delay: 3.8s;">
                         <a href="near-miss-detection.html" class="block">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Near Miss Detection (Phát hiện Suýt xảy ra Tai nạn)</h3>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-2">Phát Hiện Suýt Xảy Ra Tai nạn - Học Hỏi Từ Rủi Ro</h3>
                         </a>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
-                            <strong class="text-gray-900">Mô tả:</strong> Chuyển đổi Hậu quả thành Dự đoán An toàn. Tự động ghi lại và phân tích các sự cố cận kề (suýt va chạm, trượt chân).
+                            <strong class="text-gray-900">Mô tả:</strong> Giải pháp của chúng tôi giúp chuyển đổi những sự cố suýt xảy ra thành dữ liệu an toàn có giá trị. Hệ thống tự động ghi lại và phân tích các sự kiện cận kề như suýt va chạm hoặc trượt chân, giúp ban quản lý hiểu rõ hơn về các rủi ro tiềm ẩn mà con người có thể bỏ qua.
                         </p>
-                        <p class="text-gray-900 leading-relaxed text-lg mt-2">
-                            <strong class="text-gray-900">Dữ liệu:</strong> 91% các sự cố suýt xảy ra trước đây không được báo cáo; AI đã gắn cờ chúng ngay lập tức.
-                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4 font-bold">Lợi ích:</p>
+                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
+                            <li><strong>Cải thiện an toàn chủ động:</strong> Giúp doanh nghiệp phát hiện và xử lý các nguyên nhân gây ra sự cố trước khi chúng dẫn đến tai nạn thực sự.</li>
+                            <li><strong>Tối ưu hóa quy trình:</strong> Cung cấp thông tin chi tiết về các hành vi hoặc khu vực nguy hiểm, từ đó đưa ra những điều chỉnh kịp thời để nâng cao an toàn lao động.</li>
+                            <li><strong>Giảm thiểu rủi ro:</strong> Phân tích dữ liệu từ các sự cố suýt xảy ra giúp xây dựng một môi trường làm việc an toàn và hiệu quả hơn.</li>
+                        </ul>
                     </div>
                     <div class="md:w-1/2 animate-slideInLeft" style="animation-delay: 3.8s;">
-                        <img src="../../assets/images/image_near_miss_detection.png" alt="Near Miss Detection" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/image_near_miss_detection.png" alt="Near Miss Detection"
+                            class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
             </div>
         </section>
-    </main>    <!-- Footer -->
+    </main> <!-- Footer -->
     <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">
