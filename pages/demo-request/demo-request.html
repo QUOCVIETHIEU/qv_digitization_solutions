@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu Cầu Demo | Quốc Việt Digitization Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #374151;
+        }
+
+        .container {
+            max-width: 1280px;
+        }
+
+        .gradient-bg {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #C19837, #CE9522);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        .input-field {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e7eb;
+        }
+
+        .input-field:focus {
+            border-color: #C19837;
+            box-shadow: 0 0 0 3px rgba(193, 152, 55, 0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #C19837, #CE9522);
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #CE9522, #C19837);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(193, 152, 55, 0.3);
+        }
+
+        .circle-blur {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(193, 152, 55, 0.15);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-2">
+                <a href="../../index.html" class="flex items-center space-x-2">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-12 w-auto">
+                    <span class="text-2xl font-bold text-gray-900 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button onclick="history.back()" 
+                   class="flex items-center space-x-2 text-gray-900 hover:text-gray-700 transition-colors duration-300 bg-transparent border-none cursor-pointer">
+                    <img src="../../assets/svgs/ico_arrow_back.svg" alt="Back" class="w-5 h-5">
+                    <span>Quay lại</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24 pb-12 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="circle-blur top-1/4 left-1/4"></div>
+        <div class="circle-blur bottom-1/4 right-1/4"></div>
+
+        <!-- Form Section -->
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                        Yêu Cầu <span class="text-gradient">Demo Ngay</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 max-w-xl mx-auto">
+                        Điền thông tin bên dưới để nhận demo miễn phí các giải pháp Safety Video Analytics của chúng tôi
+                    </p>
+                </div>
+
+                <!-- Form Container -->
+                <div class="form-container p-8">
+                    <form id="demoForm" class="space-y-6">
+                        <!-- Tên người đăng ký -->
+                        <div>
+                            <label for="fullName" class="block text-sm font-semibold text-gray-900 mb-2">
+                                Tên người đăng ký <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required
+                                class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-0"
+                                placeholder="Nhập họ và tên của bạn">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">
+                                Email <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-0"
+                                placeholder="example@company.com">
+                        </div>
+
+                        <!-- Số điện thoại -->
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-900 mb-2">
+                                Số điện thoại <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-0"
+                                placeholder="0123 456 789">
+                        </div>
+
+                        <!-- Tên công ty -->
+                        <div>
+                            <label for="company" class="block text-sm font-semibold text-gray-900 mb-2">
+                                Tên công ty <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="company" name="company" required
+                                class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-0"
+                                placeholder="Tên công ty của bạn">
+                        </div>
+
+                        <!-- Ghi chú -->
+                        <div>
+                            <label for="notes" class="block text-sm font-semibold text-gray-900 mb-2">
+                                Ghi chú
+                            </label>
+                            <textarea id="notes" name="notes" rows="4"
+                                class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-0"
+                                placeholder="Mô tả nhu cầu cụ thể của bạn hoặc các câu hỏi khác..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-2 flex justify-center">
+                            <button type="submit" 
+                                class="submit-btn flex items-center justify-center space-x-2 text-white font-semibold py-4 px-8 rounded-lg text-sm" style="width: 250px;">
+                                <img src="../../assets/svgs/ico_send.svg" alt="Send" class="w-5 h-5" style="filter: brightness(0) invert(1);">
+                                <span>GỬI YÊU CẦU DEMO</span>
+                            </button>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                            <p class="text-sm text-gray-600 mb-2">Hoặc liên hệ trực tiếp:</p>
+                            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                                <a href="tel:+84983092393" class="flex items-center space-x-2 text-gray-900 hover:text-gray-700 font-medium">
+                                    <img src="../../assets/svgs/ico_phone.svg" alt="Phone" class="w-4 h-4">
+                                    <span>+84.983.092.393</span>
+                                </a>
+                                <a href="mailto:customer_service@quocviet.com.vn" class="flex items-center space-x-2 text-gray-900 hover:text-gray-700 font-medium">
+                                    <img src="../../assets/svgs/ico_email.svg" alt="Email" class="w-4 h-4">
+                                    <span>customer_service@quocviet.com.vn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-8 w-auto">
+                    <span class="text-lg font-bold text-gray-900">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                    Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message (you can replace this with actual form submission logic)
+            alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.');
+            
+            // Reset form
+            this.reset();
+            
+            // Here you would typically send the data to your backend
+            // fetch('/api/demo-request', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(data)
+            // });
+        });
+
+        // Input focus animations
+        document.querySelectorAll('.input-field').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentNode.classList.remove('focused');
+            });
+        });
+    </script>
+</body>
+
+</html>
