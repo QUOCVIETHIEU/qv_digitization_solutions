@@ -19,7 +19,7 @@ read -r -d '' NEW_HEADER << 'EOF'
                 <li class="relative group">
                     <a href="../safety-video-analytics/safety-video-analytics.html"
                         class="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center">
-                        Safety Camera AI
+                        Safety Video Analytics
                         <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
