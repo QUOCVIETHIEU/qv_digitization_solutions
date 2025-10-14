@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src../assets/js/main.js"></script>
-    <style>        body {
+    <script src="../../assets/js/main.js"></script>
+    <style>
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #FFFFFF;
             color: #374151;
@@ -18,7 +19,9 @@
 
         .container {
             max-width: 1280px;
-        }        .gradient-bg {
+        }
+
+        .gradient-bg {
             background-image: linear-gradient(to right, #C19837, #CE9522);
         }
 
@@ -39,7 +42,8 @@
             opacity: 0.2;
             z-index: 0;
         }
-                .liquid-glass {
+
+        .liquid-glass {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -49,13 +53,13 @@
             transition: all 0.3s ease;
         }
 
-                .liquid-glass:hover {
+        .liquid-glass:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-5px);
             box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.3);
         }
 
-                .liquid-glass-dark {
+        .liquid-glass-dark {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -65,7 +69,7 @@
             transition: all 0.3s ease;
         }
 
-                .liquid-glass-dark:hover {
+        .liquid-glass-dark:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-5px);
             box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25);
@@ -93,6 +97,26 @@
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-bg-ppe {
+            position: relative;
+            background-image: url('../../assets/images/banner_digital_transformation1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-bg-ppe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            z-index: 1;
         }
 
         /* Custom Scrollbar */
@@ -143,15 +167,19 @@
         <div class="circle-blur bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2"></div>
 
         <!-- Hero Section -->
-        <section class="w-full text-center py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-             <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt="Open Edge Detection Icon"
-                class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
-                Giải pháp Phát Hiện Cháy, Khói & Cháy Rừng
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-12 animate-fadeIn" style="animation-delay: 0.2s;">
-                viAct AI-powered Fire, Smoke & Wildfire Detection: Ngăn ngừa Thảm họa Cháy với AI Thông minh. Giải pháp của viAct chuyển đổi CCTV thành công cụ phòng ngừa nguy cơ chủ động, phát hiện các dấu hiệu khói hoặc lửa sớm nhất và gửi cảnh báo theo thời gian thực.
-            </p>
+        <section class="w-full text-center py-8 px-4 sm:px-6 lg:px-8 relative z-10 hero-bg-ppe">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/70 to-white/80 z-0"></div>
+            <div class="relative z-10">
+                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt="Fire, Smoke Detection Icon"
+                    class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
+                    Giải pháp Phát Hiện Cháy, Khói
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-4 animate-fadeIn"
+                    style="animation-delay: 0.2s;">
+                    Fire, Smoke Detection: Ngăn ngừa Thảm họa Cháy với AI Thông minh. Giải pháp của Quốc Việt chuyển đổi CCTV thành công cụ phòng ngừa nguy cơ chủ động, phát hiện các dấu hiệu khói hoặc lửa sớm nhất và gửi cảnh báo theo thời gian thực.
+                </p>
+            </div>
         </section>
 
         <!-- Content Sections -->
@@ -167,9 +195,9 @@
                             Phát Hiện Cháy, Khói & Cháy Rừng là một giải pháp video analytics dựa trên AI, cho phép nhận dạng khói, lửa và các mối đe dọa cháy rừng theo thời gian thực trong các môi trường công nghiệp rủi ro cao.
                         </p>
                         <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
-                            <li>Công nghệ: Được xây dựng trên công nghệ computer vision độc quyền của viAct.</li>
+                            <li>Công nghệ: Được xây dựng trên công nghệ computer vision độc quyền của Quốc Việt.</li>
                             <li>Hoạt động: Hệ thống tích hợp với mạng lưới CCTV hoặc IP camera hiện có của bạn để liên tục giám sát các dấu hiệu hình ảnh của lửa.</li>
-                            <li>Lợi thế vượt trội: Không giống như các báo động khói thông thường dựa vào phát hiện hóa học bị trì hoãn hoặc giới hạn đường ngắm, AI của viAct phát hiện mối đe dọa sớm—thường là trước khi lửa bùng phát hoàn toàn—và đưa ra cảnh báo tự động ngay lập tức.</li>
+                            <li>Lợi thế vượt trội: Không giống như các báo động khói thông thường dựa vào phát hiện hóa học bị trì hoãn hoặc giới hạn đường ngắm, AI của Quốc Việt phát hiện mối đe dọa sớm—thường là trước khi lửa bùng phát hoàn toàn—và đưa ra cảnh báo tự động ngay lập tức.</li>
                         </ul>
                         <p class="text-gray-900 leading-relaxed text-lg mt-4">
                             Giải pháp này hỗ trợ các nhóm EHS phản ứng nhanh hơn, ngăn chặn sự lây lan, và thiết lập văn hóa an toàn không chậm trễ.
@@ -177,7 +205,7 @@
                     </div>
                    <div class="md:w-1/2">
                         <img src="../../assets/images/image_fire_smoke_wildfire_detection.png" alt="QV - AI Module"
-                            class="w-full h-auto rounded-xl shadow-xl">
+                            class="w-full h-auto rounded-xl">
                     </div>
                 </div>
 
@@ -202,7 +230,7 @@
                         </div>
                     </div>
                     <p class="text-gray-900 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
-                        AI của viAct bước vào để lấp đầy khoảng trống này, chuyển đổi CCTV thông thường thành một mạng lưới an toàn thông minh có khả năng phát hiện các mối đe dọa tinh vi và kích hoạt phản ứng ngay lập tức.
+                        AI của Quốc Việt bước vào để lấp đầy khoảng trống này, chuyển đổi CCTV thông thường thành một mạng lưới an toàn thông minh có khả năng phát hiện các mối đe dọa tinh vi và kích hoạt phản ứng ngay lập tức.
                     </p>
                 </div>
 
@@ -266,7 +294,7 @@
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
                                 <div>
-                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun “Fire, Smoke & Wildfire Detection” từ viHUB – thư viện chứa hơn 100 công cụ AI video analytics của viAct.
+                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun “Fire, Smoke & Wildfire Detection” từ viHUB – thư viện chứa hơn 100 công cụ AI video analytics của Quốc Việt.
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -300,7 +328,7 @@
                         V. Tác động và Lợi ích Chính (Phòng ngừa Hỏa hoạn)
                     </h2>
                     <p class="text-gray-900 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
-                        viAct AI cung cấp các khả năng tiên tiến giúp cải thiện đáng kể khả năng sẵn sàng và tốc độ phản ứng với hỏa hoạn.
+                        Quốc Việt AI cung cấp các khả năng tiên tiến giúp cải thiện đáng kể khả năng sẵn sàng và tốc độ phản ứng với hỏa hoạn.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="liquid-glass-dark p-6">
@@ -343,10 +371,10 @@
                             **Vấn đề:** Một nhà cung cấp năng lượng tái tạo lớn (trang trại năng lượng mặt trời) gần khu vực bụi cây phải đối mặt với các mối đe dọa cháy lặp lại trong mùa khô. Cảm biến nhiệt truyền thống và kiểm tra thủ công đã bỏ sót các điểm đánh lửa âm ỉ.
                         </p>
                         <p class="text-gray-900 text-lg">
-                            **Giải pháp của viAct:** Hệ thống đã xác định một sự cố đánh lửa nhỏ do cáp quá nóng. Hệ thống đã kích hoạt can thiệp, ngăn chặn một vụ cháy rừng toàn diện.
+                            **Giải pháp của Quốc Việt:** Hệ thống đã xác định một sự cố đánh lửa nhỏ do cáp quá nóng. Hệ thống đã kích hoạt can thiệp, ngăn chặn một vụ cháy rừng toàn diện.
                         </p>
                         <p class="text-gray-900 text-lg mt-4">
-                            **Tác động của viAct:** Trong vòng ba tháng, hệ thống đã giúp công ty tuân thủ các tiêu chuẩn Quản lý Cháy rừng Úc.
+                            **Tác động của Quốc Việt:** Trong vòng ba tháng, hệ thống đã giúp công ty tuân thủ các tiêu chuẩn Quản lý Cháy rừng Úc.
                         </p>
                     </div>
                 </div>
@@ -358,7 +386,7 @@
                         Đừng để cảnh báo cháy bị chậm trễ dù chỉ một giây.
                     </h2>
                     <p class="text-lg text-gray-900 mb-8 max-w-4xl mx-auto">
-                        Khám phá cách viAct Fire, Smoke & Wildfire Detection tích hợp liền mạch với cơ sở hạ tầng CCTV hiện có của bạn để có thể phát hiện các mối đe dọa cháy sớm hơn 15 phút so với các hệ thống thông thường.
+                        Khám phá cách Quốc Việt Fire, Smoke & Wildfire Detection tích hợp liền mạch với cơ sở hạ tầng CCTV hiện có của bạn để có thể phát hiện các mối đe dọa cháy sớm hơn 15 phút so với các hệ thống thông thường.
                     </p>
                     <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
                         ĐẶT LỊCH DEMO NGAY HÔM NAY!
@@ -382,7 +410,7 @@
                     <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all"
                         class="text-gray-900 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn"
                         target="_blank" rel="noopener noreferrer">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
                             <path
                                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z">
                             </path>
@@ -391,7 +419,7 @@
                     <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd"
                         class="text-gray-900 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook"
                         target="_blank" rel="noopener noreferrer">
-                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0866FF" aria-hidden="true">
                             <path
                                 d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z" />
                         </svg>
