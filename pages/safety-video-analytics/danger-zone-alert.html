@@ -115,119 +115,25 @@
     </style>
 </head>
 
-<body class="antialiased">    <!-- Header/Navigation -->
+<body class="antialiased"> 
+    <!-- Header/Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-2">
-                <a href="../../index.html" class="flex items-center space-x-2">
-                    <img src="../../assets/images/qv_logo.png" alt="" class="h-12 w-auto">
-                    <span class="text-2xl font-bold text-gray-900 hidden md:block">QUỐC VIỆT DIGITIZATION</span>
+                <button onclick="history.back()" class="flex items-center space-x-2 bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
+                    <img src="../../assets/svgs/ico_arrow_back_ios.svg" alt="Back" class="h-6 w-6">
+
+                    <img src="../../assets/icons/icon_camera_ai.png" alt="Camera AI" class="h-6 w-6">
+                    <span class="text-2xl font-bold text-gray-900 hidden md:block">DANGER ZONE ALERT</span>
+                </button>
+            </div>
+            
+            <div class="flex items-center ml-auto">
+                <a href="../demo-request/demo-request.html" 
+                   class="px-6 py-2 gradient-bg text-white font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">
+                    Book Demo
                 </a>
             </div>
-            <ul class="hidden md:flex space-x-6">
-                <li class="relative group">
-                    <a href="./safety-video-analytics.html"
-                        class="text-gray-900 hover:text-gray-900 transition-colors duration-300 flex items-center">
-                        Safety Video Analytics
-                        <svg class="ml-2 w-4 h-4 transition-transform transform group-hover:rotate-180" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </a>
-                    <ul
-                        class="absolute hidden group-hover:block bg-white text-gray-900 rounded-md shadow-lg py-2 mt-0 top-full w-max border border-gray-200">
-                        <li><a href="./ppe-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_ppe_detector.png" alt="" class="w-5 h-5 mr-3">
-                                PPE Detection</a>
-                        </li>
-                        <li><a href="./open-edge-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_open_edge_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Open Edge Detection</a>
-                        </li>
-                        <li><a href="./missing-barricade-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_missing_barricade_detection.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Missing Barricade Detection</a>
-                        </li>
-                        <li><a href="./fall-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_fall_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Fall Detection</a>
-                        </li>
-                        <li><a href="./proximity-detection-warning.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_proximity_detection_and_warning.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Proximity Detection & Warning</a>
-                        </li>
-                        <li><a href="./work-under-suspended-load-monitoring.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_work_under_suspended_load_monitoring.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Work Under Suspended Load Monitoring</a>
-                        </li>
-                        <li><a href="./unauthorized-intrusion-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_unauthorized_intrusion_danger_zone_entry_detection.png"
-                                    alt="" class="w-5 h-5 mr-3">
-                                Unauthorized Intrusion/ Danger Zone Entry Detection</a>
-                        </li>
-                        <li><a href="./workforce-heat-maps.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_workforce_heat_maps.png" alt="" class="w-5 h-5 mr-3">
-                                Workforce Heat Maps</a>
-                        </li>
-                        <li><a href="./perimeter-intrusion-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_perimeter_intrusion_detection.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Perimeter Intrusion Detection</a>
-                        </li>
-                        <li><a href="./weapon-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_weapon_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Weapon Detection</a>
-                        </li>
-                        <li><a href="./theft-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_theft_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Theft Detection</a>
-                        </li>
-                        <li><a href="./loitering-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_loitering_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Loitering Detection</a>
-                        </li>
-                        <li><a href="./fight-and-violence-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_fighting_and_violence_detection.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Fighting & Violence Detection</a>
-                        </li>
-                        <li><a href="./fire-smoke-wildfire-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_fire_smoke_and_wildfire_detection.png" alt=""
-                                    class="w-5 h-5 mr-3">
-                                Fire, Smoke & Wildfire Detection</a>
-                        </li>
-                        <li><a href="./near-miss-detection.html"
-                                class="block px-4 py-2 hover:bg-gray-50 flex items-center">
-                                <img src="../../assets/icons/icon_near_miss_detection.png" alt="" class="w-5 h-5 mr-3">
-                                Near Miss Detection</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="../qr-code/qr-code.html"
-                        class="text-gray-900 hover:text-gray-900 transition-colors duration-300">QR Code</a></li>
-                <li><a href="../e-forms-report/e-forms-report.html"
-                        class="text-gray-900 hover:text-gray-900 transition-colors duration-300">E-Forms</a></li>
-                <li><a href="#" class="text-gray-900 hover:text-gray-900 transition-colors duration-300">Case Studies</a>
-                </li>
-            </ul>
         </nav>
     </header>
     
