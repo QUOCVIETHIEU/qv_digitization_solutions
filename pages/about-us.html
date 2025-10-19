@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ | Quốc Việt Digitization Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/main.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #374151; }
+        .container { max-width: 1280px; }
+        .gradient-bg { background-image: linear-gradient(to right, #C19837, #CE9522); }
+        .glass-button { background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.05);}        
+        .liquid-glass-dark { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); transition: all 0.3s ease; }
+        .liquid-glass-dark:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-3px); box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.25); border: 1px solid rgba(255, 255, 255, 0.35); }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-2">
+                <a href="/index.html" class="flex items-center space-x-2 bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
+                    <img src="../assets/svgs/ico_arrow_back_ios.svg" alt="Back" class="h-6 w-6">
+                    <img src="../assets/icons/icon_camera_ai.png" alt="Camera AI" class="h-6 w-6">
+                    <span class="text-2xl font-bold text-gray-900 hidden md:block">QUỐC VIỆT — LIÊN HỆ</span>
+                </a>
+            </div>
+            <div class="flex items-center ml-auto space-x-3">
+                <a href="../demo-request/demo-request.html" class="px-6 py-2 gradient-bg text-white font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">Book Demo</a>
+                <a href="/index.html" class="px-6 py-2 glass-button text-gray-900 font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="w-full flex-grow flex flex-col items-center pt-24">
+        <!-- Hero -->
+        <section class="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">Liên hệ với chúng tôi</h1>
+            <p class="text-gray-600 max-w-3xl mx-auto">Nếu bạn có gì thắc mắc hãy liên hệ với chúng tôi qua địa chỉ.</p>
+        </section>
+
+        <!-- Info strip -->
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-center text-center p-6 border border-gray-100 rounded-2xl shadow-sm">
+                    <img src="../assets/svgs/ico_address.svg" alt="Địa chỉ" class="h-12 w-12 mb-3">
+                    <h3 class="font-semibold text-gray-900">Địa chỉ</h3>
+                    <p class="text-gray-700">04 Cao Đức Lân, P.Bình Trưng, TP. Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 border border-gray-100 rounded-2xl shadow-sm">
+                    <img src="../assets/svgs/ico_phone.svg" alt="Điện thoại" class="h-12 w-12 mb-3">
+                    <h3 class="font-semibold text-gray-900">Số điện thoại</h3>
+                    <p class="text-gray-700">0983.092.393</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 border border-gray-100 rounded-2xl shadow-sm">
+                    <img src="../assets/svgs/ico_email.svg" alt="Email" class="h-12 w-12 mb-3">
+                    <h3 class="font-semibold text-gray-900">Email</h3>
+                    <p class="text-gray-700">customer_service@quocviet.com.vn</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map + Form -->
+        <section class="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Map -->
+                <div class="w-full">
+                    <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1993584332176!2d106.7446195!3d10.7960379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175260d0c571379%3A0x69f9b9a259060b04!2zMDQgQ2FvIMSQ4bupYyBMw6JuLCBBbiBQaMO6LCBUaOG7pyDEkOG7qWMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaA!5e0!3m2!1sen!2s!4v1760884294557!5m2!1sen!2s"
+                            width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="w-full">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Gửi thắc mắc cho chúng tôi</h2>
+                    <p class="text-gray-700 mb-6">Điền thông tin bên dưới và chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.</p>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Tên của bạn" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400">
+                            <input type="email" placeholder="Email của bạn" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        </div>
+                        <input type="text" placeholder="Số điện thoại của bạn" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <textarea rows="8" placeholder="Nội dung" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+                        <div class="flex justify-center">
+                            <button type="button" aria-label="Gửi cho chúng tôi" class="px-5 py-3 rounded-xl gradient-bg text-white shadow hover:scale-105 transition-transform inline-flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                                    <path d="M3.4 2.2l18.1 9.1c.9.5.9 1.8 0 2.3L3.4 22.7c-.9.5-2-.3-1.7-1.3l2.2-7.2c.1-.4.5-.7.9-.7H14c.6 0 1-.4 1-1s-.4-1-1-1H4.8c-.4 0-.8-.3-.9-.7L1.7 3.6C1.4 2.5 2.5 1.7 3.4 2.2z"/>
+                                </svg>
+
+                                <span class="ml-2 font-medium">Gửi cho chúng tôi</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-gray-700">Quốc Việt Co.,Ltd</span>
+                </div>
+                <p class="text-gray-700 max-w-2xl">Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp tối ưu hóa quy trình và tăng trưởng bền vững.</p>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://www.linkedin.com/company/quoc-viet-trading-and-engineering-co-ltd/posts/?feedView=all" class="text-gray-900 hover:text-gray-900 transition-colors duration-300" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+                    </a>
+                    <a href="https://www.facebook.com/QuocVietTradingAndEngineeringLtd" class="text-gray-900 hover:text-gray-900 transition-colors duration-300" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="#0866FF" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.406.593 24 1.325 24h11.49v-9.294H9.847v-3.622h2.968V8.413c0-2.94 1.796-4.545 4.416-4.545 1.255 0 2.336.093 2.65.135v3.07l-1.82.001c-1.428 0-1.704.679-1.704 1.675v2.197h3.406l-.444 3.622h-2.962V24h5.807C23.406 24 24 23.406 24 22.675V1.325C24 .593 23.406 0 22.675 0z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-700 text-sm">
+            <p>&copy; 2025 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
