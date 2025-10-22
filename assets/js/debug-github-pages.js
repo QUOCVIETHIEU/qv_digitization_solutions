@@ -11,7 +11,7 @@ function debugGitHubPages() {
     // Test asset paths
     const testAssets = [
         'assets/images/qv_logo.png',
-        'assets/icons/icon_camera_ai.png'
+        'assets/icons/card_camera_ai.png'
     ];
     
     testAssets.forEach(asset => {
