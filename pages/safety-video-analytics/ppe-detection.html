@@ -144,11 +144,14 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-2">
-                <button onclick="history.back()" class="flex items-center space-x-2 bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
-                    <img src="../../assets/svgs/ico_arrow_back_ios.svg" alt="Back" class="h-6 w-6">
+                <div class="flex items-center space-x-2">
+                    <button onclick="history.back()" class="flex items-center bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
+                        <img src="../../assets/svgs/ico_arrow_back_ios.svg" alt="Back" class="h-6 w-6 mr-2">
+                    </button>
                     <img src="../../assets/icons/card_camera_ai.png" alt="Camera AI" class="h-6 w-6">
-                    <span class="text-2xl font-bold text-gray-900 hidden md:block">SAFETY VIDEO ANALYTICS › PPE DETECTION</span>
-                </button>
+                    <a href="./safety-video-analytics.html" class="text-2xl font-semibold text-gray-700 hidden md:inline-block ml-2">SAFETY VIDEO ANALYTICS</a>
+                    <span class="text-2xl font-semibold text-gray-700 hidden md:inline-block ml-2">› PPE DETECTION</span>
+                </div>
             </div>
             
             <div class="flex items-center ml-auto space-x-3">
@@ -177,12 +180,12 @@
                 <img src="../../assets/svgs/safety/icon_ppe_detector.svg" alt="PPE Detection Icon"
                     class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
-                    PPE Detection
+                    PPE DETECTION
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-4 animate-fadeIn"
                     style="animation-delay: 0.2s;">
-                    Giải pháp video AI biến camera
-                    thường thành trợ lý an toàn, giám sát và phát hiện sai phạm tuân thủ đồ bảo hộ cá nhân theo thời gian
+                    Giải pháp video AI - Biến camera
+                    thường thành trợ lý an toàn, giám sát và phát hiện sai phạm tuân thủ Đồ Bảo Hộ Cá Nhân theo thời gian
                     thực (PPE).
                 </p>
             </div>
@@ -408,7 +411,7 @@
                         </ul>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="../../assets/svgs/image_ppe_detection_flowchart.svg" alt="PPE Detection Workflow"
+                        <img src="../../assets/svgs/flowchart/flowchart_ppe_detection.svg" alt="PPE Detection Workflow"
                             class="w-full h-auto rounded-xl">
                     </div>
                 </div>
