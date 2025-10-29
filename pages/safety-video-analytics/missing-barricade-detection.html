@@ -139,27 +139,29 @@
     </style>
 </head>
 
-<body class="antialiased">    
+<body class="antialiased">
     <!-- Header/Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-100">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center space-x-2">
-                <button onclick="history.back()" class="flex items-center space-x-2 bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
+                <button onclick="history.back()"
+                    class="flex items-center space-x-2 bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
                     <img src="../../assets/svgs/ico_arrow_back_ios.svg" alt="Back" class="h-6 w-6">
 
                     <img src="../../assets/icons/card_camera_ai.png" alt="Camera AI" class="h-6 w-6">
-                    <span class="text-2xl font-bold text-gray-900 hidden md:block">SAFETY VIDEO ANALYTICS › MISSING BARRICADE DETECTION</span>
+                    <span class="text-2xl font-bold text-gray-900 hidden md:block">SAFETY VIDEO ANALYTICS › MISSING
+                        BARRICADE DETECTION</span>
                 </button>
             </div>
-            
+
             <div class="flex items-center ml-auto space-x-3">
-                <a href="../demo-request/demo-request.html" 
-                   class="px-6 py-2 gradient-bg text-white font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">
+                <a href="../demo-request/demo-request.html"
+                    class="px-6 py-2 gradient-bg text-white font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">
                     Book Demo
                 </a>
 
-                <a href="/index.html" 
-                   class="px-6 py-2 glass-button text-gray-900 font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">
+                <a href="/index.html"
+                    class="px-6 py-2 glass-button text-gray-900 font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300">
                     Home
                 </a>
             </div>
@@ -175,14 +177,17 @@
         <section class="w-full text-center py-8 px-4 sm:px-6 lg:px-8 relative z-10 hero-bg-ppe">
             <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/70 to-white/80 z-0"></div>
             <div class="relative z-10">
-                <img src="../../assets/svgs/safety/icon_missing_barricade_detection.svg" alt="Missing Barricade Detection icon"
-                    class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
+                <img src="../../assets/svgs/safety/icon_missing_barricade_detection.svg"
+                    alt="Missing Barricade Detection icon" class="w-32 h-32 mx-auto mb-6 animate-fadeIn">
                 <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
                     Giải pháp Phát Hiện Thiếu Rào Chắn
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-900 max-w-4xl mx-auto mb-4 animate-fadeIn"
                     style="animation-delay: 0.2s;">
-                    Missing Barricade Detection: Đảm bảo An toàn Khu vực Quan trọng với Giám sát Rào chắn 24/7. AI video analytics của Quốc Việt chuyển đổi CCTV thành hệ thống an toàn chủ động, nhận diện rào chắn bị thiếu, di dời hoặc hư hỏng theo thời gian thực để ngăn chặn các khu vực không được bảo vệ trở thành các sự cố nghiêm trọng.
+                    Missing Barricade Detection: Đảm bảo An toàn Khu vực Quan trọng với Giám sát Rào chắn 24/7. AI video
+                    analytics của Quốc Việt chuyển đổi CCTV thành hệ thống an toàn chủ động, nhận diện rào chắn bị
+                    thiếu, di dời hoặc hư hỏng theo thời gian thực để ngăn chặn các khu vực không được bảo vệ trở thành
+                    các sự cố nghiêm trọng.
                 </p>
             </div>
         </section>
@@ -197,46 +202,96 @@
                             I. Giải pháp là gì?
                         </h2>
                         <p class="text-gray-900 leading-relaxed text-lg mb-4">
-                            Phát Hiện Thiếu Rào Chắn (Missing Barricade Detection) là giải pháp an toàn dựa trên Computer Vision được thiết kế để xác định các khu vực bị thiếu các rào chắn vật lý thiết yếu (như rào chắn, thanh chắn bảo vệ, hoặc băng cảnh báo) theo thời gian thực.
-                            Mô-đun này được xây dựng để hỗ trợ các công trường xây dựng, sản xuất, logistics và năng lượng.
+                            <span class="font-semibold">Missing Barricade Detection</span> (MBD) là một
+                            giải pháp an toàn dựa trên Computer Vision được thiết kế để xác định các khu vực bị thiếu
+                            các rào chắn vật lý thiết yếu (như rào chắn, thanh chắn bảo vệ, hoặc băng cảnh báo) theo
+                            thời gian thực. Mô-đun này được xây dựng để hỗ trợ các công trường xây dựng, sản xuất,
+                            logistics và năng lượng.
                         </p>
-                        <ul class="list-disc pl-5 text-gray-900 space-y-2 leading-relaxed text-lg">
-                            <li>Hoạt động: Hệ thống sử dụng công nghệ video analytics độc quyền của Quốc Việt để quét liên tục các nguồn cấp dữ liệu CCTV hoặc camera IP hiện có để tìm kiếm rào chắn bị thiếu hoặc không hiệu quả.</li>
-                            <li>Mục tiêu: Giảm sự phụ thuộc vào kiểm tra thủ công định kỳ, vốn dễ bị chậm trễ và lỗi do con người. Hệ thống đưa ra cảnh báo tức thì ngay khi phát hiện sự cố liên quan đến rào chắn.</li>
-                            <li>viHUB: Mô-đun này có sẵn trong viHUB, thư viện cung cấp hơn 100 giải pháp AI video analytics của Quốc Việt.</li>
-                        </ul>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4">
+                            Hệ thống sử dụng công nghệ video analytics độc quyền của Quốc Việt để quét
+                            liên tục các nguồn cấp dữ liệu CCTV hoặc camera IP hiện có để tìm kiếm rào chắn bị thiếu
+                            hoặc không hiệu quả.
+                        </p>
+                        <p class="text-gray-900 leading-relaxed text-lg mt-4">
+                            Giảm sự phụ thuộc vào kiểm tra thủ công định kỳ, vốn dễ bị chậm trễ và lỗi do
+                            con người. Hệ thống đưa ra cảnh báo tức thì ngay khi phát hiện sự cố liên quan đến rào
+                            chắn.
+                        </p>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="../../assets/images/mockup_desktop_missing_barricade_detection.png" alt="QV - AI Module"
-                            class="w-full h-auto rounded-xl">
+                        <img src="../../assets/images/mockup_desktop_missing_barricade_detection.png"
+                            alt="QV - AI Module" class="w-full h-auto rounded-xl" />
                     </div>
                 </div>
+
 
                 <!-- Section II: Why is it important? -->
                 <div class="text-center">
                     <h2 class="text-4xl font-bold mb-4 text-gradient">
-                        II. Tại sao Phát hiện Thiếu Rào chắn lại quan trọng? (Vấn đề)
+                        II. Tại sao phát hiện thiếu rào chắn (MBD) lại quan trọng?
                     </h2>
                     <p class="text-gray-900 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
-                        Việc thiếu hoặc di dời rào chắn là nguy cơ phổ biến trên các công trường có nhịp độ nhanh. Những sự cố này thường xảy ra khi rào chắn bị tháo ra để tái chế vật liệu (rework) hoặc di chuyển thiết bị, nhưng sau đó không được đặt lại đúng chỗ.
+                        Việc thiếu hoặc di dời rào chắn là nguy cơ phổ biến trên các công trường có nhịp độ nhanh. Những
+                        sự cố này thường xảy ra khi rào chắn bị tháo ra để tái chế vật liệu (rework) hoặc di chuyển
+                        thiết bị, nhưng sau đó không được đặt lại đúng chỗ.
                     </p>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Rủi ro liên quan đến Lỗ hổng Rào chắn:</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+                        Rủi ro liên quan đến lỗ hổng rào chắn
+                    </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="liquid-glass-dark p-6">
-                            <p class="text-gray-900">Nguy cơ té ngã: Rào chắn bị thiếu quanh hố sàn không được đánh dấu hoặc khu vực mở giếng thang máy.</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">
+                                Nguy Cơ Té Ngã Xuống Hố Sâu
+                            </h4>
+                            <p class="text-gray-900">
+                                Rào chắn bị thiếu tại mép sàn, hố thang máy hoặc giàn giáo là nguyên nhân trực tiếp dẫn
+                                đến té ngã - loại tai nạn gây tử vong hàng đầu trong xây dựng.
+                            </p>
                         </div>
                         <div class="liquid-glass-dark p-6">
-                            <p class="text-gray-900">Nguy cơ điện: Thiếu rào chắn vật lý quanh tấm điện có năng lượng hoặc khu vực nguy hiểm hồ quang điện (arc flash hazard zones).</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">
+                                Vật Tư, Dụng Cụ Rơi
+                            </h4>
+                            <p class="text-gray-900">
+                                Việc thiếu vắng rào chắn xung quanh khu vực đang thi công ở trên cao, khiến dụng cụ hoặc
+                                vật liệu xây
+                                dựng rơi từ trên cao xuống, gây nguy hiểm chết người cho công nhân vô tình đi vào khu
+                                vực nguy hiểm này.
+                            </p>
                         </div>
                         <div class="liquid-glass-dark p-6">
-                            <p class="text-gray-900">Xâm nhập: Truy cập ngẫu nhiên vào các khu vực hạn chế hoặc không gian kín mà không có biển báo thích hợp.</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">
+                                Tiếp Cận Vùng Nguy Hiểm
+                            </h4>
+                            <p class="text-gray-900">
+                                Một rào chắn bị thiếu tạo ra lối vào không được kiểm soát. Người lao động có thể vô tình
+                                đi vào khu vực có điện áp cao, hố ga sâu, hoặc khu vực đang vận hành máy móc nặng.
+                            </p>
                         </div>
                         <div class="liquid-glass-dark p-6">
-                            <p class="text-gray-900">Thách thức Giám sát: Kiểm tra thủ công thường bỏ sót các rủi ro này do quy mô công trường lớn, sự thay đổi bố cục liên tục và sự chuyển giao ca làm việc.</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">
+                                Điểm Mù Giám sát
+                            </h4>
+                            <p class="text-gray-900">
+                                Một giám sát viên không thể có mặt ở mọi nơi. Rào chắn có thể bị tháo dỡ ngay sau khi họ
+                                vừa đi qua. Sự chủ quan của con người cộng với một rào chắn bị thiếu sẽ tạo ra một "điểm
+                                mù" an toàn mà không ai có thể lường trước.
+                            </p>
+                        </div>
+
+                        <div class="liquid-glass-dark p-6">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                                Vi phạm tiêu chuẩn & trách nhiệm pháp lý
+                            </h4>
+                            <p class="text-gray-900">
+                                Thiếu rào chắn là vi phạm nghiêm trọng tiêu chuẩn OSHA, ISO 45001, có thể dẫn đến phạt
+                                hành chính, đình chỉ thi công hoặc ảnh hưởng uy tín doanh nghiệp.
+                            </p>
                         </div>
                     </div>
                     <p class="text-gray-900 leading-relaxed text-lg mt-8 max-w-4xl mx-auto">
-                        Nguy cơ: Một rào chắn bị thiếu hoặc giám sát sơ sài có thể leo thang thành vi phạm an toàn nghiêm trọng hoặc tai nạn.
+                        AI giám sát MBD - phát hiện, cảnh báo, bảo vệ an toàn mọi lúc.
                     </p>
                 </div>
 
@@ -244,46 +299,64 @@
                 <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                     <div class="md:w-1/2">
                         <h2 class="text-4xl font-bold mb-4 text-gradient">
-                            III. Ứng dụng Giải pháp Cần thiết nhất ở đâu?
+                            III. Được ứng dụng ở đâu?
                         </h2>
                         <p class="text-gray-900 leading-relaxed text-lg mb-4">
-                            Giải pháp này cần thiết ở bất cứ nơi nào các khu vực phải được phân định vật lý để đảm bảo an toàn, quy trình làm việc hoặc tuân thủ quy định.
+                            Giải pháp này cần thiết ở bất cứ nơi nào các khu vực phải được phân định vật lý để đảm bảo
+                            an toàn, quy trình làm việc hoặc tuân thủ quy định:
                         </p>
                         <ul class="space-y-6 text-gray-900 leading-relaxed text-lg">
                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <span class="flex-shrink-0 mr-4 text-xl text-gray-700">◆</span>
                                 <div>
-                                    <strong class="text-gray-900">Công trường Xây dựng:</strong> Theo dõi rào chắn gần giếng thang máy, cầu thang, rãnh và giàn giáo. Giảm đáng kể nguy cơ té ngã.
+                                    <strong class="text-gray-900">Xây dựng (Construction):</strong>
+                                    Theo dõi rào chắn gần giếng thang máy, cầu thang, rãnh và giàn giáo. Giảm đáng kể
+                                    nguy cơ té ngã.
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <span class="flex-shrink-0 mr-4 text-xl text-gray-700">◆</span>
                                 <div>
-                                    <strong class="text-gray-900">Kho hàng & Logistics:</strong> Các khu vực giao thông cao như sàn xếp dỡ, đường dốc và sàn lửng nơi rào chắn thường xuyên bị tháo dỡ do xử lý vật liệu.
+                                    <strong class="text-gray-900">Dầu khí (Oil & Gas):</strong>
+                                    Các khu vực liên quan đến công việc nóng, hóa chất nguy hiểm hoặc thiết bị điện trực
+                                    tiếp, nơi việc thiếu rào chắn có thể dẫn đến sự cố nghiêm trọng.
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <span class="flex-shrink-0 mr-4 text-xl text-gray-700">◆</span>
                                 <div>
-                                    <strong class="text-gray-900">Sàn Sản xuất:</strong> Giám sát các khu vực bị hạn chế hoặc có năng lượng để đảm bảo công nhân tránh xa thiết bị vận hành hoặc khu vực điện áp cao.
+                                    <strong class="text-gray-900">Khai thác mỏ (Mining):</strong>
+                                    Giám sát tuân thủ PPE trong khu vực sử dụng hóa chất nguy hại, bảo vệ
+                                    an toàn trước rủi ro tiếp xúc chất độc hại.
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+                                <span class="flex-shrink-0 mr-4 text-xl text-gray-700">◆</span>
                                 <div>
-                                    <strong class="text-gray-900">Nhà máy Điện & Lọc dầu:</strong> Các khu vực liên quan đến công việc nóng, hóa chất nguy hiểm hoặc thiết bị điện trực tiếp, nơi việc thiếu rào chắn có thể dẫn đến sự cố nghiêm trọng.
+                                    <strong class="text-gray-900">Sản xuất (Manufacturing):</strong>
+                                    Giám sát các khu vực bị hạn chế hoặc có năng lượng để đảm bảo công nhân tránh xa
+                                    thiết bị vận hành hoặc khu vực điện áp cao.
                                 </div>
                             </li>
-                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">◆</span>
+
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-gray-900">◆</span>
                                 <div>
-                                    <strong class="text-gray-900">Sân bay & Khu vực Đường sắt:</strong> Kiểm soát chu vi nghiêm ngặt, đặc biệt trong thời gian bảo trì, nơi rào chắn là tạm thời và dễ bị dịch chuyển.
+                                    <strong class="text-gray-900">Logistics & Kho hàng:</strong>
+
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 mr-4 text-2xl text-gray-900">◆</span>
+                                <div>
+                                    <strong class="text-gray-900">Hóa chất:</strong>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=Missing+Barricade+Areas" alt="Missing Barricade Areas" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="../../assets/images/area_ppe_detection.png" alt="PPE Detection Areas"
+                            class="w-full h-auto rounded-xl shadow-xl" />
                     </div>
                 </div>
 
@@ -294,37 +367,42 @@
                             IV. Cách Thức Hoạt động (Computer Vision)
                         </h2>
                         <p class="text-gray-900 leading-relaxed text-lg mb-4">
-                            Mô-đun MBD tận dụng Computer Vision để theo dõi tình trạng rào chắn vật lý theo thời gian thực.
+                            Mô-đun MBD tận dụng Computer Vision để theo dõi tình trạng rào chắn vật lý theo thời gian
+                            thực.
                         </p>
                         <ul class="space-y-6 text-gray-900 leading-relaxed text-lg">
                             <li class="flex items-start">
-                                <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">1.</span>
-                                <div>
-                                    <strong class="text-gray-900">Chọn (Choose):</strong> Chọn mô-đun “Missing Barricade Detection” từ Quốc Việt’s viHUB.
-                                </div>
-                            </li>
-                            <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">2.</span>
                                 <div>
-                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun tích hợp liền mạch với hệ thống giám sát hiện có của bạn qua giao thức RTSP. Không cần thêm thiết bị phần cứng.
+                                    <strong class="text-gray-900">Kết nối (Connect):</strong> Mô-đun tích hợp liền mạch
+                                    với hệ thống giám sát hiện có của bạn qua giao thức RTSP. Không cần thêm thiết bị
+                                    phần cứng.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">3.</span>
                                 <div>
-                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI sử dụng computer vision để quét các luồng video trực tiếp, xác định các khu vực nguy hiểm đã được xác định. Nó phát hiện: Các khu vực cạnh, hố hoặc khu vực mở không có rào chắn; Các rào chắn bị dịch chuyển, đổ sập hoặc đặt sai vị trí; Sự hiện diện của công nhân hoặc thiết bị di chuyển bên trong các khu vực hạn chế nhưng thiếu rào chắn an toàn thích hợp.
+                                    <strong class="text-gray-900">Ghi nhận (Capture):</strong> AI sử dụng computer
+                                    vision để quét các luồng video trực tiếp, xác định các khu vực nguy hiểm đã được xác
+                                    định. Nó phát hiện: Các khu vực cạnh, hố hoặc khu vực mở không có rào chắn; Các rào
+                                    chắn bị dịch chuyển, đổ sập hoặc đặt sai vị trí; Sự hiện diện của công nhân hoặc
+                                    thiết bị di chuyển bên trong các khu vực hạn chế nhưng thiếu rào chắn an toàn thích
+                                    hợp.
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="flex-shrink-0 mr-4 text-2xl text-purple-400">4.</span>
                                 <div>
-                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi phát hiện rào chắn bị thiếu, hệ thống gửi cảnh báo tức thì: tại chỗ qua còi báo động hoặc đèn chỉ báo, và từ xa qua SMS, ứng dụng di động hoặc bảng điều khiển.
+                                    <strong class="text-gray-900">Kiểm soát (Control):</strong> Khi phát hiện rào chắn
+                                    bị thiếu, hệ thống gửi cảnh báo tức thì: tại chỗ qua còi báo động hoặc đèn chỉ báo,
+                                    và từ xa qua SMS, ứng dụng di động hoặc bảng điều khiển.
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=Missing+Barricade+Workflow" alt="Missing Barricade Workflow" class="w-full h-auto rounded-xl shadow-xl">
+                        <img src="https://placehold.co/600x400/1A1A22/E2E8F0?text=Missing+Barricade+Workflow"
+                            alt="Missing Barricade Workflow" class="w-full h-auto rounded-xl shadow-xl">
                     </div>
                 </div>
 
@@ -334,7 +412,8 @@
                         V. Tác động và Lợi ích Chính
                     </h2>
                     <p class="text-gray-900 leading-relaxed text-lg mb-8 max-w-4xl mx-auto">
-                        Phát hiện Thiếu Rào Chắn của Quốc Việt cung cấp thông tin chi tiết có thể hành động và cải thiện đáng kể sự tuân thủ rào chắn.
+                        Phát hiện Thiếu Rào Chắn của Quốc Việt cung cấp thông tin chi tiết có thể hành động và cải thiện
+                        đáng kể sự tuân thủ rào chắn.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="liquid-glass-dark p-6">
@@ -343,23 +422,28 @@
                         </div>
                         <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tăng Phòng ngừa</h3>
-                            <p class="text-gray-900">Cải thiện khả năng phát hiện sớm, tăng khả năng ngăn ngừa té ngã, xâm nhập và các vi phạm an toàn khác tới 48%.</p>
+                            <p class="text-gray-900">Cải thiện khả năng phát hiện sớm, tăng khả năng ngăn ngừa té ngã,
+                                xâm nhập và các vi phạm an toàn khác tới 48%.</p>
                         </div>
                         <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tốc độ Cảnh báo</h3>
-                            <p class="text-gray-900">Kích hoạt cảnh báo trong vòng 3 giây khi phát hiện rào chắn bị thiếu.</p>
+                            <p class="text-gray-900">Kích hoạt cảnh báo trong vòng 3 giây khi phát hiện rào chắn bị
+                                thiếu.</p>
                         </div>
                         <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Giảm Chi phí Bảo hiểm</h3>
-                            <p class="text-gray-900">Giảm tần suất yêu cầu bồi thường bảo hiểm và thời gian giải quyết 30%.</p>
+                            <p class="text-gray-900">Giảm tần suất yêu cầu bồi thường bảo hiểm và thời gian giải quyết
+                                30%.</p>
                         </div>
                         <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Khả năng Kiểm toán</h3>
-                            <p class="text-gray-900">Tạo ra nhật ký kiểm toán hoàn toàn có thể tìm kiếm được về các vi phạm rào chắn, tăng tốc độ điều tra sự cố.</p>
+                            <p class="text-gray-900">Tạo ra nhật ký kiểm toán hoàn toàn có thể tìm kiếm được về các vi
+                                phạm rào chắn, tăng tốc độ điều tra sự cố.</p>
                         </div>
                         <div class="liquid-glass-dark p-6">
                             <h3 class="text-2xl font-semibold text-gray-900 mb-2">Tính linh hoạt</h3>
-                            <p class="text-gray-900">Tự động đồng bộ hóa với các giai đoạn dự án, tự động cập nhật các khu vực rủi ro cao khi bố cục công trường thay đổi.</p>
+                            <p class="text-gray-900">Tự động đồng bộ hóa với các giai đoạn dự án, tự động cập nhật các
+                                khu vực rủi ro cao khi bố cục công trường thay đổi.</p>
                         </div>
                     </div>
                 </div>
@@ -374,13 +458,20 @@
                     </p>
                     <div class="liquid-glass-dark p-8 rounded-xl shadow-lg">
                         <p class="text-gray-900 text-lg mb-4">
-                            **Vấn đề:** Một nhà thầu xây dựng hàng đầu ở Singapore quản lý các dự án cao tầng đã gặp các sự cố lặp đi lặp lại do rào chắn bị gỡ bỏ và không được thay thế trong quá trình làm lại. Điều này dẫn đến hơn một chục sự cố an toàn và suýt xảy ra tai nạn trong một quý.
+                            **Vấn đề:** Một nhà thầu xây dựng hàng đầu ở Singapore quản lý các dự án cao tầng đã gặp các
+                            sự cố lặp đi lặp lại do rào chắn bị gỡ bỏ và không được thay thế trong quá trình làm lại.
+                            Điều này dẫn đến hơn một chục sự cố an toàn và suýt xảy ra tai nạn trong một quý.
                         </p>
                         <p class="text-gray-900 text-lg">
-                            **Giải pháp của Quốc Việt:** Công ty đã triển khai mô-đun Phát hiện Thiếu Rào Chắn bằng cách sử dụng các camera IP hiện có để giám sát các khu vực rủi ro cao như giếng thang máy và mép sàn.
+                            **Giải pháp của Quốc Việt:** Công ty đã triển khai mô-đun Phát hiện Thiếu Rào Chắn bằng cách
+                            sử dụng các camera IP hiện có để giám sát các khu vực rủi ro cao như giếng thang máy và mép
+                            sàn.
                         </p>
                         <p class="text-gray-900 text-lg mt-4">
-                            **Tác động của Quốc Việt:** Trong vòng ba tháng, công ty đã ghi nhận giảm **65%** các vi phạm an toàn liên quan đến rào chắn, bao gồm nguy cơ té ngã và xâm nhập trái phép. Sự cải thiện này cũng giúp họ phù hợp với tầm nhìn WSH (Workplace Safety and Health) 2028 của Singapore.
+                            **Tác động của Quốc Việt:** Trong vòng ba tháng, công ty đã ghi nhận giảm **65%** các vi
+                            phạm an toàn liên quan đến rào chắn, bao gồm nguy cơ té ngã và xâm nhập trái phép. Sự cải
+                            thiện này cũng giúp họ phù hợp với tầm nhìn WSH (Workplace Safety and Health) 2028 của
+                            Singapore.
                         </p>
                     </div>
                 </div>
@@ -391,15 +482,17 @@
                         Đừng để giám sát rào chắn bị thiếu bị bỏ qua.
                     </h2>
                     <p class="text-lg text-gray-900 mb-8 max-w-4xl mx-auto">
-                        Khám phá cách Quốc Việt Missing Barricade Detection có thể tích hợp với hệ thống CCTV hiện có của bạn để ngăn ngừa tai nạn và tăng cường khả năng tuân thủ tới 48%.
+                        Khám phá cách Quốc Việt Missing Barricade Detection có thể tích hợp với hệ thống CCTV hiện có
+                        của bạn để ngăn ngừa tai nạn và tăng cường khả năng tuân thủ tới 48%.
                     </p>
-                    <a href="#" class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
+                    <a href="#"
+                        class="inline-block px-8 py-4 font-bold rounded-full gradient-bg text-white shadow-lg transform transition-transform hover:scale-105">
                         YÊU CẦU BẢN DEMO NGAY HÔM NAY!
                     </a>
                 </div>
             </div>
         </section>
-    </main>    <!-- Footer -->
+    </main> <!-- Footer -->
     <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex flex-col items-center justify-center">

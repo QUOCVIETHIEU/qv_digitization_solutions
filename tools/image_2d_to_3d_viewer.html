@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình xem ảnh 2D sang 3D</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Đảm bảo canvas lấp đầy vùng chứa */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            /* Ngăn cuộn trang */
+        }
+
+        #preview-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Căn giữa bộ đệm tải */
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 8px solid #f3f3f3;
+            /* Light grey */
+            border-top: 8px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            z-index: 10;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Sửa lỗi giao diện input[type=range] trên Firefox */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        /***** Chrome, Safari, Opera, and Edge Chromium *****/
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 1.25rem;
+            /* 20px */
+            width: 1.25rem;
+            /* 20px */
+            background-color: #2563eb;
+            /* bg-blue-600 */
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-top: -6px;
+            /* Căn giữa thumb */
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            background-color: #d1d5db;
+            /* bg-gray-300 */
+            height: 0.5rem;
+            /* 8px */
+            border-radius: 0.25rem;
+            /* rounded-sm */
+        }
+
+        /***** Firefox *****/
+        input[type="range"]::-moz-range-thumb {
+            height: 1.25rem;
+            /* 20px */
+            width: 1.25rem;
+            /* 20px */
+            background-color: #2563eb;
+            /* bg-blue-600 */
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        input[type="range"]::-moz-range-track {
+            background-color: #d1d5db;
+            /* bg-gray-300 */
+            height: 0.5rem;
+            /* 8px */
+            border-radius: 0.25rem;
+            /* rounded-sm */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 text-black">
+
+    <!-- SỬA LỖI: Thanh công cụ trên cùng (Hiệu ứng Glass) -->
+    <div class="absolute top-0 left-0 right-0 z-10 p-4 bg-white/30 backdrop-blur-md border-b border-white/20">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h1 class="text-xl font-bold text-black mb-2 sm:mb-0">
+                Trình xem ảnh 2D sang 3D (2.5D)
+            </h1>
+
+            <div class="flex gap-4">
+                <!-- Nút tải ảnh lên -->
+                <label for="file-upload"
+                    class="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 shadow-lg">
+                    Upload Image
+                </label>
+                <input id="file-upload" type="file" accept="image/*" class="hidden" />
+
+                <!-- SỬA LỖI: Cập nhật tên nút -->
+                <button id="export-png-btn"
+                    class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 shadow-lg">
+                    Download PNG
+                </button>
+                <!-- (reset button moved to instructions card) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SỬA LỖI: Thanh công cụ Hướng dẫn & Zoom (Hiệu ứng Glass) -->
+    <div id="instructions"
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 p-4 bg-white/30 backdrop-blur-md shadow-lg rounded-xl text-center flex flex-col gap-3 border border-white/20">
+        <p class="text-sm text-black font-medium">Kéo chuột để xoay, cuộn chuột để thu phóng.</p>
+
+        <!-- Bảng điều khiển Zoom mới -->
+        <div class="flex items-center justify-center gap-2">
+            <label for="zoom-slider" class="text-sm font-medium text-black">Zoom:</label>
+            <!-- SỬA LỖI: Bỏ class Tailwind mặc định để CSS tùy chỉnh hoạt động -->
+            <input id="zoom-slider" type="range" min="0" max="100" value="50" class="w-32 sm:w-48">
+            <input id="zoom-input" type="number" min="0" max="100" value="50"
+                class="w-16 text-center border border-gray-300 rounded-md p-1 bg-white/50">
+            <span class="text-sm font-medium text-black">%</span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+            <p class="text-xs text-gray-800" id="instructions-text">Chưa có ảnh nào được tải lên.</p>
+            <!-- Icon-only reset button, hidden by default; shown when rotation differs -->
+            <button id="reset-view-btn"
+                class="hidden inline-flex items-center justify-center w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full transition-colors duration-150"
+                title="Reset view" aria-label="Reset view">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M21 12a9 9 0 1 1-3.1-6.4" />
+                    <polyline points="21 3 21 9 15 9" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Bộ đệm tải, ẩn ban đầu -->
+    <div id="loader" class="hidden"></div>
+
+    <!-- Canvas cho Three.js -->
+    <canvas id="preview-canvas"></canvas>
+
+    <!-- Import map cho Three.js và OrbitControls -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- Mã JavaScript của ứng dụng -->
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // Biến toàn cục
+        let scene, camera, renderer, mesh, controls, textureLoader;
+
+        let originalImageWidth = null;
+        let originalImageHeight = null;
+        // initial spherical state after image load
+        let initialSpherical = null; // {theta, phi, radius}
+
+        const canvas = document.getElementById('preview-canvas');
+        const fileInput = document.getElementById('file-upload');
+        const loaderElement = document.getElementById('loader');
+
+        // SỬA LỖI: Đổi tên biến text
+        const instructionsTextEl = document.getElementById('instructions-text');
+        const exportPngBtn = document.getElementById('export-png-btn');
+
+        // SỬA LỖI: Biến cho Zoom
+        const zoomSlider = document.getElementById('zoom-slider');
+        const zoomInput = document.getElementById('zoom-input');
+        const ZOOM_MIN_DIST = 2; // Khoảng cách gần nhất
+        const ZOOM_MAX_DIST = 50; // Khoảng cách xa nhất
+
+        /**
+         * Hiển thị thông báo lỗi cho người dùng
+         */
+        function showError(message) {
+            const errorElement = document.getElementById('error-message');
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.classList.remove('hidden');
+                setTimeout(() => { errorElement.classList.add('hidden'); }, 5000);
+            }
+            console.error(message);
+        }
+
+        function showLoading(message) {
+            loaderElement.classList.remove('hidden');
+            instructionsTextEl.textContent = message;
+        }
+
+        function hideLoading() {
+            loaderElement.classList.add('hidden');
+            if (originalImageWidth) {
+                // show current rotation instead of static message
+                updateRotationDisplay();
+            } else {
+                instructionsTextEl.textContent = "x=0, y=0.";
+            }
+        }
+
+        /**
+         * Update the instructions card to show current camera rotation (x,y) in degrees.
+         * x = azimuth (theta), y = polar (phi)
+         */
+        function updateRotationDisplay() {
+            try {
+                if (!camera || !controls) return;
+                // vector from target to camera
+                const v = camera.position.clone().sub(controls.target);
+                const spherical = new THREE.Spherical();
+                spherical.setFromVector3(v);
+                const thetaDeg = Math.round(THREE.MathUtils.radToDeg(spherical.theta));
+                const phiDeg = Math.round(THREE.MathUtils.radToDeg(spherical.phi));
+                instructionsTextEl.textContent = `x=${thetaDeg}\u00B0, y=${phiDeg}\u00B0`;
+            } catch (e) {
+                // fallback text
+                instructionsTextEl.textContent = "Đã tải xong.";
+            }
+        }
+
+        // animate reset to initial spherical angles
+        function animateResetToInitial(duration = 400) {
+            if (!initialSpherical || !camera || !controls) return;
+            const startTime = performance.now();
+            const startPos = camera.position.clone();
+            const startSph = new THREE.Spherical().setFromVector3(startPos.clone().sub(controls.target));
+            const endSph = new THREE.Spherical(initialSpherical.radius, initialSpherical.phi, initialSpherical.theta);
+
+            function step(now) {
+                const t = Math.min(1, (now - startTime) / duration);
+                const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOutQuad approx
+                const curRadius = THREE.MathUtils.lerp(startSph.radius, endSph.radius, eased);
+                const curTheta = THREE.MathUtils.lerp(startSph.theta, endSph.theta, eased);
+                const curPhi = THREE.MathUtils.lerp(startSph.phi, endSph.phi, eased);
+                const s = new THREE.Spherical(curRadius, curPhi, curTheta);
+                const newPos = new THREE.Vector3().setFromSpherical(s).add(controls.target);
+                camera.position.copy(newPos);
+                camera.lookAt(controls.target);
+                controls.update();
+                updateRotationDisplay();
+                if (t < 1) requestAnimationFrame(step);
+                else {
+                    // hide reset button when done
+                    const btn = document.getElementById('reset-view-btn');
+                    if (btn) btn.classList.add('hidden');
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        // --- SỬA LỖI: Hàm tiện ích Zoom ---
+
+        /**
+         * Chuyển đổi Khoảng cách (ví dụ: 2-50) thành % (ví dụ: 100-0)
+         * Gần (2) = 100% zoom
+         * Xa (50) = 0% zoom
+         */
+        function distanceToPercent(distance) {
+            // Sử dụng mapLinear của THREE để ánh xạ
+            // (giá trị, min_đầu_vào, max_đầu_vào, min_đầu_ra, max_đầu_ra)
+            return THREE.MathUtils.mapLinear(distance, ZOOM_MAX_DIST, ZOOM_MIN_DIST, 0, 100);
+        }
+
+        /**
+         * Chuyển đổi % (0-100) thành Khoảng cách (50-2)
+         */
+        function percentToDistance(percent) {
+            return THREE.MathUtils.mapLinear(percent, 0, 100, ZOOM_MAX_DIST, ZOOM_MIN_DIST);
+        }
+
+        /**
+         * Đặt vị trí camera dựa trên % zoom
+         */
+        function setZoomPercent(percent) {
+            if (!camera || !controls) return;
+
+            const newDistance = percentToDistance(percent);
+
+            // Lấy vị trí camera hiện tại
+            const currentPosition = camera.position.clone();
+            // Lấy mục tiêu (target)
+            const target = controls.target.clone();
+
+            // Tính toán hướng từ target về camera
+            const direction = currentPosition.clone().sub(target).normalize();
+
+            // Đặt vị trí mới
+            camera.position.copy(target).addScaledVector(direction, newDistance);
+            controls.update(); // Cần thiết để cập nhật controls
+        }
+
+        // --- Kết thúc hàm Zoom ---
+
+
+        /**
+         * Khởi tạo cảnh 3D
+         */
+        function init() {
+            try {
+                console.log("init(): Bắt đầu khởi tạo...");
+
+                // 1. Cảnh (Scene)
+                scene = new THREE.Scene();
+                scene.background = null;
+
+                // 2. Trình kết xuất (Renderer)
+                renderer = new THREE.WebGLRenderer({
+                    canvas: canvas,
+                    antialias: true,
+                    alpha: true,
+                    preserveDrawingBuffer: true
+                });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(window.devicePixelRatio);
+
+                // 3. Máy ảnh (Camera)
+                const aspect = window.innerWidth / window.innerHeight;
+                camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+                camera.position.set(0, 0, 10);
+
+                // 4. Ánh sáng
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+                scene.add(ambientLight);
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+                directionalLight.position.set(5, 5, 10);
+                scene.add(directionalLight);
+
+                // 5. Điều khiển (Controls)
+                controls = new OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.05;
+                controls.enablePan = true;
+                // SỬA LỖI: Sử dụng hằng số
+                controls.minDistance = ZOOM_MIN_DIST;
+                controls.maxDistance = ZOOM_MAX_DIST;
+                controls.target.set(0, 0, 0);
+
+                // 6. Texture Loader
+                textureLoader = new THREE.TextureLoader();
+
+                // 7. Vòng lặp Animation
+                animate();
+
+                // 8. Trình xử lý sự kiện
+                fileInput.addEventListener('change', handleFileChange);
+                window.addEventListener('resize', onWindowResize);
+                exportPngBtn.addEventListener('click', exportAsPNG);
+                const resetViewBtn = document.getElementById('reset-view-btn');
+                if (resetViewBtn) resetViewBtn.addEventListener('click', () => animateResetToInitial(500));
+
+                // SỬA LỖI: Thêm sự kiện cho thanh Zoom
+                zoomSlider.addEventListener('input', (e) => {
+                    const percent = parseFloat(e.target.value);
+                    zoomInput.value = Math.round(percent);
+                    setZoomPercent(percent);
+                });
+
+                zoomInput.addEventListener('change', (e) => { // Dùng 'change' thay vì 'input' để tránh lỗi khi đang gõ
+                    let percent = parseFloat(e.target.value);
+                    if (isNaN(percent)) percent = 0;
+                    if (percent < 0) percent = 0;
+                    if (percent > 100) percent = 100;
+
+                    e.target.value = Math.round(percent); // Cập nhật lại giá trị đã chuẩn hóa
+                    zoomSlider.value = percent;
+                    setZoomPercent(percent);
+                });
+
+
+                console.log("init(): Khởi tạo thành công.");
+
+            } catch (error) {
+                console.error("Lỗi nghiêm trọng khi khởi tạo:", error);
+                showError("Lỗi nghiêm trọng khi khởi tạo. Không thể tải Three.js? Vui lòng kiểm tra console (F12).");
+            }
+        }
+
+        /**
+         * Vòng lặp animation
+         */
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update(); // Cập nhật điều khiển
+
+            // SỬA LỖI: Đồng bộ hóa UI với zoom của camera
+            // Chỉ cập nhật nếu người dùng không đang chủ động kéo/nhập
+            if (camera && controls && document.activeElement !== zoomSlider && document.activeElement !== zoomInput) {
+                const currentDistance = camera.position.distanceTo(controls.target);
+                const currentPercent = distanceToPercent(currentDistance);
+                zoomSlider.value = currentPercent;
+                zoomInput.value = Math.round(currentPercent);
+                // also update rotation display when an image is loaded
+                if (originalImageWidth) updateRotationDisplay();
+                // show reset button when rotation differs from initial
+                try {
+                    const btn = document.getElementById('reset-view-btn');
+                    if (initialSpherical && btn) {
+                        const v = camera.position.clone().sub(controls.target);
+                        const sph = new THREE.Spherical().setFromVector3(v);
+                        const dTheta = Math.abs(THREE.MathUtils.radToDeg(sph.theta - initialSpherical.theta));
+                        const dPhi = Math.abs(THREE.MathUtils.radToDeg(sph.phi - initialSpherical.phi));
+                        const thresholdDeg = 2; // show if rotated more than 2 degrees
+                        if (dTheta > thresholdDeg || dPhi > thresholdDeg) btn.classList.remove('hidden');
+                        else btn.classList.add('hidden');
+                    }
+                } catch (e) { /* ignore */ }
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        /**
+         * Xử lý khi tải tệp lên
+         */
+        function handleFileChange(event) {
+            console.log("handleFileChange(): Đã phát hiện thay đổi tệp.");
+            const file = event.target.files[0];
+            if (!file) {
+                console.log("handleFileChange(): không có tệp nào được chọn.");
+                return;
+            }
+
+            console.log("handleFileChange(): Tệp đã chọn:", file.name);
+
+            const reader = new FileReader();
+
+            reader.onerror = () => {
+                console.error("FileReader lỗi");
+                showError("Không thể đọc tệp. Tệp có bị hỏng không?");
+                loaderElement.classList.add('hidden');
+                instructionsTextEl.textContent = "Lỗi khi đọc tệp.";
+                originalImageWidth = null;
+                originalImageHeight = null;
+            };
+
+            reader.onload = (e) => {
+                console.log("handleFileChange(): FileReader đã tải tệp xong.");
+                const imageUrl = e.target.result;
+                updateImagePlane(imageUrl);
+            };
+
+            reader.readAsDataURL(file);
+            showLoading(`Đang tải: ${file.name}`);
+        }
+
+        /**
+         * Cập nhật mặt phẳng ảnh trong cảnh
+         */
+        function updateImagePlane(imageUrl) {
+            console.log("updateImagePlane(): Bắt đầu tải texture...");
+
+            if (!textureLoader) {
+                showError("Lỗi: TextureLoader chưa được khởi tạo.");
+                return;
+            }
+
+            textureLoader.load(imageUrl, (texture) => {
+                console.log("updateImagePlane(): Tải texture thành công.");
+
+                if (mesh) {
+                    scene.remove(mesh);
+                    mesh.geometry.dispose();
+                    mesh.material.dispose();
+                }
+
+                const image = texture.image;
+                originalImageWidth = image.width;
+                originalImageHeight = image.height;
+                console.log(`Kích thước ảnh gốc: ${originalImageWidth}x${originalImageHeight}`);
+
+                const aspectRatio = image.width / image.height;
+                const planeSize = 8;
+
+                const geometry = new THREE.PlaneGeometry(planeSize * aspectRatio, planeSize);
+                const material = new THREE.MeshStandardMaterial({
+                    map: texture,
+                    side: THREE.DoubleSide,
+                    metalness: 0.1,
+                    roughness: 0.7,
+                    transparent: true
+                });
+
+                mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+
+                hideLoading();
+
+                // Đặt lại camera (tùy chọn)
+                const vFOV = THREE.MathUtils.degToRad(camera.fov);
+                const distance = (planeSize / 2) / Math.tan(vFOV / 2);
+
+                controls.target.set(0, 0, 0);
+                camera.position.set(0, 0, distance * 1.1);
+                controls.update();
+
+                // store initial spherical state for reset logic
+                const v = camera.position.clone().sub(controls.target);
+                const s = new THREE.Spherical().setFromVector3(v);
+                initialSpherical = { theta: s.theta, phi: s.phi, radius: s.radius };
+
+                // SỬA LỖI: Cập nhật thanh trượt zoom về vị trí mặc định
+                const currentPercent = distanceToPercent(camera.position.distanceTo(controls.target));
+                zoomSlider.value = currentPercent;
+                zoomInput.value = Math.round(currentPercent);
+
+
+                console.log("updateImagePlane(): Đã tạo ảnh 3D thành công.");
+            },
+                (xhr) => {
+                    console.log(`updateImagePlane(): Đang tải texture... ${(xhr.loaded / xhr.total * 100).toFixed(0)}%`);
+                },
+                (err) => {
+                    console.error('Không thể tải texture ảnh:', err);
+                    showError("Lỗi: Không thể tải ảnh làm texture. Tệp có phải là ảnh hợp lệ (jpg, png) không?");
+                    hideLoading();
+                    originalImageWidth = null;
+                    originalImageHeight = null;
+                });
+        }
+
+        /**
+         * Xử lý khi thay đổi kích thước cửa sổ
+         */
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        /**
+         * Hàm trợ giúp để kích hoạt tải tệp xuống trình duyệt
+         */
+        function downloadDataURL(dataUrl, filename) {
+            const link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        /**
+         * Xuất ảnh PNG
+         */
+        function exportAsPNG() {
+            if (!mesh || !originalImageWidth) {
+                showError("Vui lòng tải ảnh lên trước khi xuất PNG.");
+                return;
+            }
+
+            console.log(`Bắt đầu xuất PNG kích thước gốc: ${originalImageWidth}x${originalImageHeight}`);
+            showLoading(`Đang xuất PNG (${originalImageWidth}x${originalImageHeight})...`);
+
+            // 1. Lưu lại trạng thái HIỆN TẠI
+            const currentSize = new THREE.Vector2();
+            renderer.getSize(currentSize);
+            const currentAspect = camera.aspect;
+            const oldCamPos = camera.position.clone();
+            const oldCamQuat = camera.quaternion.clone(); // Dùng quaternion
+            const oldTarget = controls.target.clone();
+
+            // 2. Tạm thời thay đổi kích thước renderer và aspect camera
+            renderer.setSize(originalImageWidth, originalImageHeight, false); // `false` = không cập nhật style
+            camera.aspect = originalImageWidth / originalImageHeight;
+
+            // 3. Cập nhật ma trận chiếu của camera cho aspect mới
+            camera.updateProjectionMatrix();
+
+
+            // 4. Render cảnh một lần
+            try {
+                // Render với camera ở vị trí hiện tại, nhưng với độ phân giải cao
+                renderer.render(scene, camera);
+
+                // 5. Lấy data URL
+                const dataUrl = renderer.domElement.toDataURL('image/png');
+                downloadDataURL(dataUrl, `exported_image_${originalImageWidth}x${originalImageHeight}.png`);
+
+            } catch (e) {
+                console.error("Lỗi trong khi render off-screen:", e);
+                showError("Đã xảy ra lỗi khi tạo ảnh PNG.");
+            } finally {
+                // 6. KHÔI PHỤC TRẠNG THÁI CŨ (RẤT QUAN TRỌNG)
+                renderer.setSize(currentSize.x, currentSize.y, false);
+                camera.aspect = currentAspect;
+
+                camera.position.copy(oldCamPos);
+                camera.quaternion.copy(oldCamQuat); // Khôi phục góc xoay
+
+                camera.updateProjectionMatrix();
+
+                controls.target.copy(oldTarget);
+                controls.update();
+
+                hideLoading();
+                console.log("Đã khôi phục trạng thái renderer.");
+            }
+        }
+
+
+        // Khởi chạy ứng dụng
+        init();
+    </script>
+
+</body>
+
+</html>
