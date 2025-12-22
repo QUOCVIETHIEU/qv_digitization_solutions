@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Live View Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#2563EB", // A nice blue for primary actions
+                        },
+                        "background-light": "#F8FAFC", // A very light gray for light mode
+                        "background-dark": "#1E293B", // A cool, dark slate for dark mode
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem", // 8px
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+    <div class="flex h-screen">
+        <aside
+            class="w-64 flex-shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+            <div class="h-16 flex items-center px-6 border-b border-slate-200 dark:border-slate-800">
+                <img alt="QV Digitization Logo" class="h-8 mr-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBXJi-40tusab8r92vY3Lpws8yW6PS9C_aC0FI6Cs1wgeylfPkx2qI1qoVaWHshkgqvm9tVVLJUT0CoSsEy5weNhKTz-s7NKcMCuLSDl45Kxck_e17ysfRTC__QEQqM10ipH-xiJEvOtG9RKwx1TV78i1yZ29_AitKyFhOz9LANQxPdf1-RzOZzkNgVheY2UXcSoMdqEOdjBU__6BqWuAWU2N8ygvdFS4eXbTWNaKyXJnX-gAtlxpEApjJ2p4hTtoeQkcoJEpTfVw" />
+                <h1 class="font-bold text-lg text-slate-900 dark:text-white">QV DIGITIZATION</h1>
+            </div>
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">analytics</span>
+                    Analytic
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">notifications</span>
+                    Notification
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium bg-blue-50 text-primary dark:bg-blue-900/50 dark:text-blue-300 rounded-lg"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">camera</span>
+                    Live View
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">event</span>
+                    Events
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">description</span>
+                    Reports
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">settings</span>
+                    Settings
+                </a>
+                <a class="flex items-center px-4 py-2.5 text-sm font-medium text-slate-500 dark:text-slate-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                    href="#">
+                    <span class="material-symbols-outlined mr-3 text-lg">help</span>
+                    Supports
+                </a>
+            </nav>
+            <div class="px-4 py-4 border-t border-slate-200 dark:border-slate-800">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 dark:bg-blue-900 rounded p-2 mr-3">
+                            <span class="material-symbols-outlined text-blue-500 dark:text-blue-400">photo_camera</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-slate-900 dark:text-white">Camera Safety AI</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Version 1.1.0 (1)</p>
+                        </div>
+                    </div>
+                    <button class="text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300">
+                        <span class="material-symbols-outlined">exit_to_app</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <main class="flex-1 flex flex-col">
+            <header
+                class="h-16 flex-shrink-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6">
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined text-3xl text-primary mr-3">camera</span>
+                    <h2 class="text-xl font-semibold text-slate-900 dark:text-white">LIVE VIEW</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-slate-600 dark:text-slate-400">voquoc.hieu@...</span>
+                    <img alt="User avatar" class="h-8 w-8 rounded-full"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDihATT0qeOmiEK3HqtbHUtezNaVORBkqLug5K3umm2NsYXlvR1sU9Ns0n5AIJCOWAnuv0GsYrNHbXlj9OWE6SlmmWIu7_SF6oSxKy6sMabxcGjghZuU4jLbFfb8Pqu2OECb_DD9xbR6lYwpoJoXMzAK5Pgstb2272Mj-hRL-TGyim30KVr2k2u7ajVF4kL5cpC0V9XmuEe6Ofeoo7fw7F91cXuYAQTjLsKT4G07h87KIX4tFG-fsOqxYzVfjmdHonPH666lQozDh8" />
+                    <button
+                        class="relative p-2 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-red-500"></span>
+                    </button>
+                </div>
+            </header>
+            <div class="flex-1 p-6 grid grid-cols-1 xl:grid-cols-3 gap-6 overflow-y-auto">
+                <div class="xl:col-span-2 flex flex-col space-y-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <label class="text-sm font-medium text-slate-700 dark:text-slate-300"
+                                for="location">Locations:</label>
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg py-1.5 pl-3 pr-8 text-sm font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    id="location">
+                                    <option>Area 01</option>
+                                    <option>Area 02</option>
+                                </select>
+                                <span
+                                    class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none">expand_more</span>
+                            </div>
+                        </div>
+                        <button
+                            class="flex items-center space-x-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg hover:bg-blue-700 transition">
+                            <span class="material-symbols-outlined text-base">add</span>
+                            <span>Add Area</span>
+                        </button>
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden">
+                        <img alt="Live camera feed showing construction workers pouring concrete" class="w-full h-auto"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIUHUUxmTXRASTUYufQskAIuG1lv4sif_XTFgAbnSf8GkBg0fnQBwX_LcqjMYKXxHtWWJzwB0lbzc-Sb3EpAgCqSAiIrWpkD7tPrOQM0kFRqxsodKu3rNVEC_mvxG6GXIBks-6fRDxVAAb5tIl9NAcCEK602NLBCefA0LkVuqOcTAu40408LlteZPg0ZnlT1z9_2YmWJ9qLDHo7bLpAgj047bfCzYy9SENORjaYfBB21SZqP6D5CeUUu9AKA8gLsGHbVr2IGjlDYI" />
+                        <div
+                            class="absolute top-4 left-4 bg-green-500/80 border-2 border-green-300 text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+                            H.T.Mau</div>
+                        <div
+                            class="absolute top-4 left-1/4 bg-red-500/80 border-2 border-red-300 text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+                            P.V.Duoc</div>
+                        <div
+                            class="absolute top-4 left-1/2 bg-green-500/80 border-2 border-green-300 text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+                            T.V.Nhan</div>
+                        <div
+                            class="absolute top-4 left-3/4 bg-green-500/80 border-2 border-green-300 text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+                            p.D.Phuoc</div>
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden">
+                        <img alt="Live camera feed of a construction site with workers" class="w-full h-auto"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfMuc5V3Po16M6uRHgptiuggjnBcKqQrpKTRMEllv-VmKEUv0HA3LXqQgDCjFLSQ7Zt73vYXcVp_aXVlE_LxWXqJUSzhaRidnTD0MdZcEnIAIEJGJiaMgnnZU2eggctXTOrUrsr2apIL6xoQLmhIvpTkYSCEmKPVRbWMmDQdcxmbnxKgYXre5HERILN8x4WNgDodPTpS1qSQ7-ZSYBoHs_bDi2qeOCe4UJmRP5E9prOZ-OQewYAccbHDW2Wo6W_9--s9X7NL4Q4xM" />
+                        <div
+                            class="absolute top-4 left-1/4 bg-red-500/80 border-2 border-red-300 text-white text-xs font-bold px-2 py-0.5 rounded-sm">
+                            B.V.Bach</div>
+                    </div>
+                </div>
+                <div class="xl:col-span-1 bg-white dark:bg-slate-900 rounded-lg flex flex-col">
+                    <div
+                        class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between flex-shrink-0">
+                        <div class="flex items-center">
+                            <span
+                                class="material-symbols-outlined mr-2 text-slate-600 dark:text-slate-400">history</span>
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Alert History</h3>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <button
+                                class="p-1 rounded-md text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+                                <span class="material-symbols-outlined text-xl">chevron_left</span>
+                            </button>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Jun 12, 2025</span>
+                            <button
+                                class="p-1 rounded-md text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+                                <span class="material-symbols-outlined text-xl">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                        <div class="border border-blue-500 dark:border-blue-500 rounded-lg overflow-hidden">
+                            <div class="bg-blue-50 dark:bg-blue-900/40 p-3 relative border-l-4 border-orange-500">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <div
+                                            class="inline-flex items-center bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full mb-2">
+                                            <span class="material-symbols-outlined text-xs mr-1.5">crisis_alert</span>
+                                            PPE Detection
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <div>
+                                                <p class="font-bold text-lg text-slate-900 dark:text-white">12:44 AM</p>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">Jun 12, 2025</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <div class="p-2 bg-blue-100 dark:bg-blue-900 rounded-full mr-3">
+                                                    <span
+                                                        class="material-symbols-outlined text-blue-500 dark:text-blue-400">videocam</span>
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-sm text-slate-900 dark:text-white">
+                                                        Camera 01</p>
+                                                    <p class="text-xs text-slate-500 dark:text-slate-400">Production -
+                                                        Line A</p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold text-sm text-slate-900 dark:text-white">Nguyễn
+                                                    Văn An</p>
+                                                <p class="text-xs text-slate-500 dark:text-slate-400">MS1221415 |
+                                                    Operator</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                                            <span
+                                                class="material-symbols-outlined text-orange-500 dark:text-orange-400 text-lg">construction</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined text-slate-400 dark:text-slate-500">expand_less</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 grid grid-cols-3 gap-4 bg-white dark:bg-slate-900 text-sm">
+                                <div class="col-span-2 space-y-4">
+                                    <div class="flex items-center">
+                                        <p class="w-1/3 text-slate-500 dark:text-slate-400 font-medium">Risk Level</p>
+                                        <span
+                                            class="bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300 text-xs font-bold px-2.5 py-1 rounded-full">Hight</span>
+                                    </div>
+                                    <div class="flex">
+                                        <p class="w-1/3 text-slate-500 dark:text-slate-400 font-medium">Sự kiện:</p>
+                                        <p class="text-slate-800 dark:text-slate-200">Phát hiện thiếu Áo Bảo Hộ (Vest)
+                                        </p>
+                                    </div>
+                                    <div class="flex">
+                                        <p class="w-1/3 text-slate-500 dark:text-slate-400 font-medium">Nhân viên vi
+                                            phạm:</p>
+                                        <p class="text-slate-800 dark:text-slate-200">Bùi Văn Bách</p>
+                                    </div>
+                                    <div class="flex">
+                                        <p class="w-1/3 text-slate-500 dark:text-slate-400 font-medium">Mô tả rủi ro:
+                                        </p>
+                                        <p class="text-slate-800 dark:text-slate-200">Phát hiện 1 công nhân không mang
+                                            áo phản quang.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <p class="w-1/3 text-slate-500 dark:text-slate-400 font-medium">Hành động khắc
+                                            phục:</p>
+                                        <p class="text-slate-800 dark:text-slate-200">Khu vực này yêu cầu phải mang áo
+                                            phản quang và đội nón bảo hộ 24/24</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-1">
+                                    <img alt="Thumbnail of worker without proper PPE" class="rounded-md w-full"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJCeNdq6Jw5QqKP6-1PuDEJ1JEyW3RVbGfPouhNfV35bQyZcU77C9_0NSAgKJE7EG-hGUygKvIIjsKm6ZPtbDpDa09CZkN8X-H45uoAoqZ-W0g-1WFvWb11xK2bQifpiyKHozJDH5I-N-MU-2bY0X2bwgexCUa2a9QDBqzgGP_iseqQVunufKWa4cs4lPiZno3iC_JDt4LSwbeppWu0ALQ4CMCRYHnlTnbW3KBEnjRlpzwuR7kujRvVp7AGv5I_bGKxdn-CgqVok" />
+                                </div>
+                            </div>
+                            <div class="p-4 bg-slate-50 dark:bg-slate-800/50 flex justify-end space-x-3">
+                                <button
+                                    class="px-6 py-2 bg-primary text-white font-semibold text-sm rounded-lg hover:bg-blue-700 transition">Report</button>
+                                <button
+                                    class="px-6 py-2 bg-yellow-500 text-white font-semibold text-sm rounded-lg hover:bg-yellow-600 transition">Acknowledge</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg flex justify-between items-center border-l-4 border-orange-500">
+                            <div class="flex items-center space-x-4">
+                                <div>
+                                    <p class="font-bold text-lg text-slate-900 dark:text-white">12:44 AM</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">Jun 12, 2025</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="p-2 bg-blue-100 dark:bg-blue-900 rounded-full mr-3">
+                                        <span
+                                            class="material-symbols-outlined text-blue-500 dark:text-blue-400">videocam</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-sm text-slate-900 dark:text-white">Camera 01</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Production - Line A</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-900 dark:text-white">Nguyễn Văn An</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">MS1221415 | Operator</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-orange-500 dark:text-orange-400 text-lg">construction</span>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-lg flex justify-between items-center border-l-4 border-orange-500">
+                            <div class="flex items-center space-x-4">
+                                <div>
+                                    <p class="font-bold text-lg text-slate-900 dark:text-white">12:44 AM</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">Jun 12, 2025</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="p-2 bg-blue-100 dark:bg-blue-900 rounded-full mr-3">
+                                        <span
+                                            class="material-symbols-outlined text-blue-500 dark:text-blue-400">videocam</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-sm text-slate-900 dark:text-white">Camera 01</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400">Production - Line A</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-sm text-slate-900 dark:text-white">Nguyễn Văn An</p>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400">MS1221415 | Operator</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                                    <span
+                                        class="material-symbols-outlined text-orange-500 dark:text-orange-400 text-lg">construction</span>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
