@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live View | Quốc Việt Digitization Solutions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/card_camera_ai.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/card_camera_ai.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#C19837',
+                        secondary: '#CE9522',
+                        danger: '#EF4444',
+                        sidebar: '#F9FAFB',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F3F4F6;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #D1D5DB;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #9CA3AF;
+        }
+
+        /* Bounding Box Styling */
+        .bounding-box {
+            position: absolute;
+            border-width: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .bounding-box-label {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2px 8px;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .box-green {
+            border-color: #10B981;
+        }
+
+        .label-green {
+            background-color: #10B981;
+        }
+
+        .box-red {
+            border-color: #EF4444;
+        }
+
+        .label-red {
+            background-color: #EF4444;
+        }
+    </style>
+</head>
+
+<body class="flex h-screen overflow-hidden bg-white text-gray-800">
+
+    <!-- Sidebar -->
+    <aside class="w-64 flex-shrink-0 bg-white border-r border-gray-200 flex flex-col z-20">
+        <!-- Logo -->
+        <div class="h-16 flex items-center px-6 border-b border-gray-100">
+            <img src="assets/images/qv_logo.png" alt="Logo" class="h-8 w-auto mr-3">
+            <span class="font-bold text-gray-700 text-sm tracking-tight">QV DIGITIZATION</span>
+        </div>
+
+        <!-- Menu -->
+        <nav class="flex-1 overflow-y-auto py-6 px-3 space-y-1">
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_home.svg" class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500"
+                    alt="">
+                Dashboard
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_analytic.svg"
+                    class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500" alt="">
+                Analytic
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_notification.svg"
+                    class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500" alt="">
+                Notification
+            </a>
+
+            <!-- Active Item -->
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-primary bg-yellow-50 rounded-lg group">
+                <img src="assets/svgs/safety/ico_liveview.svg" class="w-5 h-5 mr-3 text-primary" alt="">
+                Live View
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_event.svg" class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500"
+                    alt="">
+                Events
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_report.svg"
+                    class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500" alt="">
+                Reports
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_setting.svg"
+                    class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500" alt="">
+                Settings
+            </a>
+
+            <a href="#"
+                class="flex items-center px-3 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 group">
+                <img src="assets/svgs/safety/ico_support.svg"
+                    class="w-5 h-5 mr-3 text-gray-400 group-hover:text-gray-500" alt="">
+                Supports
+            </a>
+
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col h-screen overflow-hidden relative">
+
+        <!-- Header -->
+        <header
+            class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 flex-shrink-0 z-10">
+            <!-- Left Header -->
+            <div class="flex items-center">
+                <img src="assets/svgs/safety/ico_liveview.svg" class="w-6 h-6 mr-3 text-gray-700 p-0.5" alt="">
+                <h1 class="text-lg font-bold text-gray-800 uppercase">Live View</h1>
+            </div>
+
+            <!-- Right Header -->
+            <div class="flex items-center space-x-6">
+                <!-- User Profile -->
+                <div class="flex items-center">
+                    <div class="text-right mr-3 hidden sm:block">
+                        <p class="text-xs text-gray-500">voquochieu@...</p>
+                    </div>
+                    <img src="assets/images/banner_about_us_image.jpg" alt="User"
+                        class="w-8 h-8 rounded-full object-cover border border-gray-200">
+                </div>
+                <!-- Bell Notification -->
+                <button class="text-gray-500 hover:text-gray-700 relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                        </path>
+                    </svg>
+                    <!-- Badge -->
+                    <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Sub Controls Header -->
+        <div class="bg-white px-6 py-3 flex items-center justify-between border-b border-gray-100 flex-shrink-0">
+            <div class="flex items-center space-x-3">
+                <label class="text-base font-bold text-gray-700">Locations:</label>
+                <div class="relative">
+                    <select
+                        class="appearance-none bg-gray-50 border border-gray-200 text-gray-700 py-1.5 pl-4 pr-10 rounded shadow-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary text-sm min-w-[150px]">
+                        <option>Area 01</option>
+                        <option>Area 02</option>
+                        <option>Area 03</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                class="flex items-center px-4 py-1.5 border border-gray-200 rounded text-sm font-medium text-gray-600 hover:bg-gray-50 bg-white shadow-sm transition-colors">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Add Area
+            </button>
+        </div>
+
+        <!-- Content Split -->
+        <div class="flex-1 flex overflow-hidden">
+            <!-- Left Panel: Video Feeds -->
+            <div class="flex-1 p-6 overflow-y-auto bg-white border-r border-gray-200 space-y-6">
+                <!-- Camera 1 -->
+                <div class="relative w-full rounded-lg overflow-hidden shadow-sm group">
+                    <img src="assets/images/area_ppe_detection.png" class="w-full h-auto object-cover"
+                        alt="Camera Feed 01">
+
+                    <!-- Bounding Boxes Example 1 -->
+                    <!-- H.T.Hau (Green) -->
+                    <div class="bounding-box box-green" style="top: 25%; left: 15%; width: 14%; height: 40%;">
+                        <div class="bounding-box-label label-green">H.T.Hau</div>
+                    </div>
+                    <!-- P.V.Duoc (Red) -->
+                    <div class="bounding-box box-red" style="top: 20%; left: 32%; width: 15%; height: 45%;">
+                        <div class="bounding-box-label label-red">P.V.Duoc</div>
+                    </div>
+                    <!-- T.V.Nhan (Green) -->
+                    <div class="bounding-box box-green" style="top: 28%; left: 50%; width: 13%; height: 35%;">
+                        <div class="bounding-box-label label-green">T.V.Nhan</div>
+                    </div>
+                    <!-- p.D.Phuoc (Green) -->
+                    <div class="bounding-box box-green" style="top: 18%; left: 65%; width: 16%; height: 48%;">
+                        <div class="bounding-box-label label-green">p.D.Phuoc</div>
+                    </div>
+
+                </div>
+
+                <!-- Camera 2 -->
+                <div class="relative w-full rounded-lg overflow-hidden shadow-sm group">
+                    <img src="assets/images/area_ppe_detection.png" class="w-full h-auto object-cover"
+                        alt="Camera Feed 02">
+
+                    <!-- B.V.Bach (Red) -->
+                    <div class="bounding-box box-red" style="top: 25%; left: 45%; width: 15%; height: 40%;">
+                        <div class="bounding-box-label label-red">B.V.Bach</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Alert History -->
+            <div class="w-[480px] bg-white flex flex-col border-l border-gray-200 flex-shrink-0">
+                <!-- Panel Header -->
+                <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <!-- Icon -->
+                        <svg class="w-5 h-5 text-gray-700 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        <h2 class="text-base font-bold text-gray-900">Alert History</h2>
+                    </div>
+                    <div class="flex items-center text-gray-500 text-sm cursor-pointer hover:text-gray-700">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span>Jun 12, 2025</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Alert List -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+
+                    <!-- Alert Item 1: Expanded -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                        <!-- Header -->
+                        <div class="bg-white p-4 border-b border-gray-100 relative">
+                            <!-- Badge -->
+                            <div
+                                class="absolute -top-0 left-0 bg-[#FF5722] text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-br-md flex items-center shadow-sm">
+                                <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                </svg>
+                                PPE Detection
+                            </div>
+
+                            <div class="flex justify-between items-start mt-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-center">
+                                        <div class="text-base font-bold text-gray-900 leading-tight">12:44 AM</div>
+                                        <div class="text-xs text-gray-500">Jun 12, 2025</div>
+                                    </div>
+                                    <!-- Icon Circle -->
+                                    <div class="bg-[#2998FF] rounded-full p-2 text-white">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-800 text-sm">Camera 01</div>
+                                        <div class="text-xs text-gray-500">Production - Line A</div>
+                                    </div>
+                                </div>
+
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800 text-sm">Nguyễn Văn An</div>
+                                    <div class="text-xs text-gray-500">MS1221415 | Operator</div>
+                                </div>
+
+                                <!-- Alert Icon -->
+                                <button class="ml-2 text-gray-400 hover:text-gray-600">
+                                    <div
+                                        class="relative w-8 h-8 rounded-full border border-orange-200 flex items-center justify-center p-1">
+                                        <img src="assets/svgs/safety/icon_ppe_detector.svg" class="w-full h-full"
+                                            alt="Icon">
+                                    </div>
+                                    <!-- Dropdown Arrow -->
+                                    <!-- <svg class="w-5 h-5 inline-block" ...> -->
+                                </button>
+                                <svg class="w-5 h-5 text-gray-400 cursor-pointer" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Details Body -->
+                        <div class="p-5 bg-white space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-sm font-semibold text-gray-700 w-32">Risk Level</span>
+                                <span
+                                    class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hight</span>
+
+                                <img src="assets/images/area_ppe_detection.png"
+                                    class="w-20 h-14 object-cover rounded ml-auto border border-gray-200"
+                                    alt="Snapshot">
+                            </div>
+
+                            <div class="grid grid-cols-[120px_1fr] gap-y-2 text-sm">
+                                <div class="text-gray-600">Sự kiện:</div>
+                                <div class="text-gray-900 font-medium">Phát hiện thiếu Áo Bảo Hộ (Vest)</div>
+
+                                <div class="text-gray-600">Nhân viên vi phạm:</div>
+                                <div class="text-gray-900 font-medium">Bùi Văn Bách</div>
+
+                                <div class="text-gray-600 self-start mt-1">Mô tả rủi ro:</div>
+                                <div class="border border-gray-200 rounded p-2 bg-gray-50 text-gray-700 text-sm">
+                                    Phát hiện 1 công nhân không mang áo phản quang.
+                                </div>
+
+                                <div class="text-gray-600 self-start mt-3">Hành động khắc phục:</div>
+                                <div class="border border-gray-200 rounded p-2 bg-gray-50 text-gray-700 text-sm mt-2">
+                                    Khu vực này yêu cầu phải mang áo phản quang và đội nón bảo hộ 24/24
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex justify-end space-x-3 pt-4 border-t border-gray-100">
+                                <button
+                                    class="px-6 py-2 bg-[#1A73E8] text-white text-sm font-medium rounded hover:bg-blue-600 transition-colors">
+                                    Report
+                                </button>
+                                <button
+                                    class="px-6 py-2 bg-[#D9AA00] text-white text-sm font-medium rounded hover:bg-yellow-600 transition-colors">
+                                    Acknowledge
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alert Item 2: Collapsed -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm border border-gray-200 relative overflow-hidden group hover:border-[#FF5722] transition-colors cursor-pointer">
+                        <div
+                            class="absolute -top-0 left-0 bg-[#FF5722] text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-br-md flex items-center shadow-sm">
+                            <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            PPE Detection
+                        </div>
+
+                        <div class="p-4 mt-2 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <div class="text-center">
+                                    <div class="text-base font-bold text-gray-900 leading-tight">12:44 AM</div>
+                                    <div class="text-xs text-gray-500">Jun 12, 2025</div>
+                                </div>
+                                <!-- Icon Circle -->
+                                <div class="bg-[#1A73E8] rounded-full p-2 text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-800 text-sm">Camera 01</div>
+                                    <div class="text-xs text-gray-500">Production - Line A</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800 text-sm">Nguyễn Văn An</div>
+                                    <div class="text-xs text-gray-500">MS1221415 | Operator</div>
+                                </div>
+                                <div
+                                    class="relative w-8 h-8 rounded-full border border-orange-200 flex items-center justify-center p-1">
+                                    <img src="assets/svgs/safety/icon_ppe_detector.svg" class="w-full h-full"
+                                        alt="Icon">
+                                    <div
+                                        class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white">
+                                    </div>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alert Item 3: Collapsed (Copy) -->
+                    <div
+                        class="bg-white rounded-lg shadow-sm border border-gray-200 relative overflow-hidden group hover:border-[#FF5722] transition-colors cursor-pointer">
+                        <div
+                            class="absolute -top-0 left-0 bg-[#FF5722] text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-br-md flex items-center shadow-sm">
+                            <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            PPE Detection
+                        </div>
+
+                        <div class="p-4 mt-2 flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <div class="text-center">
+                                    <div class="text-base font-bold text-gray-900 leading-tight">12:44 AM</div>
+                                    <div class="text-xs text-gray-500">Jun 12, 2025</div>
+                                </div>
+                                <!-- Icon Circle -->
+                                <div class="bg-[#CE9522] rounded-full p-2 text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-gray-800 text-sm">Camera 01</div>
+                                    <div class="text-xs text-gray-500">Production - Line A</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="text-right">
+                                    <div class="font-bold text-gray-800 text-sm">Nguyễn Văn An</div>
+                                    <div class="text-xs text-gray-500">MS1221415 | Operator</div>
+                                </div>
+                                <div
+                                    class="relative w-8 h-8 rounded-full border border-orange-200 flex items-center justify-center p-1">
+                                    <img src="assets/svgs/safety/icon_ppe_detector.svg" class="w-full h-full"
+                                        alt="Icon">
+                                    <div
+                                        class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white">
+                                    </div>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
