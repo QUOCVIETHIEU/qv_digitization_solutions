@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Forms Report | Quốc Việt Digitization Solutions</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/card_eform_report.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/card_eform_report.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../../assets/js/main.js"></script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #ffffff;
+      color: #374151;
+    }
+
+    .container {
+      max-width: 1280px;
+    }
+
+    .gradient-bg {
+      background-image: linear-gradient(to right, #c19837, #ce9522);
+    }
+
+    .text-gradient {
+      background-image: linear-gradient(to right, #c19837, #ce9522);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-button {
+      background: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .card-corporate {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .card-corporate:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border-color: #c19837;
+    }
+
+    .flow-step {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      width: 140px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #1f2937;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .flow-step:hover {
+      border-color: #c19837;
+      color: #c19837;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .flow-connector {
+      background: #e5e7eb;
+      height: 2px;
+    }
+
+    .tablet-mockup {
+      width: 100%;
+      max-width: 500px;
+      height: 350px;
+      background: #1f2937;
+      border-radius: 20px;
+      border: 8px solid #111827;
+      position: relative;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      margin: 0 auto;
+    }
+
+    .tablet-screen {
+      width: 100%;
+      height: 100%;
+      background: #f3f4f6;
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    @keyframes blob {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(10px, -12px) scale(1.05);
+      }
+    }
+
+    .animate-blob {
+      animation: blob 12s ease-in-out infinite;
+    }
+
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- Header/Navigation (Consistent with PPE) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2">
+          <button onclick="history.back()"
+            class="flex items-center bg-transparent border-none cursor-pointer text-gray-900 hover:text-gray-700 transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <img src="../../assets/images/card_eform_report.png" alt="E-Form" class="h-6 w-auto" />
+          <a href="../../index.html" class="text-xl md:text-2xl font-semibold text-gray-700 hidden md:inline-block ml-2 uppercase">SOLUTIONS</a>
+          <span class="text-xl md:text-2xl font-semibold text-gray-400 hidden md:inline-block">›</span>
+          <span class="text-xl md:text-2xl font-bold text-gray-900 hidden md:inline-block">E-FORM REPORTS</span>
+        </div>
+      </div>
+
+      <div class="flex items-center ml-auto space-x-3">
+        <a href="../demo-request/demo-request.html"
+          class="px-6 py-2 gradient-bg text-white font-semibold text-sm rounded-full hover:scale-105 transition-transform duration-300 shadow-md">
+          Book Demo
+        </a>
+        <a href="../../index.html"
+          class="px-6 py-2 bg-gray-100 text-gray-700 font-semibold text-sm rounded-full hover:bg-gray-200 transition-colors duration-300">
+          Home
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full pt-24 pb-12">
+
+    <!-- 1. Hero Section (Slide 1) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mb-20 text-center animate-fadeIn">
+      <div class="py-12 md:py-20 relative rounded-3xl overflow-hidden bg-gray-50 border border-gray-100">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-gray-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+        <div class="relative z-10">
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-wide mb-6">
+            Digitization Solution 2026
+          </div>
+          <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight leading-ti">
+            E-FORM <span class="text-gradient">REPORTS</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10 font-normal">
+            Giải pháp số hóa báo cáo sản xuất toàn diện, thay thế quy trình thủ công và tối ưu hóa vận hành doanh nghiệp.
+          </p>
+          <div class="flex justify-center items-center space-x-2 text-sm text-gray-500">
+            <span class="font-semibold text-gray-900">Presenter:</span> VO QUOC HIEU
+            <span class="mx-2">•</span>
+            <span>01/2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Roadmap (Slide 2) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">I. Lộ trình triển khai</h2>
+        <p class="text-gray-600 text-lg">Roll-out Roadmap Module Production (2024 - 2025)</p>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto">
+        <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 -translate-y-1/2 rounded-full"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="relative group text-center bg-white p-6 rounded-xl border border-gray-100 hover:border-yellow-400 transition-all shadow-sm">
+            <div class="w-4 h-4 bg-yellow-500 rounded-full mx-auto mb-4 relative z-10 border-4 border-white shadow"></div>
+            <span class="inline-block px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-bold rounded mb-2">AUG 2024</span>
+            <h3 class="font-bold text-gray-900 text-lg">Thiết kế & Lập trình</h3>
+            <p class="text-sm text-gray-500 mt-2">Master Data, chuẩn hóa biểu mẫu, lập trình giao diện.</p>
+          </div>
+          <div class="relative group text-center bg-white p-6 rounded-xl border border-gray-100 hover:border-yellow-400 transition-all shadow-sm">
+            <div class="w-4 h-4 bg-yellow-500 rounded-full mx-auto mb-4 relative z-10 border-4 border-white shadow"></div>
+            <span class="inline-block px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-bold rounded mb-2">NOV 2024</span>
+            <h3 class="font-bold text-gray-900 text-lg">FAT & UAT</h3>
+            <p class="text-sm text-gray-500 mt-2">Kiểm tra chất lượng (FAT) và UAT với module Production.</p>
+          </div>
+          <div class="relative group text-center bg-white p-6 rounded-xl border border-gray-100 hover:border-green-400 transition-all shadow-sm">
+            <div class="w-4 h-4 bg-green-500 rounded-full mx-auto mb-4 relative z-10 border-4 border-white shadow"></div>
+            <span class="inline-block px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded mb-2">DEC 2024</span>
+            <h3 class="font-bold text-gray-900 text-lg">Golive (Trial)</h3>
+            <p class="text-sm text-gray-500 mt-2">Golive cho bộ phận Production với 01 line thử nghiệm.</p>
+          </div>
+          <div class="relative group text-center bg-white p-6 rounded-xl border border-gray-100 hover:border-gray-400 transition-all shadow-sm">
+            <div class="w-4 h-4 bg-gray-400 rounded-full mx-auto mb-4 relative z-10 border-4 border-white shadow"></div>
+            <span class="inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded mb-2">MAY 2025</span>
+            <h3 class="font-bold text-gray-900 text-lg">Mass Roll-out</h3>
+            <p class="text-sm text-gray-500 mt-2">Golive cho các line còn lại trên toàn nhà máy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Process & Tablet (Slide 3 & 4) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-bold mb-6 text-gradient">II. Flowchart – Quy trình báo cáo</h2>
+          <p class="text-gray-600 text-lg mb-8">Chuẩn hóa quy trình từ đăng nhập đến phê duyệt, đảm bảo minh bạch và chính xác.</p>
+          <div class="relative bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+            <div class="flex flex-col items-center space-y-6">
+              <div class="flow-step border-l-4 border-l-blue-500">START<br><span class="text-xs text-gray-400 font-normal">Đăng nhập</span></div>
+              <div class="h-6 w-px bg-gray-300"></div>
+              <div class="flow-step">Chọn Line / Machine</div>
+              <div class="h-6 w-px bg-gray-300"></div>
+              <div class="flow-step border-yellow-400 bg-yellow-50">INPUT DATA<br><span class="text-xs text-yellow-600 font-normal">Nhập PO, Sản lượng</span></div>
+              <div class="h-6 w-px bg-gray-300"></div>
+              <div class="flex space-x-4">
+                <div class="flow-step w-28 text-xs bg-red-50 border-red-200">Validate Error</div>
+                <div class="flow-step w-28 text-xs bg-green-50 border-green-200">Save DB</div>
+              </div>
+              <div class="h-6 w-px bg-gray-300"></div>
+              <div class="flow-step rounded-full bg-gray-100 text-gray-500 border-none">END</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-6 text-gradient">III. Giao diện báo cáo trên Tablet</h2>
+          <p class="text-gray-600 text-lg mb-8">Trải nghiệm người dùng tối ưu trên thiết bị di động.</p>
+          <div class="tablet-mockup">
+            <div class="tablet-screen flex flex-col bg-gray-50">
+              <div class="bg-white p-4 border-b border-gray-100 flex justify-between items-center shadow-sm">
+                <span class="font-bold text-gray-800">Production App</span>
+                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">User</div>
+              </div>
+              <div class="p-4 space-y-3">
+                <div class="bg-white p-3 rounded-lg border border-gray-200 shadow-sm flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold text-gray-800">Line 01 - Filling</div>
+                    <div class="text-xs text-green-500 font-medium">● Running</div>
+                  </div>
+                  <button class="bg-blue-600 text-white text-xs px-3 py-1 rounded">Report</button>
+                </div>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 shadow-sm flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold text-gray-800">Line 02 - Packing</div>
+                    <div class="text-xs text-yellow-500 font-medium">● Maintenance</div>
+                  </div>
+                  <button class="bg-gray-200 text-gray-500 text-xs px-3 py-1 rounded">View</button>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4 w-10 h-10 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full shadow-lg flex items-center justify-center text-white text-xl">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Benefits (Slide 5) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-gradient">IV. Lợi ích nổi bật</h2>
+          <p class="text-gray-600 text-lg max-w-3xl mx-auto">Tối ưu toàn diện từ chi phí đến hiệu quả vận hành.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">01. Tiết kiệm chi phí</h3>
+            <p class="text-gray-500 text-sm">Cắt giảm in ấn, lưu trữ vật lý.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">02. Bảo vệ môi trường</h3>
+            <p class="text-gray-500 text-sm">Hạn chế sử dụng giấy, mực in.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">03. Giao diện thân thiện</h3>
+            <p class="text-gray-500 text-sm">Dễ dùng, nhanh quen, ít sai sót.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">04. Bảo mật cao</h3>
+            <p class="text-gray-500 text-sm">Phân quyền truy cập, lưu trữ an toàn.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">05. Phê duyệt linh hoạt</h3>
+            <p class="text-gray-500 text-sm">Nhiều cấp, rõ ràng, theo luồng.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">06. Tra cứu nhanh</h3>
+            <p class="text-gray-500 text-sm">Báo cáo realtime, không mất công tìm kiếm.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">07. Cảnh báo tức thời</h3>
+            <p class="text-gray-500 text-sm">Gửi thông báo ngay khi có bất thường.</p>
+          </div>
+          <div class="card-corporate p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">08. Kết nối hệ thống khác</h3>
+            <p class="text-gray-500 text-sm">Đồng bộ dữ liệu, giảm nhập liệu thủ công.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Features Highlight (Slide 6) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">V. Features Highlight</h2>
+        <p class="text-gray-600 text-lg">Những điểm nổi bật giúp chuẩn hóa và kiểm soát báo cáo sản xuất.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Chuẩn hóa Master Data</h3>
+          <p class="text-sm text-gray-500">Thống nhất dữ liệu giữa các nhà máy.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Chuẩn hóa biểu mẫu</h3>
+          <p class="text-sm text-gray-500">E-Form dùng chung toàn hệ thống.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Tích hợp SAP</h3>
+          <p class="text-sm text-gray-500">Đồng bộ realtime, minh bạch và trực quan.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Quản lý báo cáo</h3>
+          <p class="text-sm text-gray-500">Phân loại theo khu vực, dễ dàng quản lý.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Xuất Excel / Audit</h3>
+          <p class="text-sm text-gray-500">Hỗ trợ kiểm toán, truy vết lịch sử.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Realtime Trace</h3>
+          <p class="text-sm text-gray-500">Cảnh báo tức thì, nắm bắt tình huống nhanh.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Giám sát sản xuất</h3>
+          <p class="text-sm text-gray-500">Đánh giá tính hợp lệ của dữ liệu.</p>
+        </div>
+        <div class="card-corporate p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Liên kết Machine</h3>
+          <p class="text-sm text-gray-500">Lấy dữ liệu trực tiếp từ machine vào báo cáo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Report Manager (Slide 7) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 text-gradient">VI. Report Manager</h2>
+          <p class="text-gray-600 text-lg">Quản lý vòng đời và lịch sử báo cáo từ tạo lập đến phê duyệt.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-corporate p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Quản lý vòng đời báo cáo</h3>
+            <p class="text-gray-500 text-sm">Theo dõi đầy đủ trạng thái: khởi tạo → phê duyệt → đóng báo cáo.</p>
+          </div>
+          <div class="card-corporate p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Quản lý lịch sử báo cáo</h3>
+            <p class="text-gray-500 text-sm">Truy xuất lịch sử báo cáo nhanh chóng và minh bạch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Approval Manager (Slide 8) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">VII. Approval Manager</h2>
+        <p class="text-gray-600 text-lg">Tăng cường kiểm soát và minh bạch dữ liệu.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div class="card-corporate p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">01. Phê duyệt hủy báo cáo</h3>
+          <p class="text-gray-500 text-sm">Mọi báo cáo hủy đều cần quản lý cấp trên phê duyệt.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">02. Phê duyệt chỉnh sửa dữ liệu</h3>
+          <p class="text-gray-500 text-sm">Giữ tính minh bạch và chính xác của dữ liệu.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">03. Phê duyệt dữ liệu theo ca</h3>
+          <p class="text-gray-500 text-sm">Mỗi ca được chỉ định quản lý cụ thể.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">04. Phê duyệt báo cáo</h3>
+          <p class="text-gray-500 text-sm">Phê duyệt qua Power Apps, Email hoặc MS Teams.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center text-sm text-gray-500">
+        Quản lý phê duyệt trực tiếp trên hệ thống; mọi thay đổi đều cần phê duyệt trước khi áp dụng.
+      </div>
+    </section>
+
+    <!-- 8. Real-time Notification (Slide 9) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 text-gradient">VIII. Real-time Notification</h2>
+          <p class="text-gray-600 text-lg">Gửi thông báo & cảnh báo tức thì khi dữ liệu vượt ngưỡng cho phép.</p>
+        </div>
+        <div class="max-w-4xl mx-auto card-corporate p-8 text-center">
+          <p class="text-gray-600">Khi có bất thường, hệ thống lập tức gửi thông báo cho SUP đi ca để xử lý kịp thời.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Friendly UI (Slide 10) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">IX. Giao diện thân thiện</h2>
+        <p class="text-gray-600 text-lg">Dễ dàng quản lý theo khu vực/line/machine.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Quản lý theo khu vực</h3>
+          <p class="text-gray-500 text-sm">Nhóm báo cáo theo line/machine rõ ràng.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Danh sách realtime</h3>
+          <p class="text-gray-500 text-sm">Báo cáo hiện tại được cập nhật liên tục.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">KPI pass/fail</h3>
+          <p class="text-gray-500 text-sm">Chỉ tiêu lỗi/đạt hiển thị theo thời gian thực.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Easy Input (Slide 11) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 text-gradient">X. Nhập dữ liệu dễ dàng</h2>
+          <p class="text-gray-600 text-lg">Giảm nhập tay, nâng cao độ chính xác.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-corporate p-8">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Tự định dạng dữ liệu</h3>
+            <p class="text-gray-500 text-sm">Chỉ cần chọn đúng loại dữ liệu, hạn chế nhập tay.</p>
+          </div>
+          <div class="card-corporate p-8">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Tự động lấy dữ liệu</h3>
+            <p class="text-gray-500 text-sm">Liên kết SAP & Machine để lấy dữ liệu tự động.</p>
+          </div>
+          <div class="card-corporate p-8">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Highlight vượt chỉ tiêu</h3>
+            <p class="text-gray-500 text-sm">Dễ đánh giá và phê duyệt báo cáo.</p>
+          </div>
+          <div class="card-corporate p-8">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Ghi chú dữ liệu lỗi</h3>
+            <p class="text-gray-500 text-sm">Ghi rõ nguyên nhân để truy xuất nhanh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Dashboard (Slide 12) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">XI. Dashboard</h2>
+        <p class="text-gray-600 text-lg">Biểu đồ trực quan, chi tiết và linh hoạt.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Đa dạng biểu đồ</h3>
+          <p class="text-gray-500 text-sm">Nhiều loại đồ thị phục vụ phân tích.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Chi tiết & trực quan</h3>
+          <p class="text-gray-500 text-sm">Dễ hiểu cho mọi cấp quản lý.</p>
+        </div>
+        <div class="card-corporate p-8">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Tích hợp dashboard</h3>
+          <p class="text-gray-500 text-sm">Đưa dữ liệu lên dashboard theo nhu cầu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. AI Integration (Slide 13) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 text-gradient">XII. Tích hợp AI</h2>
+          <p class="text-gray-600 text-lg">AI phân tích & đề xuất cải tiến vận hành.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-corporate p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">AI Q&A theo dữ liệu báo cáo</h3>
+            <p class="text-gray-500 text-sm">Đặt câu hỏi tự nhiên và nhận câu trả lời tức thì.</p>
+          </div>
+          <div class="card-corporate p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">AI phân tích hiệu suất</h3>
+            <p class="text-gray-500 text-sm">Đề xuất cải tiến máy móc, vận hành để tăng sản lượng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. AI Analytic & E-Form Agent (Slide 14) -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">XIII. AI Analytic & E-Form Agent</h2>
+        <p class="text-gray-600 text-lg">Tăng tốc ra quyết định bằng phân tích chuyên sâu.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card-corporate p-8 text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">AI Analytic</h3>
+          <p class="text-gray-500 text-sm">Phân tích xu hướng, OEE và hiệu suất theo thời gian.</p>
+        </div>
+        <div class="card-corporate p-8 text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">E-Form Agent</h3>
+          <p class="text-gray-500 text-sm">Trợ lý thông minh cho truy vấn & tổng hợp báo cáo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Thank You (Slide 15) -->
+    <section class="bg-gray-50 py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-4 text-gradient">THANK YOU</h2>
+        <p class="text-gray-600 text-lg">Date: 01/2026 • Presenter: VO QUOC HIEU</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (Consistent with PPE) -->
+  <footer class="w-full bg-gray-50 border-t border-gray-200 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="flex flex-col items-center justify-center">
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="../../assets/images/qv_logo.png" alt="QV Logo" class="h-10 w-auto" />
+          <span class="text-xl font-bold text-gray-700">Quốc Việt Co.,Ltd</span>
+        </div>
+        <p class="text-gray-900 max-w-2xl">
+          Chuyên gia hàng đầu trong lĩnh vực chuyển đổi số, giúp doanh nghiệp
+          tối ưu hóa quy trình và tăng trưởng bền vững.
+        </p>
+        <div class="mt-8 text-center text-gray-700 text-sm">
+          <p>&copy; 2026 Quốc Việt Digitization Solutions. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
